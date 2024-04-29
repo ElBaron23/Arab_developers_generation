@@ -11,9 +11,9 @@
     <title>الجيل المبرمج العربي</title>
 </head>
 <body>
+<?php include "inc/header.php" ?>
 
 
-    <h1 id="h1">الجيل المبرمج العربي</h1>
     
 
     <?php include 'inc/footer.php' ?>
