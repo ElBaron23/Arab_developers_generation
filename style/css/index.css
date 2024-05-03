@@ -9,7 +9,6 @@ header {
   background: #031930;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   display: flex;
-  position: fixed;
   align-items: center;
   justify-content: space-between;
 }

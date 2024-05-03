@@ -14,7 +14,7 @@
     <!-- استدعاء ملف header -->
     <?php include "inc/header.php" ?>
     <!-- استدعاء ملف تحقق من اتصال المستخدم بالانترنيت -->
-    <!-- <?php include "inc/ifConnect.php" ?> -->
+    <?php include "inc/ifConnect.php" ?>
     <!-- القسم الاول من الصفحة -->
     <div class="head">
         <h1>انضم الان الى اكبر تجمع عربي للبرمجة</h1>
