@@ -10,7 +10,6 @@
     <span>العربي</span>
     </h1>
    </div> 
-   ا
    <ul>
     <li><a href="register.php">التسجيل</a></li>
     <li><a href="login.php">الدخول</a></li>

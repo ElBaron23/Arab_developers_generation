@@ -1,0 +1,100 @@
+@import 'var';
+
+#connect , #noConnect{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    margin: 4px;
+    span{
+        font-size: 18px;
+        margin-left: 16px;
+        font-family: $font;
+    }
+}
+#connect{
+    border: $success 2px solid;
+    .icon{
+        border: 2px solid $success;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        margin-left: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        &::after{
+            content: '';
+            width: 8px;
+            height: 2px;
+            background: $success;
+            position: absolute;
+            top: 65%;
+            left: 25%;
+            transform: translate(-50%,-50%);
+            rotate: 45deg;
+        }
+        &::before{
+            content: '';
+            width: 15px;
+            height: 2px;
+            background: $success;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            rotate: -45deg;
+        }
+    }
+    span{
+        color: $success;
+    }
+}
+#noConnect{
+    border: $danger 2px solid;
+    .icon{
+        background: $danger;
+        width: 0;
+        height: 0;
+        margin-left: 16px;
+        border-left: 20px solid #fff;
+        border-right: 20px solid #fff;
+        border-bottom: 30px solid $danger;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &::after{
+          content: '';
+            background: $light;
+            width: 4px;
+            height: 4px;
+            position: absolute;
+            top: 25px ;
+            border-radius: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+         &::before{
+            content: '';
+            background: $light;
+            width: 2px;
+            height: 15px;
+            position: absolute;
+            top: 15px;
+            border-radius: 25% 25% 100% 100%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        
+        
+    }
+    span{
+        color: $danger;
+    }
+}   
+.active{
+    display: none !important;
+}
