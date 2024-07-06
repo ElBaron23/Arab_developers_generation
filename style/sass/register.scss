@@ -1,0 +1,330 @@
+@import 'var';
+@import 'navIndex';
+*{
+    margin: 0;
+    padding: 0;
+    font-family: tajawal;
+}
+
+//start header 
+header{
+    width: 100%;
+    height: 50px;
+    background: $mainColor;
+    display: flex;
+    justify-content: center
+}
+main{ 
+    background: $mainColor;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+    flex-direction: column;
+    .email_repp{
+        color:rgb(245, 74, 74);
+        font-size: 18px ;
+        margin-bottom: 8px;
+
+    }
+     .container{
+        border: 1px solid #707070;
+        border-radius: 12px;
+        background: $darkColor;
+        box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.1);
+        width: 90%;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+       
+        form{
+         
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+            h1{
+                color:$lightColor;
+                font-size: 24px;  
+            }
+            .forgot{
+                width: 98%;
+                text-align: start;
+                height: 35px;
+                display: flex;
+                align-items: center;
+                margin-right: 16px;
+                // justify-content: center;
+                a{
+                    color: $secondColor;
+                    text-decoration: none;
+                }
+            }
+            .nam{
+                display: flex;
+                height: auto;
+                margin-top: 8px;
+                width: 98%;
+                justify-content: space-between;
+                input{
+                    width: 48%;
+                    height: 35px;
+                    border-radius: 12px;
+                    border:1px solid $lightColor;
+                    background: $mainColor;
+                }
+            }
+            input{
+                width: 98%;
+                height: 35px;
+                border-radius: 12px;
+                border:none;
+                margin-top: 8px;
+                background: $mainColor;
+                &::first-letter{
+                    border: 2px solid red;
+                }
+                &::placeholder{
+                    color: $lightColor;
+                    padding-right: 12px;
+                }
+            }
+            button{
+                width: 98%;
+                height: 35px;
+                margin-top: 8px;
+                border-radius: 12px;
+                background: $secondColor;
+                color: $lightColor;
+                border: 2px solid $secondColor;
+                transition: all .3s ease;
+                &:hover{
+                    background: transparent;
+                    border: 2px solid $secondColor;
+                }
+            }
+        }
+    .box{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .box_img{
+            width: 80%;
+            height: 174px;
+            border-radius: 12px ;
+            background-image: url(../../file/image/img_form.jpg);
+            background-size: cover;
+            
+        }
+        h5{
+            width: 80%;
+            margin-top: 4px;
+            text-align: center;
+            color: $secondColor;
+            font-size: 12px;
+        }
+        .for_login{
+            width: 80%;
+            height: 39px;
+            display: flex;
+            align-items: center;
+            h3{
+                color: $lightColor;
+                font-size: 15px
+            }
+            a{
+                text-decoration: none;
+                font-size: 15px;
+                width: 120px;
+                height: 35px;
+                color: $lightColor;
+                margin-right: 4px;
+                background: $secondColor;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 12px;
+                border: 2px solid $secondColor;
+                transition: all .3s ease;
+                &:hover{
+                    border: 2px solid $secondColor;
+                    background: transparent;
+                }
+            }
+        }
+    }
+  
+}
+
+@media screen and (max-width:560px){
+
+
+main{ 
+    background: $mainColor;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+    flex-direction: column;
+    .email_repp{
+        color:rgb(245, 74, 74);
+        font-size: 18px ;
+        margin-bottom: 8px;
+
+    }
+     .container{
+        border: 1px solid #707070;
+        border-radius: 12px;
+        background: $darkColor;
+        box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.1);
+        width: 90%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+        justify-content: center;
+        }
+       
+        form{
+            
+            width: 94%;
+            margin-left: 16px;
+            margin-right: 16px;
+            margin-bottom: 16px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            h1{
+                color:$lightColor;
+                font-size: 24px;  
+            }
+            .forgot{
+                width: 98%;
+                text-align: start;
+                height: 35px;
+                display: flex;
+                align-items: center;
+                // justify-content: center;
+                a{
+                    color: $secondColor;
+                    text-decoration: none;
+                }
+            }
+            .nam{
+                display: flex;
+                height: auto;
+                margin-top: 8px;
+                width: 98%;
+                justify-content: space-between;
+                input{
+                    width: 48%;
+                    height: 35px;
+                    border-radius: 12px;
+                    border:1px solid $lightColor;
+                    background: $mainColor;
+                }
+            }
+            input{
+                width: 98%;
+                height: 35px;
+                border-radius: 12px;
+                border:1px solid $lightColor;
+                margin-top: 8px;
+                background: $mainColor;
+                &::placeholder{
+                    color: $lightColor;
+                    padding-right: 12px;
+                }
+                &:focus{
+                    color: $lightColor;
+                    font-size: 16px;
+                }
+            }
+            button{
+                width: 98%;
+                height: 35px;
+                margin-top: 8px;
+                border-radius: 12px;
+                background: $secondColor;
+                color: $lightColor;
+                border: 2px solid $secondColor;
+                transition: all .3s ease;
+                &:hover{
+                    background: transparent;
+                    border: 2px solid $secondColor;
+                }
+            }
+        }
+    .box{
+        width: 94%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 16px;
+        justify-content: center;
+        .box_img{
+            width: 80%;
+            height: 174px;
+            border-radius: 12px ;
+            background-image: url(../../file/image/img_form.jpg);
+            background-size: cover;
+            
+        }
+        h5{
+            width: 80%;
+            margin-top: 4px;
+            text-align: center;
+            color: $secondColor;
+            font-size: 12px;
+        }
+        .for_login{
+            width: 95%;
+            height: 39px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            h3{
+                color: $lightColor;
+                font-size: 15px
+            }
+            a{
+                text-decoration: none;
+                font-size: 15px;
+                width: 120px;
+                height: 35px;
+                color: $lightColor;
+                margin-right: 4px;
+                background: $secondColor;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 12px;
+                border: 2px solid $secondColor;
+                transition: all .3s ease;
+                &:hover{
+                    border: 2px solid $secondColor;
+                    background: transparent;
+                }
+            }
+        }
+    }
+  
+}
+  
+}
+@import 'footer';
