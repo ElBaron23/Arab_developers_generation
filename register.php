@@ -51,17 +51,18 @@ echo' <h4 class="email_repp" >هذا البريد الاكتروني مسجل ل
  }
 }
 ?>
+ <div class="errs" id="errs">
         <div class="container">
 
-        <form method="post">
+        <form method="post" id="reg">
         <h1>انشاءحساب</h1>
         <div class="nam">
-            <input type="text" name="firstname" placeholder="الاسم">
-            <input type="text" name="lastname" placeholder="النسب">
+            <input type="text" name="firstname" id="fn" placeholder="الاسم" required>
+            <input type="text" name="lastname" id ="ln"placeholder="النسب" required>
         </div>
-        <input type="email" name="new_email" placeholder="البريد الاكتروني">
-        <input type="password" id="pass1" placeholder="كلمة السر" >
-        <input type="password" name="new_password" id="pass2" placeholder=" تحقق من كلمة السر">
+        <input type="email" name="new_email" id="email" placeholder="البريد الاكتروني" required>
+        <input type="password" id="pass1" placeholder="كلمة السر"  required>
+        <input type="password" name="new_password" id="pass2" placeholder=" تحقق من كلمة السر"required >
         <button type="submit" name="register">تسجيل</button>
         </form>
         <div class="box">
@@ -75,10 +76,13 @@ echo' <h4 class="email_repp" >هذا البريد الاكتروني مسجل ل
         </div>
         </div>
     </main>
-
+<script src="js/password_verefication.js"></script>
     <?php
     include 'inc/_footer.php'
     ?>
+    <!-- هدا script تمت برمجته من قبل 
+     https://github.com/AHMED1CB
+    -->
     <script src="js/password_verefication.js"></script>
 </body>
 </html>

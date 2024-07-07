@@ -1,4 +1,9 @@
   //this script for remove and add class active for element in navbar
+  /*
+هنا مجموعة من الطرق التي مررنا بها للوصول الى النتيجة التي نريدها 
+باقل عدد من الاسطر
+
+  */
 
 //   let home        = document.getElementById('home'),
 //       roadmap     = document.getElementById('roadmap'),
@@ -6,7 +11,7 @@
 //       profile     = document.getElementById('profile'),
 //       communitie  = document.getElementById('communitie'),
 //       blogger     = document.getElementById('blogger');
-
+//استخدمنا هذه الطريقة لاكن بيها مشكلة منطقية عند ضغط على العنصر يفتح صفحة جديدة ولا يضل التحديد
 //  let  url = window.location.href;
 //  if(url.includes('profile.php')){
 // profile.classList.add('active');
