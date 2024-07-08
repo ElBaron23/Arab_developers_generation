@@ -30,6 +30,7 @@ if(isset($_POST['login'])){
  if($login->rowCount() === 1){
    $data = $login->fetchObject();
     $_SESSION['user_id']=$data->user_id;
+    $_SESSION['data']=$data;
 
     header("location:home.php",true);
  }else{

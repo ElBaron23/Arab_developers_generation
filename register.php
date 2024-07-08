@@ -33,7 +33,13 @@ echo' <h4 class="email_repp" >هذا البريد الاكتروني مسجل ل
 }else{
     $lastname=$_POST['lastname'];
     $firstname=$_POST['firstname'];
+    
     $new_password=$_POST['new_password'];
+    if(strlen($new_password)>= 8){
+       $password = $new_password;
+    }else{
+        echo"<h3>يجب ان تحتوي كلمة المرور على 8 احرف عالاقل</h3>";
+    }
     $new_email=$_POST['new_email'];
 
     $adduser= $mydb->prepare("INSERT INTO user(firstname,lastname,email,password)
@@ -41,7 +47,7 @@ echo' <h4 class="email_repp" >هذا البريد الاكتروني مسجل ل
     $adduser->bindParam("firstname",$firstname);                                 
     $adduser->bindParam("lastname",$lastname);                                 
     $adduser->bindParam("email",$new_email);                               
-    $adduser->bindParam("password",$new_password);
+    $adduser->bindParam("password",$password);
    
     if($adduser->execute()){
      header("location:login.php",true);
@@ -51,7 +57,8 @@ echo' <h4 class="email_repp" >هذا البريد الاكتروني مسجل ل
  }
 }
 ?>
- <div class="errs" id="errs">
+ <h3 class="errs" id="errs">
+</h3>
         <div class="container">
 
         <form method="post" id="reg">
