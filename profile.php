@@ -12,6 +12,9 @@
     <title>الملف الشخصي</title>
 </head>
 <body dir="rtl">
+<div class="container">
     
+</div>    
+
 </body>
 </html>
