@@ -14,7 +14,7 @@
         justify-content: center;
         ul{
             list-style: none;
-            width: 90%;
+            width: 95%;
             height: 40px;
             display: flex;
             align-items: center;
@@ -35,6 +35,7 @@
                     height: 30px;
                     display: flex;
                     align-items: center;
+                    width: auto;
                     justify-content: center;
                     text-align: center;
                     transition: all .3s ease;

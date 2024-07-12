@@ -22,7 +22,7 @@
     justify-content: center; }
     #navbar #nav ul {
       list-style: none;
-      width: 90%;
+      width: 95%;
       height: 40px;
       display: flex;
       align-items: center;
@@ -43,6 +43,7 @@
           height: 30px;
           display: flex;
           align-items: center;
+          width: auto;
           justify-content: center;
           text-align: center;
           transition: all .3s ease;
@@ -154,8 +155,49 @@ h2 {
 .toggle :nth-child(2) {
   display: none !important; }
 
-#container {
+.container {
   width: 100%;
   height: auto; }
+  .container .user_profile {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: end;
+    display: flex;
+    width: 100%;
+    height: 120px;
+    background: #f7f7f7; }
+    .container .user_profile #photo_profile {
+      border: 2px solid #223A59;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-left: 16px;
+      margin-right: 16px;
+      margin-top: 8px;
+      background-image: url(../../file/image/mypic.png);
+      background-size: cover;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
+    .container .user_profile .name {
+      display: flex;
+      flex-direction: column;
+      text-align: end; }
+      .container .user_profile .name h1 {
+        color: #223A59; }
+      .container .user_profile .name h4 {
+        color: #758BA5; }
+    .container .user_profile button {
+      width: 150px;
+      height: 30px;
+      background: #223A59;
+      border-radius: 2px solid #f7f7f7;
+      border-radius: 8px;
+      color: #f7f7f7;
+      margin-top: 16px;
+      margin-right: 28px;
+      transition: all .3s ease; }
+      .container .user_profile button:hover {
+        border: 2px solid #223A59;
+        background: #f7f7f7;
+        color: #223A59; }
 
 /*# sourceMappingURL=profile.css.map */
