@@ -55,6 +55,13 @@ border-radius: 0 0 12px 0;
         }
     }
 
+.profile_active{
+    background: $mainColor;
+    color: $lightColor;
+    img{
+        background: $lightColor;
+    }
+}    
 #profile{
     width: 75%;
     height: 100%;

@@ -6,7 +6,7 @@
        <h4><?php  echo $email ?></h4>
 
        <div class="btn">
-       <button type="submit" id="edit_profile">تعديل الملف الشخصي</button>
+       <button type="submit" id="downloaadcv">  تحميل CV</button>
        <div class="follow">
                <img src="file/icons/star.png" alt="">
                <span>45</span>

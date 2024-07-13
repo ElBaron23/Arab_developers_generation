@@ -195,6 +195,11 @@ h2 {
           color: #f7f7f7; }
           .container .profile_nav ul li:hover img {
             background: #f7f7f7; }
+  .container .profile_active {
+    background: #223A59;
+    color: #f7f7f7; }
+    .container .profile_active img {
+      background: #f7f7f7; }
   .container #profile {
     width: 75%;
     height: 100%; }

@@ -28,41 +28,41 @@ include 'profile/_profile.php';
 
     <div class="profile_nav">
      <ul>
-        <li>
+        <li id="link_profile" class="profile_active">
     <img src="file/icons/profile/utilisateur.png" alt="">
             الملف الشخصي
 
         </li>
-        <li>
+        <li id="profile_setting"> 
             <img src="file/icons/profile/profil.png" alt="">
         اعدادات الملف الشخصي
             
         </li>
-        <li>
+        <li id="account_setting">
         <img src="file/icons/profile/parametres.png" alt="">
             
         اعدادات الحساب
 
         </li>
-        <li>
+        <li id="notification">
         <img src="file/icons/profile/notification.png" alt="">
             
         الاشعارات
 
         </li>
-        <li>
+        <li iid="project">
         <img src="file/icons/profile/gestion-de-projet.png" alt="">
             
         المشاريع
 
         </li>
-        <li>
+        <li id="post">
         <img src="file/icons/profile/nouveau-poste.png" alt="">
             
         منشوراتي
 
         </li>
-        <li>
+        <li id="static">
         <img src="file/icons/profile/roue-dentee.png" alt="">
             
         احصائياتي
@@ -71,6 +71,6 @@ include 'profile/_profile.php';
      </ul>   
     </div>
 </div>    
-
+<script src="js/profile_nav.js"></script>
 </body>
 </html>
