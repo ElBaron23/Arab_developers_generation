@@ -18,16 +18,57 @@
     $email = $_SESSION['data']->email;
 ?>
 <div class="container">
-    <div class="user_profile">
-       
-        <div class="name">
-        <h1><?php echo  $firstname ." ". $lastname ?></h1>
-        <h4><?php  echo $email ?></h4>
-        <button type="submit" id="edit_profile">تعديل الملف الشخصي</button>
-        </div>
-        <div id="photo_profile">
-        </div>
-      
+    
+<?php
+include 'profile/_profile.php';
+?>
+
+ 
+
+
+    <div class="profile_nav">
+     <ul>
+        <li>
+    <img src="file/icons/profile/utilisateur.png" alt="">
+            الملف الشخصي
+
+        </li>
+        <li>
+            <img src="file/icons/profile/profil.png" alt="">
+        اعدادات الملف الشخصي
+            
+        </li>
+        <li>
+        <img src="file/icons/profile/parametres.png" alt="">
+            
+        اعدادات الحساب
+
+        </li>
+        <li>
+        <img src="file/icons/profile/notification.png" alt="">
+            
+        الاشعارات
+
+        </li>
+        <li>
+        <img src="file/icons/profile/gestion-de-projet.png" alt="">
+            
+        المشاريع
+
+        </li>
+        <li>
+        <img src="file/icons/profile/nouveau-poste.png" alt="">
+            
+        منشوراتي
+
+        </li>
+        <li>
+        <img src="file/icons/profile/roue-dentee.png" alt="">
+            
+        احصائياتي
+
+        </li>
+     </ul>   
     </div>
 </div>    
 

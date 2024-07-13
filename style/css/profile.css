@@ -157,47 +157,110 @@ h2 {
 
 .container {
   width: 100%;
-  height: auto; }
-  .container .user_profile {
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    align-items: center;
-    justify-content: end;
+  height: auto;
+  display: flex; }
+  .container .profile_nav {
+    padding-top: 120px;
+    border-radius: 0 0  12px 0;
+    width: 25%;
+    height: 100%;
+    background: #f7f7f7;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
-    width: 100%;
-    height: 120px;
-    background: #f7f7f7; }
-    .container .user_profile #photo_profile {
-      border: 2px solid #223A59;
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      margin-left: 16px;
-      margin-right: 16px;
-      margin-top: 8px;
-      background-image: url(../../file/image/mypic.png);
-      background-size: cover;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
-    .container .user_profile .name {
+    flex-direction: column; }
+    .container .profile_nav ul {
+      width: 100%;
+      list-style: none;
+      align-items: center;
       display: flex;
       flex-direction: column;
-      text-align: end; }
-      .container .user_profile .name h1 {
-        color: #223A59; }
-      .container .user_profile .name h4 {
-        color: #758BA5; }
-    .container .user_profile button {
-      width: 150px;
-      height: 30px;
-      background: #223A59;
-      border-radius: 2px solid #f7f7f7;
-      border-radius: 8px;
-      color: #f7f7f7;
-      margin-top: 16px;
-      margin-right: 28px;
-      transition: all .3s ease; }
-      .container .user_profile button:hover {
+      border-bottom: 1px solid #223A59;
+      border-radius: 0 0 12px 0; }
+      .container .profile_nav ul li {
+        border-radius: 12px;
+        height: 35px;
+        width: 100%;
+        margin-right: 8px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #223A59;
+        transition: all .3s ease;
+        box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.01); }
+        .container .profile_nav ul li img {
+          height: 25px;
+          margin-left: 4px;
+          border-radius: 50%; }
+        .container .profile_nav ul li:hover {
+          background: #223A59;
+          color: #f7f7f7; }
+          .container .profile_nav ul li:hover img {
+            background: #f7f7f7; }
+  .container #profile {
+    width: 75%;
+    height: 100%; }
+    .container #profile .user_profile {
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      align-items: center;
+      justify-content: end;
+      display: flex;
+      width: 100%;
+      height: 120px;
+      background: #f7f7f7; }
+      .container #profile .user_profile #photo_profile {
         border: 2px solid #223A59;
-        background: #f7f7f7;
-        color: #223A59; }
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-top: 8px;
+        background-image: url(../../file/image/mypic.png);
+        background-size: cover;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
+      .container #profile .user_profile .name {
+        display: flex;
+        flex-direction: column;
+        text-align: end; }
+        .container #profile .user_profile .name h1 {
+          color: #223A59; }
+        .container #profile .user_profile .name h4 {
+          color: #758BA5; }
+      .container #profile .user_profile .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-between;
+        height: 40px;
+        width: 300px; }
+        .container #profile .user_profile .btn .follow {
+          width: 80px;
+          display: flex;
+          height: 30px;
+          align-items: center;
+          justify-content: center;
+          border: 2px solid #223A59;
+          border-radius: 8px;
+          cursor: pointer; }
+          .container #profile .user_profile .btn .follow img {
+            height: 30px; }
+          .container #profile .user_profile .btn .follow span {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center; }
+        .container #profile .user_profile .btn button {
+          width: 150px;
+          height: 30px;
+          background: #223A59;
+          border-radius: 2px solid #f7f7f7;
+          border-radius: 8px;
+          color: #f7f7f7;
+          margin-right: 28px;
+          transition: all .3s ease; }
+          .container #profile .user_profile .btn button:hover {
+            border: 2px solid #223A59;
+            background: #f7f7f7;
+            color: #223A59; }
 
 /*# sourceMappingURL=profile.css.map */
