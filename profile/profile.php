@@ -21,27 +21,41 @@
     include '_navbar.php';
 ?>
 <div class="container">
-<div id="profile">
+ <div id="profile">
    <div class="user_profile">
-       
        <div class="name">
-       <h1><?php echo  $firstname ." ". $lastname ?></h1>
-       <h4><?php  echo $email ?></h4>
 
-       <div class="btn">
-       <button type="submit" id="downloaadcv">  تحميل CV</button>
-       <div class="follow">
-               <img src="../file/icons/star.png" alt="">
-               <span>45</span>
+           <h1><?php echo  $firstname ." ". $lastname ?></h1>
+           <h4><?php  echo $email ?></h4>
+
+             <div class="btn">
+              <button type="submit" id="downloaadcv">  تحميل CV</button>
+                <div class="follow">
+                  <img src="../file/icons/star.png" alt="">
+                  <span>45</span>
+                </div>
+
+             </div>
        </div>
-       </div>
-       </div>
-       <div id="photo_profile">
-       </div>
-     
-   </div>
+    <div id="photo_profile">
+  </div>
 </div>
-
+</div>
+<div class="about">
+    <h4>معلومات اكثر:</h4>
+    
+</div>
+<div class="skills">
+    <h4>المصارات التي تتابعها:</h4>
+<div class="skill">
+   لايوجد مسارات الان
+</div>
+<div class="skills">
+    <h4>اللغات البرمجية التي تتابعها:</h4>
+<div class="skill">
+   لايوجد لغات الان
+</div>
+</div>
 </div>    
 </body>
 </html>
