@@ -55,8 +55,9 @@
             background: #f7f7f7; }
 
 #logout {
-  color: #f7f7f7;
-  background: #dc2626;
+  color: #223A59;
+  background: #223A59;
+  border: 2px solid #f7f7f7;
   border-radius: 8px;
   padding: 2px; }
 
@@ -134,12 +135,12 @@ h2 {
             color: #f7f7f7;
             text-decoration: none;
             height: 30px;
-            width: 80%;
+            width: 95%;
             display: flex;
             align-items: center;
             justify-content: center;
             transition: all .3s ease;
-            font-size: 16px; }
+            font-size: 1px; }
             #navbar #nav ul li a:hover {
               color: #223A59;
               background: #f7f7f7; } }
@@ -159,50 +160,10 @@ h2 {
   width: 100%;
   height: auto;
   display: flex; }
-  .container .profile_nav {
-    padding-top: 120px;
-    border-radius: 0 0  12px 0;
-    width: 25%;
-    height: 100%;
-    background: #f7f7f7;
-    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column; }
-    .container .profile_nav ul {
-      width: 100%;
-      list-style: none;
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      border-bottom: 1px solid #223A59;
-      border-radius: 0 0 12px 0; }
-      .container .profile_nav ul li {
-        border-radius: 12px;
-        height: 35px;
-        width: 100%;
-        margin-right: 8px;
-        display: flex;
-        align-items: center;
-        border-bottom: 1px solid #223A59;
-        transition: all .3s ease;
-        box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.01); }
-        .container .profile_nav ul li img {
-          height: 25px;
-          margin-left: 4px;
-          border-radius: 50%; }
-        .container .profile_nav ul li:hover {
-          background: #223A59;
-          color: #f7f7f7; }
-          .container .profile_nav ul li:hover img {
-            background: #f7f7f7; }
-  .container .profile_active {
-    background: #223A59;
-    color: #f7f7f7; }
-    .container .profile_active img {
-      background: #f7f7f7; }
   .container #profile {
-    width: 75%;
-    height: 100%; }
+    width: 100%;
+    height: 100%;
+    display: flex; }
     .container #profile .user_profile {
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
       align-items: center;

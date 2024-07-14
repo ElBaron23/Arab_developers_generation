@@ -4,67 +4,17 @@
     font-family: tajawal;
 }
 @import 'var';
-@import 'navbar';
+@import 'navbar_profile';
 
 .container{
     width: 100%;
     height: auto;
     display: flex;
-    .profile_nav{
-        padding-top: 120px;
-        border-radius:0 0  12px 0;
-        width: 25%;
-        height: 100%;
-        background: $lightColor;
-        box-shadow: 3px 0 10px rgba($color: #000000, $alpha: 0.1);
-        display: flex;
-        flex-direction: column;
-        ul{
-            width: 100%;
-            list-style: none;
-            align-items: center;
-            display: flex;
-            flex-direction: column;
-            border-bottom: 1px solid $mainColor;
-border-radius: 0 0 12px 0;
-            li{
-                img{
-                    height: 25px;
-                    margin-left: 4px;
-                    border-radius: 50%;
 
-                }
-                border-radius:  12px;
-                height: 35px;
-                width: 100%;
-                margin-right: 8px;
-                display: flex;
-                align-items: center;
-                // justify-content: center;
-                border-bottom: 1px solid $mainColor;
-                transition: all .3s ease;
-                box-shadow: 3px 0px 10px rgba($color: #000000, $alpha: 0.01);
-                &:hover{
-                    background: $mainColor;
-                    color: $lightColor;
-                    img{
-                        background: $lightColor;
-                    }
-                }
-            }
-        }
-    }
-
-.profile_active{
-    background: $mainColor;
-    color: $lightColor;
-    img{
-        background: $lightColor;
-    }
-}    
 #profile{
-    width: 75%;
+    width: 100%;
     height: 100%;
+    display: flex;
     .user_profile{
         box-shadow:  0 3px 10px rgba($color: #000000, $alpha: 0.1);
         align-items: center;
@@ -143,6 +93,6 @@ border-radius: 0 0 12px 0;
         
     }
 }
-  
+
    
 }

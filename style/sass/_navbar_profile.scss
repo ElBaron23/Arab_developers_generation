@@ -1,0 +1,176 @@
+#navbar{
+    width: 100%;
+    height: 40px;
+    background: $mainColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    #nav{
+        width: 100%;
+        height: 40px;
+        background: $mainColor;
+        display: flex ;
+        align-items: center;
+        justify-content: center;
+        ul{
+            list-style: none;
+            width: 95%;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            li{
+                margin-left: 16px;
+                height: 100%;
+               width: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.1);
+                a{ 
+                    color: $lightColor;
+                    text-decoration: none;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    width: auto;
+                    justify-content: center;
+                    text-align: center;
+                    transition: all .3s ease;
+                    font-size: 16px;
+                    padding: 2px;
+                    &:hover{
+                        color: $mainColor;
+                        border-radius: 8px;
+                        background: $lightColor;
+                    }
+                }
+            }
+        }
+    }
+}
+#logout{
+    color: $mainColor;
+    background: $mainColor;
+    border: 2px solid $lightColor;
+    border-radius: 8px;
+    padding: 2px;
+}
+h2{
+    display: none;
+}
+.active{
+    color: $mainColor !important; 
+    background: $lightColor !important;
+    border-radius: 8px;
+}
+@media screen and (max-width:725px){
+    h2{
+        display: block;
+        color: $lightColor;
+        font-size: 18px;
+       margin-right: 16px;
+    }
+
+    #navbar{
+        width: 100%;
+        height: 40px;
+        background: $mainColor;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // align-items: center;
+        // justify-content: center;
+        position: relative;
+        #toggle_btn{
+            margin-left: 16px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            justify-content: space-around;
+            transition: all .3s ease;
+
+         
+          
+            span{
+                transition: all .3s ease;
+                width: 40px;
+                height: 4px;
+                border-radius: 4px;
+                background: $lightColor;
+                
+            }
+        }
+        #nav{
+            position: absolute;
+            left: 0px;
+            top: 40px;
+            width: 40%;
+            height: 350px;
+            background: $mainColor;
+            display: none;
+            align-items: center;
+            flex-direction: column;
+            transition: all .3s ease;
+            border-radius: 0  0 12px 0;
+            ul{
+                display: flex;
+                list-style: none;
+                flex-direction: column;
+                width: 100%;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                li{
+                    margin-top: 4px;
+                    margin-bottom: 4px;
+                    margin-left: 16px;
+                    width:  100%;
+                    height: 40px;
+                    display: flex;
+                    border-bottom: 1px solid $lightColor;
+                    align-items: center;
+                    justify-content: center;
+                    box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.1);
+                    a{ 
+                        color: $lightColor;
+                        text-decoration: none;
+                        height: 30px;
+                        width: 95%;
+                        display: flex;
+                       align-items: center;
+                       justify-content: center;
+                        transition: all .3s ease;
+                        font-size: 1px;
+                        &:hover{
+                            color: $mainColor;
+                            background: $lightColor;
+                        }
+                    }
+                }
+            }
+        }
+    
+    }  
+}
+.show_nav{
+     display: flex !important; 
+}
+.toggle{
+    :nth-child(3){
+        rotate: 45deg !important;
+        position: absolute !important;
+        }
+       :nth-child(1){
+        rotate: -45deg !important;
+        position: absolute !important;
+        }
+       :nth-child(2){
+       display: none !important;
+        }
+}
