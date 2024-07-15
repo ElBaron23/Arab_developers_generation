@@ -21,7 +21,7 @@
     justify-content: center; }
     #navbar #nav ul {
       list-style: none;
-      width: 90%;
+      width: 95%;
       height: 60px;
       display: flex;
       align-items: center;
@@ -38,7 +38,7 @@
           color: #f7f7f7;
           text-decoration: none;
           padding: 7px;
-          width: fit-content;
+          width: auto;
           display: flex;
           border-radius: 7px;
           align-items: center;
@@ -62,7 +62,7 @@ h2 {
   background: #f00000 !important;
   color: #fff !important; }
 
-@media screen and (max-width: 725px) {
+@media screen and (max-width: 835px) {
   h2 {
     display: block;
     color: #f7f7f7;
@@ -266,5 +266,104 @@ h2 {
       border-radius: 12px;
       background: #758BA5;
       margin-top: 16px; }
+
+/*
+******************************************
+******************************************
+
+import file profile style here ;
+*/
+@font-face {
+  font-family: tajawal;
+  src: url(../../font/Tajawal-Regular.ttf); }
+#edit_profile2 {
+  padding-top: 16px;
+  width: 100%;
+  height: auto;
+  background: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  #edit_profile2 .text_head {
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 95%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    #edit_profile2 .text_head h4 {
+      color: #223A59;
+      font-size: 18px; }
+    #edit_profile2 .text_head button {
+      width: 120px;
+      height: 35px;
+      background: #223A59;
+      border-radius: 8px;
+      color: #f7f7f7;
+      outline: none;
+      border: 2px solid #f7f7f7;
+      transition: all .3s ease; }
+      #edit_profile2 .text_head button:hover {
+        background: #f7f7f7;
+        color: #223A59;
+        border: 2px solid #223A59; }
+  #edit_profile2 .upload_photo {
+    margin-top: 16px;
+    width: 95%;
+    height: 200px;
+    display: flex; }
+    #edit_profile2 .upload_photo #yourPhoto {
+      width: 100px;
+      height: 100px;
+      border: 2px solid #223A59;
+      border-radius: 8px; }
+      #edit_profile2 .upload_photo #yourPhoto img {
+        width: 95%;
+        height: 95%; }
+    #edit_profile2 .upload_photo .input_photo {
+      display: flex;
+      flex-direction: column;
+      height: 100px;
+      margin-right: 16px;
+      justify-content: center; }
+      #edit_profile2 .upload_photo .input_photo #inputFile {
+        display: none; }
+      #edit_profile2 .upload_photo .input_photo .custom_upload_file {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #f7f7f7;
+        background: #3684DB;
+        height: 35px;
+        width: 100px;
+        border-radius: 8px;
+        transition: all .3s ease;
+        border: 2px solid #f7f7f7; }
+        #edit_profile2 .upload_photo .input_photo .custom_upload_file:hover {
+          background: #f7f7f7;
+          color: #3684DB;
+          border: 2px solid #3684DB; }
+      #edit_profile2 .upload_photo .input_photo #delete_photo {
+        width: 100px;
+        height: 35px;
+        color: #f7f7f7;
+        background: #dc2626;
+        margin-top: 16px;
+        border-radius: 8px;
+        outline: none;
+        border: 2px solid #f7f7f7;
+        transition: all .3s ease; }
+        #edit_profile2 .upload_photo .input_photo #delete_photo:hover {
+          background: #f7f7f7;
+          color: #dc2626;
+          border: 2px solid #dc2626; }
+
+/*
+
+******************************************
+******************************************
+*/
 
 /*# sourceMappingURL=profile.css.map */

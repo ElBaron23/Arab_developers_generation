@@ -13,7 +13,7 @@ let elements = [
   
   if (url.includes('profile.php')) {
     elements[0].classList.add('active');
-  } else if (url.includes('prfoile_setting.php')) {
+  } else if (url.includes('profile_setting.php')) {
     elements[1].classList.add('active');
   } else if (url.includes('account_setting.php')) {
     elements[2].classList.add('active');
