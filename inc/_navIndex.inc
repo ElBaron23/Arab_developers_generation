@@ -1,12 +1,16 @@
+<?php
+include 'init.php';
+?>
+    <link rel="stylesheet" href="<?=$nav?>">
  <!-- start navbar -->
         <nav>
 
             <div class="logo">
                 <div class="logo_img">
-                    <a href="index.php"></a>
+                    <a href="<?=$indexP?>"></a>
                 </div>
                 <h1>
-                <a href="index.php">
+                <a href="<?=$indexP?>">
                     الجيل البرمجي العربي
                 </a>
                 </h1>
@@ -15,11 +19,11 @@
              <!-- بداية ازرار تنقل -->
            <ul>
             <li>
-                <a href="index.php">
+                <a href="<?=$indexP?>">
                 الرئيسة
                 </a>
             </li>
-            <li> <a href="contact_us.php">
+            <li> <a href="<?=$contact?>">
                 اتصال بنا
             </a></li>
            </ul>
@@ -39,3 +43,14 @@
              
         </nav>
          <!-- end navbar -->
+
+
+
+
+
+
+
+
+
+
+

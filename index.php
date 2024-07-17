@@ -1,17 +1,22 @@
+<?php
+include 'inc/init.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="file/image/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="style/css/index.css">
+    <link rel="stylesheet" href="<?=$index?>">
+    <link rel="stylesheet" href="<?=$nav2?>">
+    <link rel="stylesheet" href="<?=$scrollbar?>">
     <title>الجيل البرمجي العربي</title>
 </head>
 <body dir="rtl">
 <!-- start header  -->
 <header>
         <?php
-            include 'inc/_navIndex.inc';
+            include $navIndex2;
         ?>
          
            <!-- start hero  -->
@@ -29,7 +34,7 @@
             البرمجة وايضا تمارين وامتحانات
              في مختلف لغات البرمجية .
             </h4>
-            <a href="register.php" class="btn_hero">
+            <a href="<?=$reg?>" class="btn_hero">
                 انضم الينا
             </a>
         </div>
@@ -192,7 +197,7 @@
  </section>
  <!-- end section all lang -->
 <?php
-include 'inc/_footer.php'
+include $footer2;
 ?>
 
 </body>

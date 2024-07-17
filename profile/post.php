@@ -1,6 +1,8 @@
 <?php 
     session_start();
-    include '../inc/if_not_regi.php';
+include '../inc/init.php';
+
+    include $if_not_reg;
      
     $firstname = $_SESSION['data']->firstname;
     $lastname  = $_SESSION['data']->lastname;
@@ -10,14 +12,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../style/css/profile.css">
+    <link rel="stylesheet" href="<?=$profile?>">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>المنشورات</title>
 </head>
 <body dir="rtl">
 <?php
-    include '_navbar.php';
+    include $_nav;
 ?>  
 </body>
 </html>

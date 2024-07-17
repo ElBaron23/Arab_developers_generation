@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: tajawal;
+}
+@import 'var';
+
+body{
+    align-items: center;
+    justify-content: center;
+width: 100%;
+height: 100vh;
+display: flex;
+background: $lightColor3;
+}
+
+//import style of nav bar******************
+@import 'nav';
+
+
+#main{
+width:calc(98% - 60px);
+height: 90%;
+border-radius: 12px;
+background: $lightColor2;
+border: 2px solid $secondColor;
+margin-left: 5px;
+}

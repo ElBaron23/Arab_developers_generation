@@ -4,32 +4,28 @@
      https://github.com/AHMED1CB
 ****************************************************************
 */
-
 let passwordInput1 = document.getElementById('pass1');
 let passwordInput2 = document.getElementById('pass2');
-
 let errorPos =       document.getElementById('errs')
-
 let register =       document.getElementById('reg');
-
 let firstName=       document.getElementById('fn') ;
 let lastName=        document.getElementById('ln') ;
 let email =          document.getElementById('email');
-
-
 passwordInput1.addEventListener('keyup' , (e)=>{
 if (e.target.value.length <= 8){
-passwordInput1.style.borderColor = '#dc2626';
+passwordInput1.style.borderColor = '#87870e';
 }else{
-passwordInput1.style.borderColor = '#65a30d';
+passwordInput1.style.borderColor = '#0ff';
 }
 })
 //        
 passwordInput1.addEventListener('focus' , (e)=>{
-if (e.target.value.length !== 0 && e.target.value.length <= 8 ){
+if (e.target.value.length !== 0){
+if (e.target.value.length <= 8){
 passwordInput1.style.borderColor = '#87870e';
 }else{
 passwordInput1.style.borderColor = '#0ff';
+}
 }
 })
 //      
@@ -67,11 +63,7 @@ passwordInput2.style.borderColor = '#890e0e';
 })     
 passwordInput2.addEventListener('blur' , (e)=>{
 passwordInput2.style.borderColor = 'transparent';
-
-})
-//     
-
-//       
+})   
 register.addEventListener('submit' , (e) =>{
 if (passwordInput1.value.trim() !== ''){
 if (passwordInput1.value.length>=8 ){

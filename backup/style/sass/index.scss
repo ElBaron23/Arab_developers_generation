@@ -1,0 +1,680 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: tajawal;
+}
+@import 'var';
+@import 'navIndex';
+//start header 
+header{
+    width: 100%;
+    height: 100vh;
+    background-image:url(../../file/image/bg_index.jpg);
+    background-size: cover;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    .hero{
+        width: 100%;
+        height: calc(100% - 40px);
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        h1{
+            color:$lightColor2 ;
+            margin-bottom: 16px;
+            font-size: 32px;
+        }
+        h4{
+            color: $lightColor;
+            width: 70%;
+        }
+        .btn_hero{
+           width: 120px;
+           height: 39px;
+           background: $lightColor; 
+           text-decoration: none;
+           text-align: center;
+           border-radius: 12px;
+           color: $mainColor;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           margin-top: 16px;
+           border: 2px solid $lightColor3;
+           transition: all .4s ease;
+           &:hover{
+            box-shadow: 0 0px 10px $lightColor2;
+           }
+        }
+    }
+}
+
+//end header
+
+//start section all_lang********************************************
+#all_lang{
+    width: 100%;
+    height: 300px;
+    background: $darkColor;
+    box-shadow: 0 -6px 10px $darkColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .all_lang_text{
+        width: 60%;
+        display: flex;
+        p{
+            width: 100%;
+            color: $lightColor;
+            font-size: 16px;
+        }
+    }
+    .strok_lang{
+        width: 40%;
+        height: 100%;
+        position: relative;
+        .position1{
+            top: 120px;
+            left: 10px;
+        }
+        .position2{
+            top: 68px;
+            left: 70px;
+        }
+        .position3{
+            top: 12px;
+            left: 12px;
+        }
+        .position4{
+            top: 172px;
+            left: 71px;
+        }
+        .position5{
+            top: 122px;
+            left: 130px;
+        }
+        .position6{
+            top: 15px;
+            left: 128px;
+        }
+        .position7{
+            top: 175px;
+            left: 186px;
+        }
+        .position8{
+            top: 80px;
+            left: 185px;
+        }
+        .position9{
+            top: 225px;
+            left: 137px;
+        }
+        .lang_icon{
+            position: absolute;
+            width: 70px;
+            height: 70px;           
+            box-shadow: 0 1px 10px rgba($color: #ffffff, $alpha: 1);
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            rotate: 45deg;
+            border-radius: 25px;
+            transition: all .4s ease;
+            &:hover{
+                rotate: 90deg;
+                img{
+                    rotate: -90deg;
+                }
+            }
+            img{
+            transition: all .4s ease;
+                width: 50px;
+                rotate: -45deg;
+                border-radius: 22%;
+            }
+        }  
+        .lang_icon2{
+            position: absolute;
+            width: 50px;
+            height: 50px;           
+            box-shadow: 0 1px 10px rgba($color: #ffffff, $alpha: 1);
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            rotate: 45deg;
+            border-radius: 12px;
+            transition: all .4s ease;
+            &:hover{
+                rotate: 90deg;
+            }          
+        }
+    }
+}
+//end section all_lang**********************************************
+//start section exam***********************************************
+#exam{
+    width: 100%;
+    height: 300px;
+    background: $mainColor;
+    box-shadow: 0 -6px 10px $mainColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2{
+        color: $lightColor;
+        margin-top: 8px;
+    }
+    .exam_box{
+    width: 100%;
+    height: calc(100% - 40px);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+        .container_exam{
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 45%;
+            /*Here we set the  height according to the content*/
+            height:fit-content !important;
+            border: 2px solid #f7f7f7;
+            border-radius: 12px;
+            position: relative;
+            transition: all ease .3s;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      justify-content: center;;
+      align-items: center;
+      line-height: 2;
+            &:hover{
+               scale: 1.05;
+            }
+            &::after{
+                content: '';
+        position: absolute;
+        background: transparent;
+        border: 1px solid #f7f7f7;
+        width: 100%;
+        border-radius: 12px;
+        z-index: 0;
+        rotate: -5deg;
+        /*Here i Made Height 100% full */
+        height: 100%;
+       transition: 0.5s;
+            }
+            h4{
+                color: $lightColor2;
+                font-size: 18px;
+            }
+            p{
+                color: $lightColor;
+                margin: 8px;
+            }
+        }
+    }
+}
+#exam .exam_box .container_exam:hover::after {
+    /*reset Rotate To create nice animation on hover*/
+      rotate: 0deg !important;
+  }  
+//end section exam***************************************************
+
+//start section brunch*****************************************
+#brunch{
+    width: 100%;
+    height: 200px;
+    background:$darkColor;
+    box-shadow: 0 -6px 10px $darkColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2{
+        color: $lightColor;
+    }
+    .brunch_box{
+        margin-top: 16px;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .brunch_container{
+            cursor: pointer;
+            border: 1px solid $lightColor;
+            display: flex;
+            align-items: center;
+            width: 200px;
+            height: 39px;
+            border-radius: 12px;
+            box-shadow: 0 0 6px rgba($color: #fffbfb, $alpha: 0.1);
+            .div_img{
+                width: 35px;
+                height: 35px ;
+                border-radius: 50%;
+                margin-left: 8px ;
+                margin-right: 8px ;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                img{
+                   width: 30px;
+                   height: 30px;
+                }
+            }
+           
+            h5{
+                color: $lightColor;
+            }
+        }
+    }
+}
+//end section brunch*****************************************
+// start section apk****************************************
+#apk{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../../file/image/bg_index2.jpg);
+    background-size: cover;
+    box-shadow:  0 -6px 10px $darkColor;
+    .mobile{
+        width: 50%;
+        height: 100%;
+        .phone{
+            width: 300px;
+            height: 400px;
+            position: relative;
+            img{
+                height: 100%;
+                width: 100%;
+            }
+         #scren{
+            position: absolute;
+            width: 168px;
+            height: 350px;
+            left: 41px;
+            top: 6px;
+         }
+    
+        }
+    }
+    .text{
+        width: 50%;
+        height: 100%;
+        background: rgba($color: #223A59, $alpha: 0.8);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 30px 0 20px rgba($color: #223A59, $alpha: 0.8);
+        h1{
+            color: $lightColor;
+            width: 200px;
+            font-size: 20px;
+        }
+        h4{
+            color: $secondColor;
+            width: 200px;
+            font-size: 14px;
+        }
+        img{
+            width: 150px;
+        }
+    }
+}
+//end section apk*************************************************
+//start section faq*****************************************
+
+#faq{
+    width: 100%;
+    height: 500px;
+    background: $mainColor;
+    box-shadow: 0 -6px 10px $mainColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    h2{
+        margin-top: 16px;
+        color: $lightColor;
+    }
+    .span_left{
+        width: 80%;
+        height: 2px;
+        background: $lightColor;
+        border-radius: 10px;
+        margin-top: 8px;
+      align-self: flex-end;
+    }
+    .span_right{
+        border-radius: 10px;
+
+        margin-top: 8px;
+        width: 80%;
+        height: 2px;
+        background: $lightColor;
+      align-self: flex-start;
+    }
+    .box1{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        h3{
+            color: $lightColor;
+        }
+        .box1_img{
+            height: 80px;
+            width: 100px;
+            border-radius: 10px;
+            border: 1px solid $lightColor;
+            margin:16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                width: 95%;
+                height: 95%;
+            }
+        }
+    }
+}
+//end section faq*****************************************
+
+@media screen and (max-width:600px){
+//start section exam***********************************************
+#exam{
+    width: 100%;
+    height: auto;
+    padding-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2{
+        color: $lightColor;
+        margin-top: 8px;
+    }
+    .exam_box{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+        .container_exam{
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 40%;
+            height: 180px;
+            border:  2px solid $lightColor;
+            border-radius: 12px;
+            position: relative;
+            transition: all ease .3s;
+            &:hover{
+               scale: 1.05;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                background: transparent;
+                border: 1px solid $lightColor;
+                width: 100%;
+                border-radius: 12px ;
+                z-index: 0;
+                rotate: -5deg;
+                height: 180px;
+            }
+            h4{
+                color: $lightColor2;
+                font-size: 16px;
+            }
+            p{
+                color: $lightColor;
+                margin: 8px;
+            }
+        }
+    }
+}
+//end section exam***************************************************
+}
+@media screen and (max-width:500px){
+//start section exam***********************************************
+#exam{
+    width: 100%;
+    height: auto;
+    padding-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2{
+        color: $lightColor;
+        margin-top: 8px;
+    }
+    .exam_box{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+        .container_exam{
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            height: 180px;
+            margin-top: 20px;
+            margin-bottom: 16px;
+            border:  2px solid $lightColor;
+            border-radius: 12px;
+            position: relative;
+            transition: all ease .3s;
+            &:hover{
+               scale: 1.05;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                background: transparent;
+                border: 1px solid $lightColor;
+                width: 100%;
+                border-radius: 12px ;
+                z-index: 0;
+                rotate: -5deg;
+                height: 180px;
+            }
+            h4{
+                color: $lightColor2;
+                font-size: 16px;
+            }
+            p{
+                color: $lightColor;
+                margin: 8px;
+            }
+        }
+    }
+}
+//end section exam***************************************************
+// start section apk****************************************
+#apk{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../../file/image/bg_index2.jpg);
+    background-size: cover;
+    box-shadow:  0 -6px 10px $darkColor;
+    .mobile{
+        width: 50%;
+        height: 100%;
+        display: none;
+       
+    }
+    .text{
+        width: 100%;
+        height: 100%;
+        background: rgba($color: #223A59, $alpha: 0.8);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 30px 0 20px rgba($color: #223A59, $alpha: 0.8);
+        h1{
+            color: $lightColor;
+            width: 200px;
+            font-size: 20px;
+        }
+        h4{
+            color: $secondColor;
+            width: 200px;
+            font-size: 14px;
+        }
+        img{
+            width: 200px;
+            height: 100px;
+           
+        }
+    }
+}
+//end section apk*************************************************
+
+}
+@media screen and (max-width:420px){
+//start section brunch*****************************************
+#brunch{
+    width: 100%;
+    height: auto;
+    background:$darkColor;
+    box-shadow: 0 -6px 10px $darkColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2{
+        color: $lightColor;
+    }
+    .brunch_box{
+        margin-top: 16px;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        .brunch_container{
+            cursor: pointer;
+            border: 1px solid $lightColor;
+            display: flex;
+            align-items: center;
+            width: 95%;
+            height: 50px;
+            border-radius: 12px;
+            margin: 8px;
+            box-shadow: 0 0 6px rgba($color: #fffbfb, $alpha: 0.1);
+            .div_img{
+                width: 35px;
+                height: 35px ;
+                border-radius: 50%;
+                margin-left: 8px ;
+                margin-right: 8px ;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                img{
+                   width: 30px;
+                   height: 30px;
+                }
+            }
+           
+            h5{
+                color: $lightColor;
+            }
+        }
+    }
+}
+//end section brunch**************************************
+//start section faq*****************************************
+
+#faq{
+    width: 100%;
+    height: 500px;
+    background: $mainColor;
+    box-shadow: 0 -6px 10px $mainColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    h2{
+        margin-top: 16px;
+        color: $lightColor;
+    }
+    .span_left{
+        width: 80%;
+        height: 2px;
+        background: $lightColor;
+        border-radius: 10px;
+        margin-top: 8px;
+      align-self: flex-end;
+    }
+    .span_right{
+        border-radius: 10px;
+
+        margin-top: 8px;
+        width: 80%;
+        height: 2px;
+        background: $lightColor;
+      align-self: flex-start;
+    }
+    .box1{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        h3{
+            color: $lightColor;
+            font-size: 16px;
+        }
+        .box1_img{
+            height: 50px;
+            width: 60px;
+            border-radius: 10px;
+            border: 1px solid $lightColor;
+            margin:16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                width: 95%;
+                height: 95%;
+            }
+        }
+    }
+}
+//end section faq*****************************************
+}
+::-webkit-scrollbar{
+    width: 12px;
+    }
+    ::-webkit-scrollbar-track{
+    background: #223a59cc;
+    }
+    ::-webkit-scrollbar-thumb{
+    background: #B3D6F955;
+    }
+@import 'footer'

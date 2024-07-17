@@ -1,0 +1,293 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: tajawal;
+}
+@import 'var';
+@import 'navbar';
+
+//start section hello;
+
+/*
+في ملف home.css قمت بعمل تعديلات
+-body
+قمت باضه له خلفيه 
+------------
+-navbar 
+جعلت الheight من 40 الي 60 
+وطبعا ال ul اللتي بداخله جعلتها نفس العرض
+------------
+-nav
+قمت بالتعديل عليه في الشاشات الصغيره ليكون متناسبا معها عند الفتح
+------------
+-hello section
+لم يكن في البدايه متجاوب لكن قمت باضافه تعديلات عليه حتي اصبح متجاول وداخله الصوره قمت بازاله منها الخلفيه 
+------------
+-Road section
+قمت بتعديل ال height في كل road1 وايضا قمت بالتعديل عليه في الشاشات الصغيره ليكون كل road1 column 
+------------
+end home.css
+
+*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: tajawal; }
+  
+  body{
+  height: fit-content;
+  background: $lightColor;
+  }
+
+  #hello {
+    height: 100vh;
+    background: #f2f3f4; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  align-items: center;
+  }
+    #hello .hello_img {
+  flex-basis: 30%;
+      padding: 0 20px
+    }
+  
+  @media (max-width: 992px) {
+  #hello .hello_img {
+  flex-basis: 100%;
+  padding: 0 20px;
+   text-align: center;
+    }
+    #hello{
+  height: fit-content;
+  
+    }
+    #hello .hello_text {
+  padding: 0 20px !important;
+  margin: 0  !important;
+  
+  }
+  }
+  
+  
+  
+      #hello .hello_img img {
+  
+        width: 80%;
+        max-width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 0 10 rgba(0, 0, 0, 0.1); 
+  mix-blend-mode: darken;
+      }
+    #hello .hello_text {
+      flex-basis: 60%;
+      margin-right: 16px; 
+  padding:0 20px ;
+  line-height: 2;
+  height: fit-content
+    }
+  
+      #hello .hello_text h1 {
+        color: #223A59;
+        font-size: 40px; }
+      #hello .hello_text p {
+        margin-top: 16px;
+      text-align: justify;
+        color: #031930;
+        font-size: 16px;
+        word-spacing: 2px; 
+        width: 100%;
+      }
+  
+  @media screen and (max-width: 992px) {
+    #hello {
+      height: fit-content !important;
+  padding: 30px;
+    }
+      #hello .hello_img {
+  flex-basis: 100%;
+  height: 70%;
+      text-align: center;
+      }
+        #hello .hello_img img {
+            border-radius: 12px;
+     margin: auto;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);     
+  width: 70%;
+  
+  }
+     
+      #hello .hello_text {
+  flex-basis: 100%;
+  height: fit-content;
+  text-align: center;
+   }
+        #hello .hello_text h1 {
+          color: #223A59;
+      padding: 0;
+          font-size: 40px; }
+        #hello .hello_text p {
+          margin-top: 16px;
+            color: #031930;
+          font-size: 16px;
+          word-spacing: 2px; 
+                } }
+  
+  
+  #road {
+    width: 100%;
+    height: fit-content;
+    background: #f2f3f4;
+    padding: 80px 0;
+    margin: 80px 0;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  #road img{
+  mix-blend-mode: darken;
+   
+  }
+    #road h1 {
+      font-size: 29px;
+      color: #223A59;
+      margin:16px;
+    }
+    #road p {
+      margin-right: 16px;
+      width: 80%;
+      margin-bottom: 16px; 
+      line-height: 2;
+      text-align: justify !important;
+    }
+    #road .road1 {
+  margin-bottom: 20px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      height: fit-content !important;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+  
+       }
+      #road .road1 .description {
+        width: 60%; 
+      padding: 20px;
+    
+      }
+        #road .road1 .description h1 {
+          font-size: 24px;
+          color: #031930; }
+        #road .road1 .description p {
+          font-size: 17px;
+          color: #121212; 
+        }
+        #road .road1 .description button {
+          width: 120px;
+          height: 30px;
+  cursor: pointer;
+          border-radius: 8px;
+          border: 2px solid #f7f7f7;
+          color: #f7f7f7;
+          background: #223A59;
+          transition: all 0.3s ease;
+          margin-bottom: 8px; }
+          #road .road1 .description button:hover {
+            border: 2px solid #223A59;
+            background: #f7f7f7;
+            color: #223A59; }
+      #road .road1 img {
+        height: 90%;
+        width: 30%;
+        border-radius: 12px;
+        box-shadow: 0 0 23px 5px rgba($color: #000000, $alpha: 0.1) }
+        /*road info styling*/
+  #road .info{
+  margin-bottom: 40px;
+  width: 100%
+  }
+  .info p{
+  width: 100%;
+  }
+  @media screen and (max-width: 767px) {
+    #road {
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 -6px 10px rgba(0, 0, 0, 0.1); }
+    #road h1  , #road p{
+    text-align: center !important;
+    }
+      #road .road1 {
+        width: 100%;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around; 
+      }
+      #road .road1 img{
+  margin: 10px 0 !important;
+  width: 40%
+      }
+        #road .road1 .description button {
+  display: block !important;
+  width: 200px !important;
+  margin: auto !important;
+  }
+  
+        #road .road1 .description {
+          width: 80%;
+          display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center; }
+          #road .road1 .description h1 {
+            font-size: 24px;
+            color: #031930; }
+          #road .road1 .description p {
+            font-size: 16px;
+            color: #121212; 
+          }
+          #road .road1 .description #foundation {
+            width: 120px;
+            height: 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 2px solid #f7f7f7;
+            color: #f7f7f7;
+            background: #223A59;
+            transition: all 0.3s ease; }
+            #road .road1 .description #foundation:hover {
+              border: 2px solid #223A59;
+              background: #f7f7f7;
+              color: #223A59; }
+        #road .road1 img {
+          height: 90%;
+          border-radius: 12px;
+          box-shadow: -6px 0 10px rgba(0, 0, 0, 0.1); } }
+  
+  /*# sourceMappingURL=home.css.map */
+  
+  @media (min-width: 720px) and (max-width: 870px){
+  #nav ul{
+  width: 50% !important ;
+  }
+  #nav ul li {
+  padding: 0 !important;
+  }
+  } 
+  
+  #road img{
+  margin: 40px 0;
+  }
+  
+  img{
+  object-fit: cover !important;
+  max-width: 100%;
+  }
+  
+  
+  

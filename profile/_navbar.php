@@ -1,3 +1,6 @@
+<?php 
+include '../inc/init.php';
+ ?>
 <div id="navbar">
 <h2>الجيل البرمجي العربي</h2>
 <div id="toggle_btn" >
@@ -9,18 +12,18 @@
   
     <ul>
     <li> <a href="profile.php" id="profile" class="active">الملف الشخصي</a></li>
-        <li> <a href="profile_setting.php" id="edit_profile"> اعدادات الملف الشخصي</a></li>
-        <li> <a href="account_setting.php" id="edit_account">  الحساب</a></li>
-        <li> <a href="notification.php" id="notification"> الاشعارات</a></li>
-        <li> <a href="post.php" id="post">المنشورات</a></li>
-        <li> <a href="project.php" id="project">المشاريع</a></li>
-        <li> <a href="static.php" id="static">الاحصائيات</a></li>
-        <li> <a href="../home.php" id="logout"> العودة</a></li>
+        <li> <a href="<?=$profileS?>" id="edit_profile"> اعدادات الملف الشخصي</a></li>
+        <li> <a href="<?=$accountS?>" id="edit_account">  الحساب</a></li>
+        <li> <a href="<?=$notification?>" id="notification"> الاشعارات</a></li>
+        <li> <a href="<?=$post?>" id="post">المنشورات</a></li>
+        <li> <a href="<?=$project?>" id="project">المشاريع</a></li>
+        <li> <a href="<?=$static?>" id="static">الاحصائيات</a></li>
+        <li> <a href="<?=$homeP?>" id="logout"> العودة</a></li>
        
     </ul>
     </div>
 </div>
-<script src="../js/add_remove_active_profile.js">
+<script src="<?=$toggleMenu?>">
 </script>
-<script src="../js/toggle_btn_nav.js">
+<script src="<?=$toggleClassProfile?>">
 </script>

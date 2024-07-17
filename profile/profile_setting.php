@@ -1,6 +1,7 @@
 <?php 
     session_start();
-    include '../inc/if_not_regi.php';
+include '../inc/init.php';
+    include $if_not_reg;
      
     $firstname = $_SESSION['data']->firstname;
     $lastname  = $_SESSION['data']->lastname;
@@ -10,7 +11,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../style/css/profile.css">
+    <link rel="stylesheet" href="<?=$profile?>">
     <link rel="shortcut icon" href="../file/image/support.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>اعدادات الملف الشخصي</title>
@@ -28,9 +29,9 @@
     <button type="submit" name="SaveChange">حفظ التغيرات</button>
 </div>
 <!-- هنا مكان رفع الصورة الشخصية -->
- <h4 class="h4_edit_profile">تغيير الصورة الشخصية:</h4>
  <div class="upload_photo">
     <div id="yourPhoto"></div>
+
     <div class="input_photo">
         <label for="inputFile" class="custom_upload_file">اختر الصورة</label>
         <input type="file" id="inputFile" accept="image/*">
@@ -67,9 +68,7 @@
                 })
         </script>
     </div>
-
- </div>
- <h4 class="h4_edit_profile">
+    <h4 class="h4_edit_profile">
     تعديل البيانات الشخصية:
  </h4>
  <div class="edit_container">
@@ -104,6 +103,7 @@
      <input type="text" name="new_PhoneNumber" placeholder="   موقعك الشخصي" class="edit_input">
    
    </div>
+ </div>
  </div>
 </form>
 </body>
