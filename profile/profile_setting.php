@@ -1,4 +1,6 @@
 <?php 
+
+
     session_start();
 include '../inc/init.php';
     include $if_not_reg;
