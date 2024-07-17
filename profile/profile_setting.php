@@ -21,7 +21,7 @@ include '../inc/init.php';
 <body  dir="rtl">
 <!-- استدعاء ملف الناف بار هنا -->
 <?php
-    include '_navbar.php';
+    include $_nav;
 ?>
 <!-- //هنا حقول تعديل الملف الشخصي -->
 <form  method="post" id="edit_profile2">
