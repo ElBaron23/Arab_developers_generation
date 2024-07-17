@@ -20,14 +20,6 @@ include $navIndex
         ?>
     </header>
  
-    <main>
-       
-                    <h1 style="color:#fff; width:90%;"> حدث خطا  ما او ان الصفحة تحت تطوير يمكن الرجوع اليها في وقت لااحق
-                        يعمل الفريق على انهائها
-                    </h1>
-
-
-    </main>
 
     <?php
     include $footer
