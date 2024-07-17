@@ -37,11 +37,12 @@
         }
 
     }
+   
     ////تخصيص مكان رفع الصورة
     .upload_photo{
         margin-top: 16px;
         width: 95%;
-        height: 200px;
+        height: 100px;
         display: flex;
         #yourPhoto{
             width: 100px;
@@ -98,4 +99,43 @@
         }
     }
 
+}
+.h4_edit_profile{
+    color: $darkColor;
+    align-self: flex-start;
+    width: 95%;
+    margin: 16px;
+}
+.edit_container{
+    margin-top: 16px;
+    width: 95%;
+    height: auto;
+    display: flex;
+    .edit_box{
+        margin-left: 16px;
+        width: 120px;
+        height: 65px;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        #gender{
+            width: 120px;
+            height: 35px;
+            border: 2px solid $mainColor;
+            border-radius: 8px;
+            background: transparent;
+        
+        }
+        h5{
+            height: 30px;
+            margin-right: 6px;
+        }
+        .edit_input{
+            height: 35px;
+            width: 120px;
+            border: 2px solid $mainColor;
+            border-radius: 8px;
+            background: transparent;
+        }
+    }
 }

@@ -312,7 +312,7 @@ import file profile style here ;
   #edit_profile2 .upload_photo {
     margin-top: 16px;
     width: 95%;
-    height: 200px;
+    height: 100px;
     display: flex; }
     #edit_profile2 .upload_photo #yourPhoto {
       width: 100px;
@@ -359,6 +359,40 @@ import file profile style here ;
           background: #f7f7f7;
           color: #dc2626;
           border: 2px solid #dc2626; }
+
+.h4_edit_profile {
+  color: #031930;
+  align-self: flex-start;
+  width: 95%;
+  margin: 16px; }
+
+.edit_container {
+  margin-top: 16px;
+  width: 95%;
+  height: auto;
+  display: flex; }
+  .edit_container .edit_box {
+    margin-left: 16px;
+    width: 120px;
+    height: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center; }
+    .edit_container .edit_box #gender {
+      width: 120px;
+      height: 35px;
+      border: 2px solid #223A59;
+      border-radius: 8px;
+      background: transparent; }
+    .edit_container .edit_box h5 {
+      height: 30px;
+      margin-right: 6px; }
+    .edit_container .edit_box .edit_input {
+      height: 35px;
+      width: 120px;
+      border: 2px solid #223A59;
+      border-radius: 8px;
+      background: transparent; }
 
 /*
 
