@@ -4,8 +4,8 @@
 <head>
     <?php 
     session_start();
-    include '../inc/if_not_regi.php';
-     
+    include '../inc/init.php';
+     include $if_not_reg;
     $firstname = $_SESSION['data']->firstname;
     $lastname  = $_SESSION['data']->lastname;
     $email = $_SESSION['data']->email;
@@ -18,7 +18,7 @@
 </head>
 <body dir="rtl">
 <?php
-    include '_navbar.php';
+    include $_nav;
 ?>
 <div class="container">
  <div id="profile">
