@@ -22,6 +22,7 @@ include '../inc/init.php';
         font: 20px Helvetica, sans-serif; color: #fff; 
       }
       .links{
+text-decoration: none;
         
       }
       #img360 {
