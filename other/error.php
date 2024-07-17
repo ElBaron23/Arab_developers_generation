@@ -20,6 +20,11 @@ include $navIndex
         ?>
     </header>
  
+    <img id="img360" src="images/icon-white.png">
+    <h1>نعتذر يتم تجهيز هذه الصفحة الان</h1>
+    <h2>يمكنك الرجوع فيما بعد او العودة للصفحة الرئيسية
+        <a href="<?=$indexP?>">الصفحة الرئيسية</a>
+    </h2>
 
     <?php
     include $footer
