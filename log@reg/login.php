@@ -2,6 +2,7 @@
 <html lang="en">
 <?php
 include '../inc/init.php';
+include  $cnx
 ?>
 <head>
     <meta charset="UTF-8">
@@ -11,9 +12,7 @@ include '../inc/init.php';
     <title>انشاء حساب</title>
 </head>
 <body dir="rtl">
-    <?php
-    include $cnx
-    ?>
+   
     <header>
         <?php
 include $navIndex

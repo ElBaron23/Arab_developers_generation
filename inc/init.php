@@ -16,7 +16,7 @@ $scrollbar = '../style/css/scrollbar.css';
 //inc files
 $if_not_reg = "../inc/if_not_regi.php";
 $navbar     = "../inc/navbar.php";
-$cnx        = "../inc/cnx.php";
+$cnx        = '../inc/cnx.php';
 $contact    = '../other/contact.php'; 
 $navIndex   = "../inc/_navIndex.inc";
 $footer     = "../inc/_footer.php";
