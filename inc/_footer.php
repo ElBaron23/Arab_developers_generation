@@ -3,30 +3,30 @@
     <div class="part1">
     <div class="social">
        <div class="logo_footer">
-        <img src="../file/image/logo.png" alt="logo">
+        <img src="file/image/logo.png" alt="logo">
         <h3>الجيل البرمجي العربي</h3>
        </div>
        <h4>تابعنا على:</h4>
        <div class="img_social">
-        <a href="#"><img src="../file/image/instagram.png" alt="instagram"></a>
-        <a href="#"><img src="../file/image/facebook.png" alt="facebook"></a>
-        <a href="#"><img src="../file/image/github.png" alt="github"></a>
-        <a href="#"><img src="../file/image/youtube.png" alt="youtube"></a>
-        <a href="#"><img src="../file/image/twitter.png" alt="x"></a>
+        <a href="#"><img src="file/image/instagram.png" alt="instagram"></a>
+        <a href="#"><img src="file/image/facebook.png" alt="facebook"></a>
+        <a href="#"><img src="file/image/github.png" alt="github"></a>
+        <a href="#"><img src="file/image/youtube.png" alt="youtube"></a>
+        <a href="#"><img src="file/image/twitter.png" alt="x"></a>
        </div>
     </div>  
      <div class="contact">
         <ul>
-            <li><a href="../other/error.php">تواصل معنا</a></li>
-            <li><a href="../other/error.php"> شروط الاستخدام</a></li>
-            <li><a href="../other/error.php"> درب معنا</a></li>
+            <li><a href="other/error.php">تواصل معنا</a></li>
+            <li><a href="other/error.php"> شروط الاستخدام</a></li>
+            <li><a href="other/error.php"> درب معنا</a></li>
         </ul>
      </div>
      <div class="contact">
         <ul>
-            <li><a href="../other/error.php"> اسئلة شائعة</a></li>
-            <li><a href="../other/error.php"> السياسة والخصوصية </a></li>
-            <li><a href="../other/error.php"> الدعم </a></li>
+            <li><a href="other/error.php"> اسئلة شائعة</a></li>
+            <li><a href="other/error.php"> السياسة والخصوصية </a></li>
+            <li><a href="other/error.php"> الدعم </a></li>
         </ul>
      </div>
 
