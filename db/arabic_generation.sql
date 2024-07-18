@@ -27,6 +27,8 @@ SET time_zone = "+00:00";
 -- Structure de la table `admin`
 --
 
+CREATE DATABASE arabic_generation;
+USE arabic_generation;
 CREATE TABLE `admin` (
   `admin_id` int(11) NOT NULL,
   `user` varchar(25) NOT NULL,
