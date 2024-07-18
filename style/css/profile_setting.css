@@ -17,3 +17,4 @@ body::before {
   border-bottom: 2px solid black;
   content: "Error: It's not clear which file to import. Found:\a   C:\\Users\\Samsung\\Desktop\\Arabic_generation\\style\\sass\\_profile_setting.scss\a   C:\\Users\\Samsung\\Desktop\\Arabic_generation\\style\\sass\\profile_setting.scss\a     \2577 \a 142 \2502  @import   'profile_setting' ;\d\a     \2502            ^^^^^^^^^^^^^^^^^\a     \2575 \a   C:\\Users\\Samsung\\Desktop\\Arabic_generation\\style\\sass\\profile_setting.scss 142:11  root stylesheet";
 }
+
