@@ -6,5 +6,4 @@ try {
 } catch ( PDOException $e){
     echo"conection impossible";
 }
-
 ?>
