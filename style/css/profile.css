@@ -178,6 +178,11 @@ h2 {
   display: none !important;
 }
 
+body {
+  height: fit-content;
+  overflow-x: hidden;
+}
+
 .container {
   width: 100%;
   height: auto;
@@ -186,22 +191,25 @@ h2 {
 }
 .container #profile {
   width: 100%;
-  height: 100%;
+  height: 300px;
   display: flex;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  justify-content: center;
 }
 .container #profile .user_profile {
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid #223A59;
   align-items: center;
   justify-content: end;
   display: flex;
+  flex-direction: column;
   width: 100%;
-  height: 120px;
+  align-items: center;
   background: #f7f7f7;
 }
 .container #profile .user_profile #photo_profile {
   border: 2px solid #223A59;
   width: 100px;
+  order: -1;
   height: 100px;
   border-radius: 50%;
   margin-left: 16px;
@@ -210,11 +218,12 @@ h2 {
   background-image: url(../../file/image/mypic.png);
   background-size: cover;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
 }
 .container #profile .user_profile .name {
   display: flex;
   flex-direction: column;
-  text-align: end;
+  text-align: center;
 }
 .container #profile .user_profile .name h1 {
   color: #223A59;
@@ -225,15 +234,16 @@ h2 {
 .container #profile .user_profile .btn {
   display: flex;
   align-items: center;
-  justify-content: center;
   justify-content: space-between;
-  height: 40px;
+  height: fit-content;
+  gap: 20px;
+  margin: 10px auto;
   width: 300px;
 }
 .container #profile .user_profile .btn .follow {
   width: 80px;
   display: flex;
-  height: 30px;
+  margin: auto;
   align-items: center;
   justify-content: center;
   border: 2px solid #223A59;
@@ -257,6 +267,7 @@ h2 {
   border-radius: 2px solid #f7f7f7;
   border-radius: 8px;
   color: #f7f7f7;
+  cursor: pointer;
   margin-right: 28px;
   transition: all 0.3s ease;
 }
@@ -268,6 +279,7 @@ h2 {
 .container .about {
   width: 100%;
   height: 400px;
+  background: red;
   margin-top: 2px;
   background: #f7f7f7;
 }
@@ -312,10 +324,14 @@ import file profile style here ;
   font-family: tajawal;
   src: url(../../font/Tajawal-Regular.ttf);
 }
+body {
+  background: #f7f7f7;
+  height: fit-content;
+}
+
 #edit_profile2 {
   padding-top: 16px;
   width: 100%;
-  height: auto;
   background: #f7f7f7;
   display: flex;
   flex-direction: column;
@@ -352,26 +368,32 @@ import file profile style here ;
 }
 #edit_profile2 .upload_photo {
   margin-top: 16px;
-  width: 95%;
-  height: 200px;
+  height: fit-content;
   display: flex;
+  flex-direction: column;
+  width: 99%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 #edit_profile2 .upload_photo #yourPhoto {
+  padding: 5px;
   width: 100px;
   height: 100px;
   border: 2px solid #223A59;
   border-radius: 8px;
+  background: #223A59;
 }
 #edit_profile2 .upload_photo #yourPhoto img {
-  width: 95%;
-  height: 95%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 #edit_profile2 .upload_photo .input_photo {
   display: flex;
-  flex-direction: column;
   height: 100px;
-  margin-right: 16px;
   justify-content: center;
+  align-items: center;
 }
 #edit_profile2 .upload_photo .input_photo #inputFile {
   display: none;
@@ -421,35 +443,84 @@ import file profile style here ;
   margin-top: 16px;
   width: 95%;
   height: auto;
+  justify-content: space-between;
   display: flex;
 }
 .edit_container .edit_box {
   margin-left: 16px;
-  width: 120px;
-  height: 65px;
+  width: fit-content;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-items: center;
 }
 .edit_container .edit_box #gender {
-  width: 120px;
-  height: 35px;
+  width: 150px;
+  height: 40px;
   border: 2px solid #223A59;
   border-radius: 8px;
   background: transparent;
+  padding: 0 10px;
 }
 .edit_container .edit_box h5 {
   height: 30px;
-  margin-right: 6px;
+  margin: 10px 0;
 }
 .edit_container .edit_box .edit_input {
-  height: 35px;
-  width: 120px;
+  height: 40px;
+  width: 90%;
+  margin: auto;
   border: 2px solid #223A59;
   border-radius: 8px;
+  padding: 0 10px;
   background: transparent;
 }
 
+@media (max-width: 767px) {
+  .edit_container {
+    margin-top: 16px;
+    width: 80%;
+    margin: auto;
+    height: auto;
+    flex-wrap: wrap;
+    display: flex;
+  }
+  .edit_container .edit_box {
+    margin-left: 16px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+  }
+  .edit_container .edit_box #gender {
+    width: 106%;
+    padding: 0 10px;
+    height: 40px;
+    border: 2px solid #223A59;
+    border-radius: 8px;
+    background: transparent;
+  }
+  .edit_container .edit_box h5 {
+    height: 30px;
+    margin-right: 6px;
+  }
+  .edit_container .edit_box .edit_input {
+    height: 40px;
+    padding: 0 10px;
+    width: 100%;
+    border: 2px solid #223A59;
+    border-radius: 8px;
+    background: transparent;
+  }
+  .input_photo {
+    display: block !important;
+    margin-top: 10px;
+  }
+  .input_photo button, .input_photo input {
+    margin: 5px 0 !important;
+  }
+}
 /*
 
 ******************************************

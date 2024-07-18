@@ -1,4 +1,4 @@
-*t{
+*{
     margin: 0;
     padding: 0;
     font-family: tajawal;
@@ -7,7 +7,7 @@
 @import 'navbar';
 
 //start section hello;
-
+// make body with full page height 
 body{
 height: fit-content;
 background: #f7f7f7;

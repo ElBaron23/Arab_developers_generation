@@ -48,7 +48,13 @@ CREATE TABLE posts (
 --
 -- Structure de la table `admin`
 --
+<<<<<<< HEAD
 --انشاء جدول الادمن
+=======
+
+CREATE DATABASE arabic_generation;
+USE arabic_generation;
+>>>>>>> 4c599e71b2c17096fdacbab1025c448c3a1953ce
 CREATE TABLE `admin` (
 --عمود لتخزين معرف الادمين
   `admin_id` int(11) NOT NULL,

@@ -24,7 +24,6 @@
  <div id="profile">
    <div class="user_profile">
        <div class="name">
-
            <h1><?php echo  $firstname ." ". $lastname ?></h1>
            <h4><?php  echo $email ?></h4>
 

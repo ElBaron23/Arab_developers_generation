@@ -35,9 +35,9 @@ include '../inc/init.php';
     <div id="yourPhoto"></div>
 
     <div class="input_photo">
-        <label for="inputFile" class="custom_upload_file">اختر الصورة</label>
+        <label for="inputFile" style="margin: 0" class="custom_upload_file">اختر الصورة</label>
         <input type="file" id="inputFile" accept="image/*">
-        <button id="delete_photo">حذف الصورة</button>
+        <button id="delete_photo" style="margin: 0 5px">حذف الصورة</button>
         <script>
             let output =document.getElementById('yourPhoto');
             let   input  =document.getElementById('inputFile');
@@ -73,13 +73,14 @@ include '../inc/init.php';
     <h4 class="h4_edit_profile">
     تعديل البيانات الشخصية:
  </h4>
+ <div class="edit_all">
  <div class="edit_container">
    <div class="edit_box">
-     <h5>الاسم الشخصي</h5>
+     <h5>الاسم الاول</h5>
      <input type="text" name="new_firstName" placeholder="الاسم الشخصي" class="edit_input">
    </div>
    <div class="edit_box">
-     <h5>الاسم العائلي</h5>
+     <h5>اسم العائلة</h5>
      <input type="text" name="new_firstName" placeholder="الاسم العائلي" class="edit_input">
    </div>
    <div class="edit_box">
@@ -93,7 +94,7 @@ include '../inc/init.php';
  </div>
  <div class="edit_container">
    <div class="edit_box">
-     <h5> تاريخ الازدياد</h5>
+     <h5>تاريخ الميلاد</h5>
      <input type="date" name="newDateBirdth" placeholder="الاسم الشخصي" class="edit_input">
    </div>
    <div class="edit_box">
@@ -101,10 +102,11 @@ include '../inc/init.php';
      <input type="number" name="new_PhoneNumber" placeholder=" رقم الهاتف" class="edit_input">
    </div>
    <div class="edit_box">
-     <h5> موقعك الشخصي</h5>
+     <h5>الموقع</h5>
      <input type="text" name="new_PhoneNumber" placeholder="   موقعك الشخصي" class="edit_input">
    
    </div>
+ </div>
  </div>
  </div>
 </form>
