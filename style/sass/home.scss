@@ -174,7 +174,7 @@ cursor: pointer;
       height: 90%;
       width: 30%;
       border-radius: 12px;
-      box-shadow: 0 0 23px 5px rgb(0 0 0 / 10%) }
+      box-shadow: 0 0 23px 5px rgba($color: #000000, $alpha: 0.1) }
       /*road info styling*/
 #road .info{
 margin-bottom: 40px;

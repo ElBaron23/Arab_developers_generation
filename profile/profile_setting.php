@@ -104,8 +104,10 @@ include '../inc/init.php';
    <div class="edit_box">
      <h5>الموقع</h5>
      <input type="text" name="new_PhoneNumber" placeholder="   موقعك الشخصي" class="edit_input">
-   
    </div>
+ </div>
+ <div class="edit_container">
+  
  </div>
  </div>
  </div>
