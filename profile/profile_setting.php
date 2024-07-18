@@ -102,12 +102,55 @@ include '../inc/init.php';
      <input type="number" name="new_PhoneNumber" placeholder=" رقم الهاتف" class="edit_input">
    </div>
    <div class="edit_box">
-     <h5>الموقع</h5>
-     <input type="text" name="new_PhoneNumber" placeholder="   موقعك الشخصي" class="edit_input">
+     <h5>البلد</h5>
+     <input type="text" name="new_country" placeholder="    البلد" class="edit_input">
    </div>
  </div>
  <div class="edit_container">
-  
+  <div class="edit_box2">
+    <h5>نبذة عنك</h5>
+    <input type="text" name="description" id="description" >
+  </div>
+ </div>
+ <div class="edit_container">
+  <div class="social_box">
+    <div class="social_box_icon">
+      <img src="#" alt="instagram">
+      رابط حسابك على الانستاجرام:
+      
+    </div>
+    <input type="text" name="link_instagram" placeholder="www.instagtram.com/arabic_generation_developer">
+  </div>
+ </div>
+ <div class="edit_container">
+  <div class="social_box">
+    <div class="social_box_icon">
+      <img src="#" alt="facebook">
+      رابط حسابك على الفايسبوك:
+      
+    </div>
+    <input type="text" name="link_facebook" placeholder="www.facebook.com/arabic_generation_developer">
+  </div>
+ </div>
+ <div class="edit_container">
+  <div class="social_box">
+    <div class="social_box_icon">
+      <img src="#" alt="linkedin">
+      رابط حسابك على لينكدن:
+      
+    </div>
+    <input type="text" name="link_linkedin" placeholder="www.linkedin.com/arabic_generation_developer">
+  </div>
+ </div>
+ <div class="edit_container">
+  <div class="social_box">
+    <div class="social_box_icon">
+      <img src="#" alt="x">
+      رابط حسابك على اكس:
+      
+    </div>
+    <input type="text" name="link_x" placeholder="www.x.com/arabic_generation_developer">
+  </div>
  </div>
  </div>
  </div>
