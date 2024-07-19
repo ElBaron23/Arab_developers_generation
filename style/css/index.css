@@ -1,10 +1,11 @@
+body {
+  background: #031930;
+}
+
 * {
   margin: 0;
   padding: 0;
   font-family: tajawal;
-}
-img{
-object-fit: cover !important;
 }
 
 @font-face {
@@ -111,8 +112,7 @@ header {
   background-image: url(../../file/image/bg_index.jpg);
   background-size: cover;
   justify-content: center;
-  display: flex;
-  height: 100vh;
+  display: none;
   flex-direction: column;
   align-items: center;
 }
@@ -254,22 +254,27 @@ header .hero .btn_hero:hover {
   rotate: 90deg;
 }
 
+#exam .exam_box .container_exam:hover::after {
+  rotate: 0deg !important;
+}
+
 #exam {
   width: 100%;
-  height: 300px;
-  background: #223A59;
-  box-shadow: 0 -6px 10px #223A59;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: fit-content;
+  background: #223A59;
+  box-shadow: 0 -6px 10px #223A59;
 }
 #exam h2 {
   color: #f7f7f7;
   margin-top: 8px;
+  margin-bottom: 40px;
 }
 #exam .exam_box {
   width: 100%;
-  height: calc(100% - 40px);
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -279,12 +284,20 @@ header .hero .btn_hero:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 40%;
-  height: 150px;
-  border: 2px solid #f7f7f7;
+  width: 45%;
+  height: fit-content !important;
   border-radius: 12px;
   position: relative;
   transition: all ease 0.3s;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 2;
+  border: 2px solid #f7f7f7;
 }
 #exam .exam_box .container_exam:hover {
   scale: 1.05;
@@ -293,20 +306,23 @@ header .hero .btn_hero:hover {
   content: "";
   position: absolute;
   background: transparent;
-  border: 1px solid #f7f7f7;
   width: 100%;
   border-radius: 12px;
   z-index: 0;
   rotate: -5deg;
-  height: 150px;
+  height: 100%;
+  transition: 0.5s;
+  border: 1px solid #f7f7f7;
 }
 #exam .exam_box .container_exam h4 {
   color: #B3D6F9;
   font-size: 18px;
+  margin: 30px 0;
 }
 #exam .exam_box .container_exam p {
   color: #f7f7f7;
   margin: 8px;
+  padding: 20px;
 }
 
 #brunch {
@@ -465,12 +481,12 @@ header .hero .btn_hero:hover {
   height: 95%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
   #exam {
     width: 100%;
-    height: auto;
     padding-bottom: 16px;
     display: flex;
+    height: fit-content;
     flex-direction: column;
     align-items: center;
   }
@@ -483,16 +499,19 @@ header .hero .btn_hero:hover {
     height: auto;
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: space-around;
   }
   #exam .exam_box .container_exam {
+    border: 2px solid #f7f7f7;
     cursor: pointer;
+    margin: 30px 0 !important;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 40%;
-    height: 180px;
-    border: 2px solid #f7f7f7;
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 16px;
     border-radius: 12px;
     position: relative;
     transition: all ease 0.3s;
@@ -504,12 +523,12 @@ header .hero .btn_hero:hover {
     content: "";
     position: absolute;
     background: transparent;
-    border: 1px solid #f7f7f7;
-    width: 100%;
+    width: 100% !important;
     border-radius: 12px;
     z-index: 0;
     rotate: -5deg;
-    height: 180px;
+    height: 100% !important;
+    border: 1px solid #f7f7f7;
   }
   #exam .exam_box .container_exam h4 {
     color: #B3D6F9;
@@ -925,6 +944,14 @@ footer .part2 h6 {
     color: #B3D6F9;
     font-size: 10px;
   }
+}
+section {
+  padding: 80px 0;
+  margin: 80px 0;
+}
+
+img {
+  object-fit: contain;
 }
 
 /*# sourceMappingURL=index.css.map */
