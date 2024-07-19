@@ -109,7 +109,7 @@ include '../inc/init.php';
  <div class="edit_container">
   <div class="edit_box2">
     <h5>نبذة عنك</h5>
-    <input type="text" name="description" id="description" >
+    <input type="text" name="description" id="description" placeholder="ملخص قصير عن سيرتك الذاتية تتضمن معلومات الاساسية عن مجال تخصصك    ">
   </div>
  </div>
  <div class="edit_container">
