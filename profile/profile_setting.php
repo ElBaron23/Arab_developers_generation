@@ -51,6 +51,11 @@ if (isset($_POST['SaveChange'])) {
     $link_facebook   = $_POST['link_facebook'];
     $link_linkedin   = $_POST['link_linkedin'];
     $link_x          = $_POST['link_x'];
+    $img_name            = $_FILES['img']['name'];
+    $img_size            = $_FILES['img']['size'];
+    $img_type            = $_FILES['img']['type'];
+    $img_tmp             = $_FILES['img']['tmp_name'];
+   
 
     $newData = $mydb->prepare("UPDATE user SET firstname=:firstname,
                                             lastname=:lastname,
@@ -103,7 +108,7 @@ if (isset($_POST['SaveChange'])) {
 
         <div class="input_photo">
             <label for="inputFile" style="margin: 0" class="custom_upload_file">اختر الصورة</label>
-            <input type="file" id="inputFile" accept="image/*">
+            <input type="file" id="inputFile" name="img" accept="image/*">
             <button id="delete_photo" style="margin: 0 5px">حذف الصورة</button>
             <script>
                 let output = document.getElementById('yourPhoto');
