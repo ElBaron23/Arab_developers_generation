@@ -37,6 +37,7 @@
              </div>
        </div>
     <div id="photo_profile">
+      <img src="<?=$photo_profile?>" alt="">
   </div>
 </div>
 </div>
