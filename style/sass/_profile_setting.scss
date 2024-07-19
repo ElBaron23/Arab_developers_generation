@@ -3,6 +3,10 @@ body{
 background: $lightColor;
 height:fit-content;
 }
+form{
+height: fit-content;
+margin: 0 0 80px 0
+}
 #edit_profile2{
     padding-top: 16px;
     width: 100%;
@@ -242,5 +246,30 @@ button , input{
 margin: 5px 0 !important
 }
 
+}
+}
+
+.social_box{
+display: flex;
+flex-direction: column;
+margin: 20px 0;
+}
+.social_box_icon{
+display: flex;
+flex-direction: column;
+img{
+margin: 5px 0;
+}
+}
+.social_box_icon + input{
+    height: fit-content;
+    padding: 10px
+}
+
+@media (max-width: 767px) {
+    .social_box{
+display: flex;
+flex-direction: column;
+margin: 40px 0;
 }
 }

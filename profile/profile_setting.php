@@ -115,7 +115,7 @@ include '../inc/init.php';
  <div class="edit_container">
   <div class="social_box">
     <div class="social_box_icon">
-      <img src="#" alt="instagram">
+      <img src="../file/icons/instagram.png" alt="instagram">
       رابط حسابك على الانستاجرام:
       
     </div>
@@ -125,7 +125,7 @@ include '../inc/init.php';
  <div class="edit_container">
   <div class="social_box">
     <div class="social_box_icon">
-      <img src="#" alt="facebook">
+      <img src="../file/icons/facebook.png" alt="facebook">
       رابط حسابك على الفايسبوك:
       
     </div>
@@ -135,9 +135,8 @@ include '../inc/init.php';
  <div class="edit_container">
   <div class="social_box">
     <div class="social_box_icon">
-      <img src="#" alt="linkedin">
+      <img src="../file/icons/linkedin.png" alt="linkedin">
       رابط حسابك على لينكدن:
-      
     </div>
     <input type="text" name="link_linkedin" placeholder="www.linkedin.com/arabic_generation_developer">
   </div>
@@ -145,7 +144,7 @@ include '../inc/init.php';
  <div class="edit_container">
   <div class="social_box">
     <div class="social_box_icon">
-      <img src="#" alt="x">
+      <img src="../file/icons/twitter.png" alt="x">
       رابط حسابك على اكس:
       
     </div>
