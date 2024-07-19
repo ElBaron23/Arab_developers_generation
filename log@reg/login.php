@@ -2,7 +2,7 @@
 <html lang="en">
 <?php
 include '../inc/init.php';
-include  $cnx
+
 ?>
 <head>
     <meta charset="UTF-8">
@@ -22,6 +22,7 @@ include $navIndex
     <main>
         <?php
 session_start();
+include  $cnx;
 if(isset($_POST['login'])){
  $login = $mydb->prepare("SELECT * FROM user WHERE email =:email AND password=:password");
  $password=$_POST['password'];
