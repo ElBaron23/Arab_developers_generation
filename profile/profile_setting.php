@@ -91,7 +91,7 @@ if (isset($_POST['SaveChange'])) {
     }
 }
 ?>
-<form method="POST" id="edit_profile2">
+<form method="POST" id="edit_profile2" enctype="multipart/form-data">
     <!-- //تخصيص زر حفظ التغيرات -->
     <div class="text_head">
         <h4>حسابي:</h4>
