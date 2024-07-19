@@ -121,13 +121,54 @@ padding: 5px;
     height: auto;
     justify-content: space-between;
     display: flex;
+    .social_box{
+        width: 100%;
+        height: 70px;
+        .social_box_icon{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 10px 0;
+            color: $darkColor;
+            img{
+                width: 35px;
+                height: 35px;
+            }
+        }
+        input{
+            background: transparent;
+            width: 100%;
+            height: 40px;
+            border-radius: 8px ;
+            border: 2px solid $mainColor;
+        }
+    }
+    .edit_box2{
+        width: 100%;
+        height: 130px;
+        h5{
+            height: 30px;
+            display: flex;
+            align-self: flex-start;
+            margin:  10px 0;
+        }
+        #description{
+            width: 100%;
+            height: 80px;
+            border-radius: 8px;
+            outline: none;
+            margin-bottom: 16px;
+            background: transparent;
+            border: 2px solid $mainColor;
+        }
+    }
     .edit_box{
         margin-left: 16px;
         width: fit-content;
         height: fit-content;
         display: flex;
         flex-direction: column;
-        justify-items: center;
+        // justify-items: center;
         #gender{
             width: 150px;
             height: 40px;
@@ -136,8 +177,10 @@ padding: 5px;
             background: transparent;
             padding: 0 10px;
         }
+       
         h5{
             height: 30px;
+            align-self: flex-start;
 margin:  10px 0;
         }
         .edit_input{
@@ -168,7 +211,7 @@ margin: auto;
         height: fit-content;
         display: flex;
         flex-direction: column;
-        justify-items: center;
+        // justify-items: center;
         #gender{
             width: 106%;
             padding: 0 10px;
