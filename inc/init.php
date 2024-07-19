@@ -67,9 +67,6 @@ $toggleClass = "../js/add_remove_active.js";
 $toggleClassProfile  = "../js/add_remove_active_profile.js"; 
 $toggleMenu	 ="../js/toggle_btn_nav.js";
 
-//photo profile 
-
-$photo_profile ='../upload/avatar/client.png';
 
 // dont forget ";" <3; END
 

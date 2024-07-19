@@ -21,13 +21,15 @@ $data->bindParam(":email", $email);
 $data->execute();
 // استرداد نتيجة الاستعلام ككائن PHP يحتوي على جميع بيانات المستخدم.
 $info = $data->fetchObject();
+// الحصول على اسم الصورة من الجلسة وحفضها في المتغير 
+$photo = $_SESSION['data']->photo_profile 
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="<?=$profile?>">
-    <link rel="shortcut icon" href="../file/image/support.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../upload/avatar/<?=$photo?>" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>اعدادات الملف الشخصي</title>
 </head>
@@ -51,11 +53,15 @@ if (isset($_POST['SaveChange'])) {
     $link_facebook   = $_POST['link_facebook'];
     $link_linkedin   = $_POST['link_linkedin'];
     $link_x          = $_POST['link_x'];
+    //تحديد خصائص الصورة
     $img_name            = $_FILES['img']['name'];
     $img_size            = $_FILES['img']['size'];
     $img_type            = $_FILES['img']['type'];
     $img_tmp             = $_FILES['img']['tmp_name'];
-   
+    //توليد رقم عشوائي واضافته الى اسم الصورة لتفادي تكرار اسم الصورة
+    $randName = rand(0 , 100000) . '_' . $img_name;
+    //نقل الصورة الى ملف الخاص بصور
+    move_uploaded_file($img_tmp , '../upload/avatar/' . $randName);
 
     $newData = $mydb->prepare("UPDATE user SET firstname=:firstname,
                                             lastname=:lastname,
@@ -67,7 +73,8 @@ if (isset($_POST['SaveChange'])) {
                                             instagram=:instagram,
                                             facebook=:facebook,
                                             twitter=:twitter,
-                                            linkedin=:linkedin
+                                            linkedin=:linkedin,
+                                            photo_profile=:photo_profile
                                             WHERE email=:email"
     );
 
@@ -82,6 +89,8 @@ if (isset($_POST['SaveChange'])) {
     $newData->bindParam(":facebook", $link_facebook);
     $newData->bindParam(":twitter", $link_x);
     $newData->bindParam(":linkedin", $link_linkedin);
+    //نقوم بتخزين اسم الصورة في قاعدة البيانات
+    $newData->bindParam(":photo_profile", $randName);
     $newData->bindParam(":email", $email);
 
     if ($newData->execute()) {

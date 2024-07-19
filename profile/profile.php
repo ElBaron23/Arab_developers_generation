@@ -9,11 +9,13 @@
     $firstname = $_SESSION['data']->firstname;
     $lastname  = $_SESSION['data']->lastname;
     $email = $_SESSION['data']->email;
+    // الحصول على اسم الصورة من الجلسة وحفضها في المتغير 
+    $photo = $_SESSION['data']->photo_profile 
     ?>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../style/css/profile.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../file/image/mypic.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../upload/avatar/<?=$photo?>" type="image/x-icon">
     <title><?php echo  $firstname ." ". $lastname ?></title>
 </head>
 <body dir="rtl">
@@ -36,8 +38,9 @@
 
              </div>
        </div>
+
     <div id="photo_profile">
-      <img src="<?=$photo_profile?>" alt="">
+      <img src="../upload/avatar/<?=$photo?>">
   </div>
 </div>
 </div>
