@@ -114,8 +114,6 @@ height: fit-content;
 }
 .about{
     width: 100%;
-    height: 400px;
-    background: red;
     margin-top: 2px;
     background: $lightColor;
     h4{
@@ -148,7 +146,67 @@ height: fit-content;
         background: $lightColor3;
         margin-top: 16px;
     }
- }  
+ }
+}
+
+.about{
+border-bottom: 1px solid;
+height: fit-content;
+
+.title{
+text-align: center; 
+margin: 40px 0;
+h4{
+font-size: 30px;
+margin-bottom: 30px;
+}
+}
+.data{
+display: flex;
+justify-content: space-between;
+width: 80%;
+margin: auto;
+text-align: center;
+align-items: center;
+height: 40%;
+padding: 10px 0;
+margin-bottom: 20px;
+div{
+width: 25%;
+}
+h4{
+margin-bottom: 10px;
+font-size: 22px;
+text-align: center;
+}
+p,span{
+text-align: center;
+font-size: 22px;
+}
+}
+}
+
+@media (max-width: 767px) {
+.about{
+height: fit-content;
+padding: 0 0 40px 0;
+.data{
+flex-direction: column;
+flex-wrap: wrap;
+width: 100%;
+height:fit-content;
+div{
+width: 80%;
+margin-top: 10px;
+padding:  0 0 10px 0;
+}
+
+}
+}
+
+.data >  div{
+border-bottom: 1px solid $mainColor;
+}
 }
 
 /*
@@ -160,6 +218,44 @@ import file profile style here ;
 @import   'profile_setting' ;
 /*
 
+
 ******************************************
 ******************************************
 */
+.links{
+display: flex;
+justify-content: space-between;
+width:80%;
+margin: 80px auto;
+.image{
+text-align: center;
+width: 60px;
+height: 60px;
+img{
+max-width: 100%;
+margin-bottom: 20px;
+} 
+}
+h4{
+text-align: center;
+margin: 20px -20px  !important;
+}
+}
+
+@media (max-width:767px) {
+.links{
+flex-direction: column;
+align-items: center;
+gap:20px;
+>div{
+border-bottom: 1px solid $mainColor;
+width: 100%;
+text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding: 20px;
+}
+}
+}

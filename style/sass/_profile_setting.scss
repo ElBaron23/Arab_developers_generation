@@ -173,7 +173,7 @@ padding: 5px;
         display: flex;
         flex-direction: column;
         // justify-items: center;
-        #gender{
+        #gender , #cou{
             width: 150px;
             height: 40px;
             border: 2px solid $mainColor;
@@ -216,7 +216,7 @@ margin: auto;
         display: flex;
         flex-direction: column;
         // justify-items: center;
-        #gender{
+        #gender , #cou {
             width: 106%;
             padding: 0 10px;
             height: 40px;

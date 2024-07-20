@@ -62,6 +62,7 @@ if (isset($_POST['SaveChange'])) {
     $randName = rand(0 , 100000) . '_' . $img_name;
     //نقل الصورة الى ملف الخاص بصور
     move_uploaded_file($img_tmp , '../upload/avatar/' . $randName);
+    
 
     $newData = $mydb->prepare("UPDATE user SET firstname=:firstname,
                                             lastname=:lastname,
@@ -92,17 +93,18 @@ if (isset($_POST['SaveChange'])) {
     //نقوم بتخزين اسم الصورة في قاعدة البيانات
     $newData->bindParam(":photo_profile", $randName);
     $newData->bindParam(":email", $email);
-
     if ($newData->execute()) {
       $newInfo = $mydb->prepare("SELECT * FROM user WHERE email = :email");
       $newInfo->bindParam("email",$email);
       $newInfo->execute();
       $new_info= $newInfo->fetchObject();
       $_SESSION['data']=$new_info;
-        echo "تم تعديل البيانات بنجاح";
+    header('location:profile.php');
+    exit();
     } else {
         echo "فشل تحديث البيانات";
     }
+
 }
 ?>
 <form method="POST" id="edit_profile2" enctype="multipart/form-data">
@@ -113,11 +115,14 @@ if (isset($_POST['SaveChange'])) {
     </div>
     <!-- هنا مكان رفع الصورة الشخصية -->
     <div class="upload_photo">
-        <div id="yourPhoto"></div>
+
+        <div id="yourPhoto">
+        
+        </div>
 
         <div class="input_photo">
             <label for="inputFile" style="margin: 0" class="custom_upload_file">اختر الصورة</label>
-            <input type="file" id="inputFile" name="img" accept="image/*">
+            <input type="file" id="inputFile" value="../upload/avatar/client.png" name="img" accept="image/*">
             <button id="delete_photo" style="margin: 0 5px">حذف الصورة</button>
             <script>
                 let output = document.getElementById('yourPhoto');
@@ -167,9 +172,9 @@ if (isset($_POST['SaveChange'])) {
                 <div class="edit_box">
                     <h5> الجنس</h5>
                     <select name="gender" id="gender">
-                        <option value="">غير محدد</option>
-                        <option value="male" <?= ($info->gender === 'male') ? 'selected' : '' ?>>ذكر</option>
-                        <option value="female" <?= ($info->gender === 'female') ? 'selected' : '' ?>>أنثى</option>
+                        <option value="غير محدد">غير محدد</option>
+                        <option value="ذكر" <?= ($info->gender === 'male') ? 'selected' : '' ?>>ذكر</option>
+                        <option value="انثي" <?= ($info->gender === 'female') ? 'selected' : '' ?>>أنثى</option>
                     </select>
                 </div>
             </div>
@@ -184,7 +189,9 @@ if (isset($_POST['SaveChange'])) {
                 </div>
                 <div class="edit_box">
                     <h5>البلد</h5>
-                    <input type="text" name="new_country" placeholder="البلد" value="<?=$info->country?>" class="edit_input">
+                    <input type="text" name="new_country"  placeholder="البلد" value="<?=$info->country?>" class="edit_input">
+
+    
                 </div>
             </div>
             <div class="edit_container">
@@ -232,5 +239,6 @@ if (isset($_POST['SaveChange'])) {
         </div>
     </div>
 </form>
+<script src="../js/countrys.js"></script>
 </body>
 </html>
