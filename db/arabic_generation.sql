@@ -20,6 +20,7 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `arabic_generation`
 --
+DROP DATABASE arabic_generation;
 -- إنشاء قاعدة بيانات جديدة باسم mydatabase
 CREATE DATABASE arabic_generation;
 
