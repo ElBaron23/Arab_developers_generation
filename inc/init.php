@@ -6,7 +6,7 @@ $profile   = "../style/css/profile.css";
 $register  = "../style/css/register.css";
 $nav       = "../style/css/nav.css";
 $scrollbar = '../style/css/scrollbar.css';
-
+$contact_s = '../style/css/contact_us.css';
 
 
 #------------------------------------------
@@ -34,7 +34,6 @@ $nav2       = "style/css/nav.css";
 
 
 #------------------------------------------
-
 
 
 
@@ -68,7 +67,31 @@ $toggleClassProfile  = "../js/add_remove_active_profile.js";
 $toggleMenu	 ="../js/toggle_btn_nav.js";
 
 
-// dont forget ";" <3; END
 
+
+#------------------------------------------
+// Footer Images
+
+		// for index.php
+		$logo      = "file/image/logo.png";
+		$instagram = "file/image/instagram.png"; 
+		$facebook  = "file/image/facbook.png"; 
+		$gihub     = "file/image/github.png";
+		$youtube   = "file/image/youtube.png";
+		$twitter   = "file/image/twitter.png";
+		
+		# -----
+// for another folders
+		$logo2       = "../file/image/logo.png";
+		$instagram2 = "../file/image/instagram.png"; 
+		$facebook2  = "../file/image/facebook.png"; 
+		$github2    = "../file/image/github.png";
+		$youtube2   = "../file/image/youtube.png";
+		$twitter2   = "../file/image/twitter.png";
+		
+
+
+// dont forget ";" <3; END
+ 
 
 

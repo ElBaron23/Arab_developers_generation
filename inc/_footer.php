@@ -1,18 +1,45 @@
+
    <!-- footer start -->
 <footer>
     <div class="part1">
     <div class="social">
        <div class="logo_footer">
-        <img src="file/image/logo.png" alt="logo">
-        <h3>الجيل البرمجي العربي</h3>
+<?php
+$url = __FILE__;
+if (!strpos($url, 'index.php')){
+echo('<img src='.$logo2.' alt="logo">');
+}else{
+echo('<img src='.$logo.' alt="logo">');
+}
+?>       
+
+        <h3>الجيل البرمجي العربي</h3> 
        </div>
        <h4>تابعنا على:</h4>
        <div class="img_social">
-        <a href="#"><img src="file/image/instagram.png" alt="instagram"></a>
-        <a href="#"><img src="file/image/facebook.png" alt="facebook"></a>
-        <a href="#"><img src="file/image/github.png" alt="github"></a>
-        <a href="#"><img src="file/image/youtube.png" alt="youtube"></a>
-        <a href="#"><img src="file/image/twitter.png" alt="x"></a>
+       <?php
+if (!strpos($url, 'index.php')){
+echo '
+  <a href="#"><img src='.$instagram2 .' alt="instagram"></a>
+        <a href="#"><img src='.$facebook2 .' alt="facebook"></a>
+        <a href="#"><img src='.$github2 .' alt="github"></a>
+        <a href="#"><img src='.$youtube2 .' alt="youtube"></a>
+        <a href="#"><img src='.$twitter2 .' alt="x"></a>
+';
+
+}else{
+echo '
+  <a href="#"><img src='.$instagram .' alt="instagram"></a>
+        <a href="#"><img src='.$facebook .' alt="facebook"></a>
+        <a href="#"><img src='.$github .' alt="github"></a>
+        <a href="#"><img src='.$youtube .' alt="youtube"></a>
+        <a href="#"><img src='.$twitter .' alt="x"></a>
+';
+}
+
+?>
+
+
        </div>
     </div>  
      <div class="contact">
