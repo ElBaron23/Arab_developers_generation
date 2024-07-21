@@ -1,7 +1,7 @@
 <?php
 include 'init.php';
 ?>
-    <link rel="stylesheet" href="<?=$nav?>">
+   
  <!-- start navbar -->
         <nav>
 

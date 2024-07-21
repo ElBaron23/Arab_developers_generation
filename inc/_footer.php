@@ -4,14 +4,15 @@
     <div class="part1">
     <div class="social">
        <div class="logo_footer">
-<?php
-$url = __FILE__;
-if (!strpos($url, 'index.php')){
-echo('<img src='.$logo2.' alt="logo">');
-}else{
-echo('<img src='.$logo.' alt="logo">');
+       <?php
+$url = __FILE__;  // يتم تعيين قيمة متغير $url بالمسار الكامل للملف الحالي
+if (!strpos($url, 'index.php')){  // إذا كان الملف الحالي لا يحتوي على النص "index.php"
+    echo('<img src='.$logo2.' alt="logo">');  // يتم عرض صورة تحمل مصدرها متغير $logo2
+} else {
+    echo('<img src='.$logo.' alt="logo">');  // في حالة أخرى، يتم عرض صورة تحمل مصدرها متغير $logo
 }
-?>       
+?>
+      
 
         <h3>الجيل البرمجي العربي</h3> 
        </div>
@@ -44,7 +45,7 @@ echo '
     </div>  
      <div class="contact">
         <ul>
-            <li><a href="other/error.php">تواصل معنا</a></li>
+            <li><a href="other/contact_us.php">تواصل معنا</a></li>
             <li><a href="other/error.php"> شروط الاستخدام</a></li>
             <li><a href="other/error.php"> درب معنا</a></li>
         </ul>

@@ -121,7 +121,7 @@ if (isset($_POST['SaveChange'])) {
         </div>
 
         <div class="input_photo">
-            <label for="inputFile" style="margin: 0" class="custom_upload_file">اختر الصورة</label>
+            <label for="inputFile" style="margin: 0"  class="custom_upload_file">اختر الصورة</label>
             <input type="file" id="inputFile" value="../upload/avatar/client.png" name="img" accept="image/*">
             <button id="delete_photo" style="margin: 0 5px">حذف الصورة</button>
             <script>
