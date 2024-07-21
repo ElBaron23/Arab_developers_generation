@@ -53,16 +53,49 @@ if (isset($_POST['SaveChange'])) {
     $link_facebook   = $_POST['link_facebook'];
     $link_linkedin   = $_POST['link_linkedin'];
     $link_x          = $_POST['link_x'];
+
     //تحديد خصائص الصورة
     $img_name            = $_FILES['img']['name'];
     $img_size            = $_FILES['img']['size'];
     $img_type            = $_FILES['img']['type'];
     $img_tmp             = $_FILES['img']['tmp_name'];
-    //توليد رقم عشوائي واضافته الى اسم الصورة لتفادي تكرار اسم الصورة
-    $randName = rand(0 , 100000) . '_' . $img_name;
-    //نقل الصورة الى ملف الخاص بصور
-    move_uploaded_file($img_tmp , '../upload/avatar/' . $randName);
-    
+
+// التحقق من أن الملف تم تحميله بشكل صحيح
+if (isset($_FILES['img']) && $_FILES['img']['error'] === UPLOAD_ERR_OK) {
+    if ($img_size > 0){
+            // الملف المرسل من النموذج
+    $uploaded_file = $_FILES['img'];
+
+    // حصول على امتداد الملف
+    $file_extension = strtolower(pathinfo($img_name, PATHINFO_EXTENSION));
+
+    // قائمة بأمتدادات الملفات التي تُعتبر صوراً (يمكنك تعديلها حسب الاحتياج)
+    $image_extensions = array("jpg", "jpeg", "png", "gif");
+    if (in_array($file_extension, $image_extensions)) {
+        // مسار الوجهة لنقل الملف
+        $target_directory = "../upload/avatar/";
+        //توليد رقم عشوائي واضافته الى اسم الصورة لتفادي تكرار اسم الصورة
+        $randName = rand(0 , 100000) . '_' . $img_name;
+
+        $target_path = $target_directory . basename($randName);
+
+        // نقل الملف إلى المسار النهائي
+        if (move_uploaded_file($img_tmp, $target_path)) {
+            echo "تم نقل الملف بنجاح.";
+        } else {
+           $randName = $photo;
+        }
+    } else {
+        $randName = $photo;
+    }
+   
+
+} else {
+    $randName = $photo;
+}
+
+
+
 
     $newData = $mydb->prepare("UPDATE user SET firstname=:firstname,
                                             lastname=:lastname,
@@ -99,13 +132,13 @@ if (isset($_POST['SaveChange'])) {
       $newInfo->execute();
       $new_info= $newInfo->fetchObject();
       $_SESSION['data']=$new_info;
-    header('location:profile.php');
+      header('location:profile.php');
     exit();
     } else {
         echo "فشل تحديث البيانات";
     }
 
-}
+}}
 ?>
 <form method="POST" id="edit_profile2" enctype="multipart/form-data">
     <!-- //تخصيص زر حفظ التغيرات -->
@@ -117,7 +150,6 @@ if (isset($_POST['SaveChange'])) {
     <div class="upload_photo">
 
         <div id="yourPhoto">
-        
         </div>
 
         <div class="input_photo">
@@ -152,7 +184,7 @@ if (isset($_POST['SaveChange'])) {
                 // دالة استماع إلى حدث النقر
                 delete_photo.addEventListener('click', () => {
                     // عند النقر على الزر يقوم بحذف الصورة
-                    output.innerHTML = '';
+                    output.innerHTML = '<div id="yourPhoto"><img src="../upload/avatar/client.png"></div>';
                 });
             </script>
         </div>
