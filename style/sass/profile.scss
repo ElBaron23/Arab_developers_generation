@@ -8,7 +8,8 @@
 
 body{
 height: fit-content;
-overflow-x: hidden;
+width: 100vw;
+/*overflow-x: hidden;*/
 }
 .container{
     width: 100%;
@@ -216,6 +217,7 @@ border-bottom: 1px solid $mainColor;
 import file profile style here ;
 */
 @import   'profile_setting' ;
+@import   'account' ;
 /*
 
 
@@ -247,7 +249,9 @@ margin: 20px -20px  !important;
 flex-direction: column;
 align-items: center;
 gap:20px;
->div{
+}
+}
+.links > div{
 border-bottom: 1px solid $mainColor;
 width: 100%;
 text-align: center;
@@ -256,6 +260,4 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 padding: 20px;
-}
-}
 }
