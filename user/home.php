@@ -1,10 +1,11 @@
-<?php 
-include '../inc/init.php';
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <?php 
+include '../inc/init.php';
+?>
     <link rel="shortcut icon" href="file/image/logo.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?=$home?>">
@@ -95,5 +96,26 @@ include '../inc/init.php';
 
  </div>
   <!-- end section roadmap -->
+
+<!-- 
+        - start FEATURES
+-->
+
+      <section  id="features" aria-label="features">
+      <h1 class="h_section_title">احدث الميزات</h1>
+          <p class="section_subtitle">تمتع بالعديد من الميزات التي يوفرها موقع 
+            الجيل البرمجي العربي
+          </p>
+        <div class="container">
+         <div class="_box">
+            
+         </div>
+         
+
+        
+       
+
+        </div>
+      </section>
 </body>
 </html>
