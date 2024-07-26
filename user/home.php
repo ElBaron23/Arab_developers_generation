@@ -97,6 +97,131 @@ include '../inc/init.php';
  </div>
   <!-- end section roadmap -->
 
+
+
+
+
+
+
+  
+  <!-- add section for avaibal languages -->
+
+<section class="languages">
+    <div class="html">
+        <figure class="fig"><img src="../file/image/home/html.jpg" alt="no image"></figure>
+        <p class="hed">HTML</p>
+        <p class="para">هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <button class="butt_html">اختيار</button>
+
+    </div>
+    <div class="css">
+        <figure class="fig"><img src="../file/image/home/css.png" alt="no image"></figure>
+        <p class="hed">CSS</p>
+        <p class="para">هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <button class="butt_css">اختيار</button>
+
+    </div>
+    <div class="JS">
+        <figure class="fig"><img src="../file/image/home/javascript.png" alt="no image"></figure>
+        <p class="hed">JavaScript</p>
+        <p class="para">هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <button class="butt_JS">اختيار</button>
+
+    </div>
+    <div class="php">
+        <figure class="fig"><img src="../file/image/home/php.png" alt="no image"></figure>
+        <p class="hed">PHP</p>
+        <p class="para">هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <button class="butt_php">اختيار</button>
+
+    </div>
+    <div class="c">
+        <figure class="fig"><img src="../file/image/home/C.png" alt="no image"></figure>
+        <p class="hed">C</p>
+        <p class="para">هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <button class="butt_c">اختيار</button>
+
+    </div>
+    <div class="cpp">
+        <figure class="fig"><img src="../file/image/home/CPP.png" alt="no image"></figure>
+        <p class="hed">++C</p>
+        <p class="para">هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <button class="butt_cpp">اختيار</button>
+
+    </div>
+    <div class="C_char">
+        <figure class="fig"><img src="../file/image/home/C_char.png" alt="no image"></figure>
+        <p class="hed">#C</p>
+        <p class="para">هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <button class="butt_C_char">اختيار</button>
+
+    </div>
+    <div class="sql">
+        <figure class="fig"><img src="../file/image/home/sql.png" alt="no image"></figure>
+        <p class="hed">SQL</p>
+        <p class="para">هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <button class="butt_sql">اختيار</button>
+
+    </div>
+    <div class="python">
+        <figure class="fig"><img src="../file/image/home/python.png" alt="no image"></figure>
+        <p class="hed">PYTHON</p>
+        <p class="para">هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <button class="butt_python">اختيار</button>
+
+    </div>
+    <div class="java">
+        <figure class="fig"><img src="../file/image/home/java.png" alt="no image"></figure>
+        <p class="hed">JAVA</p>
+        <p class="para">هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <button class="butt_java">اختيار</button>
+
+    </div>
+    <div class="ruby">
+        <figure class="fig"><img src="../file/image/home/ruby.png" alt="no image"></figure>
+        <p class="hed">RUBY</p>
+        <p class="para">هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <button class="butt_ruby">اختيار</button>
+
+    </div>
+    <div class="another1">
+        <figure class="fig"><img src="#" alt="no image"></figure>
+        <p class="hed">another1</p>
+        <p class="para">هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <button class="butt_another">اختيار</button>
+
+    </div>
+    <div class="another2">
+        <figure class="fig"><img src="#" alt="no image"></figure>
+        <p class="hed">another2</p>
+        <p class="para">هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <button class="butt_another">اختيار</button>
+
+    </div>
+    <div class="another3">
+        <figure class="fig"><img src="#" alt="no image"></figure>
+        <p class="hed">another3</p>
+        <p class="para">هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <button class="butt_another">اختيار</button>
+
+    </div>
+    <div class="another4">
+        <figure class="fig"><img src="#" alt="no image"></figure>
+        <p class="hed">another4</p>
+        <p class="para">هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <button class="butt_another">اختيار</button>
+
+    </div>
+    
+
+
+
+
+
+
+</section>
+
+
 <!-- 
         - start FEATURES
 -->

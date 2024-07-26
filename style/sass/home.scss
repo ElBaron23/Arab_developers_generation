@@ -257,6 +257,316 @@ img{
 object-fit: cover !important;
 max-width: 100%;
 }
+
+
+
+/********************************************/
+/*
+start section language
+*/
+/********************************************/
+.languages {
+  background-color: #eee !important;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: 99% !important;
+  margin: 10px auto !important;
+  gap: 2px 2px;
+}
+
+.html,
+.css,
+.JS,
+.php,
+.c,
+.cpp,
+.C_char,
+.sql,
+.python,
+.java,
+.ruby,
+.another1,
+.another2,
+.another3,
+.another4 {
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 10px 10px;
+  padding: 10px;
+  position: relative;
+}
+
+.html::before {
+  content: "";
+  width: 156px;
+  height: 10px;
+  border: 1px solid black;
+  background-image: linear-gradient(to right, #ec7528 20%, white 20% 80%);
+  position: absolute;
+  left: 5%;
+  bottom: 48%;
+
+}
+
+.css::before {
+  content: "";
+  width: 156px;
+  height: 10px;
+  border: 1px solid black;
+  background-image: linear-gradient(to right, #377bf5 40%, white 40% 60%);
+  position: absolute;
+  left: 5%;
+  bottom: 48%;
+
+}
+
+.JS::before {
+  content: "";
+  width: 156px;
+  height: 10px;
+  border: 1px solid black;
+  background-image: linear-gradient(to right, #fed730 5%, white 5% 95%);
+  position: absolute;
+  left: 5%;
+  bottom: 48%;
+
+}
+
+.php::before {
+  content: "";
+  width: 156px;
+  height: 10px;
+  border: 1px solid black;
+  background-image: linear-gradient(to right, #7981b4 15%, white 15% 85%);
+  position: absolute;
+  left: 5%;
+  bottom: 48%;
+
+}
+
+.c::before {
+  content: "";
+  width: 156px;
+  height: 10px;
+  border: 1px solid black;
+  background-image: linear-gradient(to right, #6b70bc 20%, white 20% 80%);
+  position: absolute;
+  left: 5%;
+  bottom: 48%;
+
+}
+
+.cpp::before {
+  content: "";
+  width: 156px;
+  height: 10px;
+  border: 1px solid black;
+  background-image: linear-gradient(to right, #195c9d 25%, white 25% 75%);
+  position: absolute;
+  left: 5%;
+  bottom: 48%;
+
+}
+
+.C_char::before {
+  content: "";
+  width: 156px;
+  height: 10px;
+  border: 1px solid black;
+  background-image: linear-gradient(to right, #187df5 10%, white 10% 90%);
+  position: absolute;
+  left: 5%;
+  bottom: 48%;
+
+}
+
+.sql::before {
+  content: "";
+  width: 156px;
+  height: 10px;
+  border: 1px solid black;
+  background-image: linear-gradient(to right, #5394a6 60%, white 60% 40%);
+  position: absolute;
+  left: 5%;
+  bottom: 48%;
+
+}
+
+.python::before {
+  content: "";
+  width: 156px;
+  height: 10px;
+  border: 1px solid black;
+  background-image: linear-gradient(to right, #fec747 90%, white 90% 10%);
+  position: absolute;
+  left: 5%;
+  bottom: 48%;
+
+}
+
+.java::before {
+  content: "";
+  width: 156px;
+  height: 10px;
+  border: 1px solid black;
+  background-image: linear-gradient(to right, #e05742 2%, white 2% 98%);
+  position: absolute;
+  left: 5%;
+  bottom: 48%;
+
+}
+
+.ruby::before {
+  content: "";
+  width: 156px;
+  height: 10px;
+  border: 1px solid black;
+  background-image: linear-gradient(to right, #b9493a 0%, white 0% 100%);
+  position: absolute;
+  left: 5%;
+  bottom: 48%;
+
+}
+
+.another1::before {
+  content: "";
+  width: 156px;
+  height: 10px;
+  border: 1px solid black;
+  background-image: linear-gradient(to right, #b3b0b0 20%, white 20% 80%);
+  position: absolute;
+  left: 5%;
+  bottom: 48%;
+
+}
+
+.another2::before {
+  content: "";
+  width: 156px;
+  height: 10px;
+  border: 1px solid black;
+  background-image: linear-gradient(to right, #b3b0b0 20%, white 20% 80%);
+  position: absolute;
+  left: 5%;
+  bottom: 48%;
+
+}
+
+.another3::before {
+  content: "";
+  width: 156px;
+  height: 10px;
+  border: 1px solid black;
+  background-image: linear-gradient(to right, #b3b0b0 20%, white 20% 80%);
+  position: absolute;
+  left: 5%;
+  bottom: 48%;
+
+}
+
+.another4::before {
+  content: "";
+  width: 156px;
+  height: 10px;
+  border: 1px solid black;
+  background-image: linear-gradient(to right, #b3b0b0 20%, white 20% 80%);
+  position: absolute;
+  left: 5%;
+  bottom: 48%;
+
+}
+
+.fig {
+  height: 90px;
+  width: 90px;
+}
+
+.hed {
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: bold;
+  font-size: larger;
+  height: 25px;
+
+}
+
+.butt_html,
+.butt_css,
+.butt_JS,
+.butt_php,
+.butt_c,
+.butt_cpp,
+.butt_C_char,
+.butt_sql,
+.butt_python,
+.butt_java,
+.butt_ruby,
+.butt_another {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid black;
+  color: white;
+  position: absolute;
+  left: 14%;
+  bottom: 20px;
+}
+
+.butt_html {
+  background-color: #ec7528;
+}
+
+.butt_css {
+  background-color: #377bf5;
+}
+
+.butt_JS {
+  background-color: #fed730;
+}
+
+.butt_php {
+  background-color: #7981b4;
+}
+
+.butt_c {
+  background-color: #6b70bc;
+}
+
+.butt_cpp {
+  background-color: #195c9d;
+}
+
+.butt_C_char {
+  background-color: #187df5;
+}
+
+.butt_sql {
+  background-color: #5394a6;
+}
+
+.butt_python {
+  background: #fec747;
+}
+
+.butt_java {
+  background-color: #e05742;
+}
+
+.butt_ruby {
+  background: #b9493a;
+}
+
+.butt_another {
+  background-color: #b3b0b0;
+}
+/********************************************/
+/*
+start section language
+*/
+/********************************************/
+
+
 /********************************************/
 /*
 start section features
