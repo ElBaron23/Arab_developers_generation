@@ -1,173 +1,40 @@
-  //this script for remove and add class active for element in navbar
-  /*
-هنا مجموعة من الطرق التي مررنا بها للوصول الى النتيجة التي نريدها 
-باقل عدد من الاسطر
+// إنشاء مصفوفة تحتوي على معرّفات العناصر التي نريد التعامل معها، ثم تحويل هذه المعرّفات إلى عناصر DOM باستخدام document.getElementById
+let elements = [
+  'home',            // معرّف العنصر الخاص بالصفحة الرئيسية
+  'roadmap',         // معرّف العنصر الخاص بخريطة الطريق
+  'lang_programing', // معرّف العنصر الخاص ببرمجة اللغات
+  'profile',         // معرّف العنصر الخاص بالملف الشخصي
+  'communitie',      // معرّف العنصر الخاص بالمجتمع
+  'blogger'          // معرّف العنصر الخاص بالمدونين
+].map(id => document.getElementById(id)); // تحويل معرّفات العناصر إلى عناصر DOM
 
-  */
-
-//   let home        = document.getElementById('home'),
-//       roadmap     = document.getElementById('roadmap'),
-//       lang_prog   = document.getElementById('lang_programing'),
-//       profile     = document.getElementById('profile'),
-//       communitie  = document.getElementById('communitie'),
-//       blogger     = document.getElementById('blogger');
-//استخدمنا هذه الطريقة لاكن بيها مشكلة منطقية عند ضغط على العنصر يفتح صفحة جديدة ولا يضل التحديد
-//  let  url = window.location.href;
-//  if(url.includes('profile.php')){
-// profile.classList.add('active');
-// lang_prog.classList.remove('active');
-// roadmap.classList.remove('active');
-// home.classList.remove('active');
-// communitie.classList.remove('active');
-// blogger.classList.remove('active');
-//  }else if(url.includes('roadmap.php')){
-// roadmap.classList.add('active');
-// home.classList.remove('active');
-// lang_prog.classList.remove('active');
-// profile.classList.remove('active');
-// communitie.classList.remove('active');
-// blogger.classList.remove('active');
-
-//  }else if(url.includes('lang_prog.php')){
-// lang_prog.classList.add('active');
-// roadmap.classList.remove('active');
-// home.classList.remove('active');
-// profile.classList.remove('active');
-// communitie.classList.remove('active');
-// blogger.classList.remove('active');
-//  }else if(url.includes('communitie.php')){
-// communitie.classList.add('active');
-// profile.classList.remove('active');
-// lang_prog.classList.remove('active');
-// roadmap.classList.remove('active');
-// home.classList.remove('active');
-// blogger.classList.remove('active');
-//  }else if(url.includes('blogger.php')){
-//  blogger.classList.add('active');
-//  communitie.classList.remove('active');
-//  profile.classList.remove('active');
-//  lang_prog.classList.remove('active');
-//  roadmap.classList.remove('active');
-//  home.classList.remove('active');
-//  }
-
-  //            ###
- //            ###
- //            ###
- //        ##########
- //         ########
- //          ######
- //           ####
- //            ##
- //             shurted with array
- let elements = [
-  'home',
-  'roadmap',
-  'lang_programing',
-  'profile',
-  'communitie',
-  'blogger'
-].map(id => document.getElementById(id));
-
+// الحصول على عنوان URL الحالي من نافذة المتصفح
 let url = window.location.href;
+
+// إزالة فئة 'active' من جميع العناصر في المصفوفة لتأكيد أن جميع العناصر غير نشطة في البداية
 elements.forEach(element => element.classList.remove('active'));
 
+// التحقق مما إذا كان عنوان URL يحتوي على 'profile.php'، وإذا كان الأمر كذلك، إضافة فئة 'active' إلى العنصر المقابل (الملف الشخصي)
 if (url.includes('profile.php')) {
-  elements[3].classList.add('active');
+  elements[3].classList.add('active'); // تعيين العنصر الرابع (الملف الشخصي) كنشط
+
+// التحقق مما إذا كان عنوان URL يحتوي على 'roadmap.php'، وإذا كان الأمر كذلك، إضافة فئة 'active' إلى العنصر المقابل (خريطة الطريق)
 } else if (url.includes('roadmap.php')) {
-  elements[1].classList.add('active');
+  elements[1].classList.add('active'); // تعيين العنصر الثاني (خريطة الطريق) كنشط
+
+// التحقق مما إذا كان عنوان URL يحتوي على 'lang_prog.php'، وإذا كان الأمر كذلك، إضافة فئة 'active' إلى العنصر المقابل (برمجة اللغات)
 } else if (url.includes('lang_prog.php')) {
-  elements[2].classList.add('active');
+  elements[2].classList.add('active'); // تعيين العنصر الثالث (برمجة اللغات) كنشط
+
+// التحقق مما إذا كان عنوان URL يحتوي على 'communitie.php'، وإذا كان الأمر كذلك، إضافة فئة 'active' إلى العنصر المقابل (المجتمع)
 } else if (url.includes('communitie.php')) {
-  elements[4].classList.add('active');
+  elements[4].classList.add('active'); // تعيين العنصر الخامس (المجتمع) كنشط
+
+// التحقق مما إذا كان عنوان URL يحتوي على 'blogger.php'، وإذا كان الأمر كذلك، إضافة فئة 'active' إلى العنصر المقابل (المدونين)
 } else if (url.includes('blogger.php')) {
-  elements[5].classList.add('active');
-}else if (url.includes('home.php')) {
-  elements[0].classList.add('active');
+  elements[5].classList.add('active'); // تعيين العنصر السادس (المدونين) كنشط
+
+// التحقق مما إذا كان عنوان URL يحتوي على 'home.php'، وإذا كان الأمر كذلك، إضافة فئة 'active' إلى العنصر المقابل (الصفحة الرئيسية)
+} else if (url.includes('home.php')) {
+  elements[0].classList.add('active'); // تعيين العنصر الأول (الصفحة الرئيسية) كنشط
 }
-
- 
-
-
- 
-// home.addEventListener('click',()=>{
-// home.classList.add('active');
-// roadmap.classList.remove('active');
-// lang_prog.classList.remove('active');
-// profile.classList.remove('active');
-// communitie.classList.remove('active');
-// blogger.classList.remove('active');
-// });
-
-// roadmap.addEventListener('click',()=>{
-// roadmap.classList.add('active');
-// home.classList.remove('active');
-// lang_prog.classList.remove('active');
-// profile.classList.remove('active');
-// communitie.classList.remove('active');
-// blogger.classList.remove('active');
-// });
-
-// lang_prog.addEventListener('click',()=>{
-// lang_prog.classList.add('active');
-// roadmap.classList.remove('active');
-// home.classList.remove('active');
-// profile.classList.remove('active');
-// communitie.classList.remove('active');
-// blogger.classList.remove('active');
-
-// });
-
-// profile.addEventListener('click',()=>{
-// profile.classList.add('active');
-// lang_prog.classList.remove('active');
-// roadmap.classList.remove('active');
-// home.classList.remove('active');
-// communitie.classList.remove('active');
-// blogger.classList.remove('active');
-// });
-
-// communitie.addEventListener('click',()=>{
-// communitie.classList.add('active');
-// profile.classList.remove('active');
-// lang_prog.classList.remove('active');
-// roadmap.classList.remove('active');
-// home.classList.remove('active');
-// blogger.classList.remove('active');
-// });
-
-// blogger.addEventListener('click',()=>{
-// blogger.classList.add('active');
-// communitie.classList.remove('active');
-// profile.classList.remove('active');
-// lang_prog.classList.remove('active');
-// roadmap.classList.remove('active');
-// home.classList.remove('active');
-// });
-
- //            ###
- //            ###
- //            ###
- //        ##########
- //         ########
- //          ######
- //           ####
- //            ##
- //             shurted with foreach
-
-
-
-
-//  let  links = document.querySelectorAll('#nav ul li a');
-//  links.forEach((e)=>{
-//    e.onclick = function(){
-//      links.forEach(el =>
-//        el.classList.remove('active'));
-//        e.classList.add('active')
-//    }
-//  });
-
-
-
-
-
