@@ -235,7 +235,7 @@ body {
 
   #hello .hello_text {
     padding: 0 20px !important;
-    margin: 0  !important;
+    margin: 0 !important;
     width: 100%; } }
 #hello .hello_img img {
   width: 80%;
@@ -329,7 +329,8 @@ body {
     flex-direction: column;
     box-shadow: 0 -6px 10px rgba(0, 0, 0, 0.1); }
 
-  #road h1, #road p {
+  #road h1,
+  #road p {
     text-align: center !important; }
 
   #road .road1 {
@@ -401,7 +402,7 @@ start section language
 .languages {
   background-color: #eee !important;
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: 100%;
   width: 99% !important;
   margin: 10px auto !important;
   gap: 2px 2px; }
@@ -421,173 +422,207 @@ start section language
 .another2,
 .another3,
 .another4 {
-  background-color: white;
-  display: grid;
-  grid-template-columns: 60% 40%;
-  gap: 10px 10px;
-  padding: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: fit-content !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   position: relative; }
-
-.html::before {
-  content: "";
-  width: 156px;
-  height: 10px;
-  border: 1px solid black;
-  background-image: linear-gradient(to right, #ec7528 20%, white 20% 80%);
-  position: absolute;
-  left: 5%;
-  bottom: 48%; }
-
-.css::before {
-  content: "";
-  width: 156px;
-  height: 10px;
-  border: 1px solid black;
-  background-image: linear-gradient(to right, #377bf5 40%, white 40% 60%);
-  position: absolute;
-  left: 5%;
-  bottom: 48%; }
-
-.JS::before {
-  content: "";
-  width: 156px;
-  height: 10px;
-  border: 1px solid black;
-  background-image: linear-gradient(to right, #fed730 5%, white 5% 95%);
-  position: absolute;
-  left: 5%;
-  bottom: 48%; }
-
-.php::before {
-  content: "";
-  width: 156px;
-  height: 10px;
-  border: 1px solid black;
-  background-image: linear-gradient(to right, #7981b4 15%, white 15% 85%);
-  position: absolute;
-  left: 5%;
-  bottom: 48%; }
-
-.c::before {
-  content: "";
-  width: 156px;
-  height: 10px;
-  border: 1px solid black;
-  background-image: linear-gradient(to right, #6b70bc 20%, white 20% 80%);
-  position: absolute;
-  left: 5%;
-  bottom: 48%; }
-
-.cpp::before {
-  content: "";
-  width: 156px;
-  height: 10px;
-  border: 1px solid black;
-  background-image: linear-gradient(to right, #195c9d 25%, white 25% 75%);
-  position: absolute;
-  left: 5%;
-  bottom: 48%; }
-
-.C_char::before {
-  content: "";
-  width: 156px;
-  height: 10px;
-  border: 1px solid black;
-  background-image: linear-gradient(to right, #187df5 10%, white 10% 90%);
-  position: absolute;
-  left: 5%;
-  bottom: 48%; }
-
-.sql::before {
-  content: "";
-  width: 156px;
-  height: 10px;
-  border: 1px solid black;
-  background-image: linear-gradient(to right, #5394a6 60%, white 60% 40%);
-  position: absolute;
-  left: 5%;
-  bottom: 48%; }
-
-.python::before {
-  content: "";
-  width: 156px;
-  height: 10px;
-  border: 1px solid black;
-  background-image: linear-gradient(to right, #fec747 90%, white 90% 10%);
-  position: absolute;
-  left: 5%;
-  bottom: 48%; }
-
-.java::before {
-  content: "";
-  width: 156px;
-  height: 10px;
-  border: 1px solid black;
-  background-image: linear-gradient(to right, #e05742 2%, white 2% 98%);
-  position: absolute;
-  left: 5%;
-  bottom: 48%; }
-
-.ruby::before {
-  content: "";
-  width: 156px;
-  height: 10px;
-  border: 1px solid black;
-  background-image: linear-gradient(to right, #b9493a 0%, white 0% 100%);
-  position: absolute;
-  left: 5%;
-  bottom: 48%; }
-
-.another1::before {
-  content: "";
-  width: 156px;
-  height: 10px;
-  border: 1px solid black;
-  background-image: linear-gradient(to right, #b3b0b0 20%, white 20% 80%);
-  position: absolute;
-  left: 5%;
-  bottom: 48%; }
-
-.another2::before {
-  content: "";
-  width: 156px;
-  height: 10px;
-  border: 1px solid black;
-  background-image: linear-gradient(to right, #b3b0b0 20%, white 20% 80%);
-  position: absolute;
-  left: 5%;
-  bottom: 48%; }
-
-.another3::before {
-  content: "";
-  width: 156px;
-  height: 10px;
-  border: 1px solid black;
-  background-image: linear-gradient(to right, #b3b0b0 20%, white 20% 80%);
-  position: absolute;
-  left: 5%;
-  bottom: 48%; }
-
-.another4::before {
-  content: "";
-  width: 156px;
-  height: 10px;
-  border: 1px solid black;
-  background-image: linear-gradient(to right, #b3b0b0 20%, white 20% 80%);
-  position: absolute;
-  left: 5%;
-  bottom: 48%; }
-
-.fig {
-  height: 90px;
-  width: 90px; }
 
 .hed {
   display: flex;
   justify-content: space-evenly;
   font-weight: bold;
   font-size: larger;
-  height: 25px; }
+  height: 25px;
+  position: relative;
+  bottom: 45px;
+  left: 21px; }
+
+.para {
+  position: relative;
+  left: 155px;
+  bottom: 29px; }
+
+.html::before {
+  content: "";
+  order: 1;
+  width: 582px;
+  height: 13px;
+  border: 1px solid black;
+  position: absolute;
+  left: 31%;
+  bottom: 35%;
+  background-image: linear-gradient(to right, #ec7528 20%, white 20% 80%); }
+
+.css::before {
+  content: "";
+  order: 1;
+  width: 582px;
+  height: 13px;
+  border: 1px solid black;
+  position: absolute;
+  left: 31%;
+  bottom: 35%;
+  background-image: linear-gradient(to right, #377bf5 40%, white 40% 60%); }
+
+.JS::before {
+  content: "";
+  order: 1;
+  width: 582px;
+  height: 13px;
+  border: 1px solid black;
+  position: absolute;
+  left: 31%;
+  bottom: 35%;
+  background-image: linear-gradient(to right, #fed730 5%, white 5% 95%); }
+
+.php::before {
+  content: "";
+  order: 1;
+  width: 582px;
+  height: 13px;
+  border: 1px solid black;
+  position: absolute;
+  left: 31%;
+  bottom: 35%;
+  background-image: linear-gradient(to right, #7981b4 15%, white 15% 85%); }
+
+.c::before {
+  content: "";
+  order: 1;
+  width: 582px;
+  height: 13px;
+  border: 1px solid black;
+  position: absolute;
+  left: 31%;
+  bottom: 35%;
+  background-image: linear-gradient(to right, #6b70bc 20%, white 20% 80%); }
+
+.cpp::before {
+  content: "";
+  order: 1;
+  width: 582px;
+  height: 13px;
+  border: 1px solid black;
+  position: absolute;
+  left: 31%;
+  bottom: 35%;
+  background-image: linear-gradient(to right, #195c9d 25%, white 25% 75%); }
+
+.C_char::before {
+  content: "";
+  order: 1;
+  width: 582px;
+  height: 13px;
+  border: 1px solid black;
+  position: absolute;
+  left: 31%;
+  bottom: 35%;
+  background-image: linear-gradient(to right, #187df5 10%, white 10% 90%); }
+
+.sql::before {
+  content: "";
+  order: 1;
+  width: 582px;
+  height: 13px;
+  border: 1px solid black;
+  position: absolute;
+  left: 31%;
+  bottom: 35%;
+  background-image: linear-gradient(to right, #5394a6 60%, white 60% 40%); }
+
+.python::before {
+  content: "";
+  order: 1;
+  width: 582px;
+  height: 13px;
+  border: 1px solid black;
+  position: absolute;
+  left: 31%;
+  bottom: 35%;
+  background-image: linear-gradient(to right, #fec747 90%, white 90% 10%); }
+
+.java::before {
+  content: "";
+  order: 1;
+  width: 582px;
+  height: 13px;
+  border: 1px solid black;
+  position: absolute;
+  left: 31%;
+  bottom: 35%;
+  background-image: linear-gradient(to right, #e05742 2%, white 2% 98%); }
+
+.ruby::before {
+  content: "";
+  order: 1;
+  width: 582px;
+  height: 13px;
+  border: 1px solid black;
+  position: absolute;
+  left: 31%;
+  bottom: 35%;
+  background-image: linear-gradient(to right, #b9493a 0%, white 0% 100%); }
+
+.another1::before {
+  content: "";
+  order: 1;
+  width: 582px;
+  height: 13px;
+  border: 1px solid black;
+  position: absolute;
+  left: 31%;
+  bottom: 35%;
+  background-image: linear-gradient(to right, #b3b0b0 20%, white 20% 80%); }
+
+.another2::before {
+  content: "";
+  order: 1;
+  width: 582px;
+  height: 13px;
+  border: 1px solid black;
+  position: absolute;
+  left: 31%;
+  bottom: 35%;
+  background-image: linear-gradient(to right, #b3b0b0 20%, white 20% 80%); }
+
+.another3::before {
+  content: "";
+  order: 1;
+  width: 582px;
+  height: 13px;
+  border: 1px solid black;
+  position: absolute;
+  left: 31%;
+  bottom: 35%;
+  background-image: linear-gradient(to right, #b3b0b0 20%, white 20% 80%); }
+
+.another4::before {
+  content: "";
+  order: 1;
+  width: 582px;
+  height: 13px;
+  border: 1px solid black;
+  position: absolute;
+  left: 31%;
+  bottom: 35%;
+  background-image: linear-gradient(to right, #b3b0b0 20%, white 20% 80%); }
+
+.fig {
+  height: 150px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  order: 4;
+  border-radius: 12px;
+  box-shadow: 0 0 23px 5px rgba(0, 0, 0, 0.1); }
+
+.fig img {
+  width: 100%; }
 
 .butt_html,
 .butt_css,
@@ -601,14 +636,15 @@ start section language
 .butt_java,
 .butt_ruby,
 .butt_another {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  width: 90px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 7%;
   border: 1px solid black;
   color: white;
   position: absolute;
-  left: 14%;
-  bottom: 20px; }
+  left: 90%;
+  bottom: 15px; }
 
 .butt_html {
   background-color: #ec7528; }
@@ -727,7 +763,8 @@ Start Select Road
     flex-direction: column;
     display: flex;
     flex-wrap: wrap; }
-    .select-road .content .image, .select-road .content .text {
+    .select-road .content .image,
+    .select-road .content .text {
       width: 100%; }
     .select-road .content .image {
       order: 0;

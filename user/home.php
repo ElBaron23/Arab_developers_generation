@@ -150,7 +150,7 @@ include '../inc/init.php';
 
 <section class="languages">
     <div class="html">
-        <figure class="fig"><img src="../file/image/home/html.jpg" alt="no image"></figure>
+        <figure class="fig"><img src="../file/image/home/html.png" alt="no image"></figure>
         <p class="hed">HTML</p>
         <p class="para">هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
         <button class="butt_html">اختيار</button>
@@ -213,7 +213,7 @@ include '../inc/init.php';
 
     </div>
     <div class="java">
-        <figure class="fig"><img src="../file/image/home/java.png" alt="no image"></figure>
+        <figure class="fig"><img src="../file/image/home/java1.png" alt="no image"></figure>
         <p class="hed">JAVA</p>
         <p class="para">هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
         <button class="butt_java">اختيار</button>
