@@ -675,7 +675,10 @@ start section features
     #features .container ._box {
       width: 30%; }
 
-/*Start Select Road*/
+/*
+*********************
+Start Select Road
+**********************/
 .select-road {
   padding: 60px 20px;
   margin: 60px 0; }
@@ -731,6 +734,9 @@ start section features
       margin: auto;
       justify-content: center;
       margin: 30px 0 40px 0; } }
-/*End Select Road*/
+/*
+*********************
+end Select Road
+**********************/
 
 /*# sourceMappingURL=home.css.map */

@@ -13,14 +13,25 @@ include '../inc/init.php';
 </head>
 <body dir="rtl">
 <?php
-    session_start();
-    include $if_not_reg;
-    include $navbar;
-    $firstname = $_SESSION['data']->firstname;
-    $lastname  = $_SESSION['data']->lastname;
-    
+      // بدء جلسة PHP، وهذا يعني أنه سيتم استخدام متغيرات الجلسة في هذا الملف
+      session_start();
+
+      // تضمين ملف يحتوي على تعريفات أو متغيرات أخرى، افترض أن $if_not_reg يحتوي على اسم الملف المناسب
+      include $if_not_reg;
+  
+      // تضمين ملف الشريط العلوي (النافبار) من أجل عرض التنقل في الصفحة، افترض أن $navbar يحتوي على اسم الملف المناسب
+      include $navbar;
+  
+      // الحصول على اسم المستخدم من بيانات الجلسة وتخزينه في متغير $firstname
+      $firstname = $_SESSION['data']->firstname;
+  
+      // الحصول على لقب المستخدم من بيانات الجلسة وتخزينه في متغير $lastname
+      $lastname  = $_SESSION['data']->lastname;
 ?>
-<!-- start hello section -->
+<!-- 
+ ******************************
+ start hello section 
+ ******************************-->
    <section id="hello">
 <div class="hello_text">
 
@@ -40,7 +51,11 @@ include '../inc/init.php';
    </section>
 <!-- end hello section -->
 
-  <!-- start section roadmap -->
+  <!--
+****************************
+ start section roadmap 
+ ***************************
+ -->
  <div id="road" >
 <div class="info">
 
@@ -95,11 +110,17 @@ include '../inc/init.php';
 </div>
 
  </div>
-  <!-- end section roadmap -->
+  <!-- 
+ ***************************
+ end section roadmap 
+ ***************************-->
 
 
 
-<!-- start Select Road --> 
+<!-- 
+  **************************
+  start Select Road 
+  ***************************--> 
 <section class="select-road">
 <div class="content">
 <div class="image"><img src="../file/image/home/road_home.jpg" alt=""></div>
@@ -112,14 +133,20 @@ include '../inc/init.php';
 </div>
 </div>
 </section>
-<!-- End Select Road --> 
+<!--
+******************************
+ End Select Road
+ ****************************--> 
 
 
 
 
 
   
-  <!-- add section for avaibal languages -->
+  <!--
+*******************************
+ add section for avaibal languages 
+ **********************************-->
 
 <section class="languages">
     <div class="html">
@@ -234,11 +261,19 @@ include '../inc/init.php';
 
 
 
-</section>
+  </section>
+<!-- 
+  **********************************
+  --end section  for avaibal languages
+  *************************************
+-->
+
 
 
 <!-- 
+*************************************
         - start FEATURES
+************************************
 -->
 
       <section  id="features" aria-label="features">
@@ -257,5 +292,8 @@ include '../inc/init.php';
 
         </div>
       </section>
+      <!-- 
+        - end FEATURES
+-->
 </body>
 </html>
