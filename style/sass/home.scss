@@ -108,68 +108,73 @@ width: 100%
 mix-blend-mode: darken;
     }
 //end section hello;
-    #road {
+
+//section road start
+#road {
   width: 100%;
   height: fit-content;
   background: #f2f3f4;
   padding: 80px 0;
-  margin: 80px 0;
+  margin: 16px 0;
   height: auto;
   display: flex;
   flex-direction: column;
-}
-#road img{
-mix-blend-mode: darken;
- 
-}
-  #road h1 {
-    font-size: 29px;
-    color: #223A59;
-    margin:16px;
-  }
-  #road p {
-    margin-right: 16px;
-    width: 80%;
-    margin-bottom: 16px; 
-    line-height: 2;
-    text-align: justify !important;
-  }
-  #road .road1 {
-margin-bottom: 20px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    height: fit-content !important;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-
-     }
-    #road .road1 .description {
-      width: 60%; 
-    padding: 20px
+  img{
+    mix-blend-mode: darken;
+     
     }
-      #road .road1 .description h1 {
-        font-size: 24px;
-        color: #031930; }
-      #road .road1 .description p {
-        font-size: 17px;
-        color: #121212; 
-text-align: justify;
-      }
-      #road .road1 .description button {
+    h1 {
+      font-size: 29px;
+      color: #223A59;
+      margin:16px;
+    }
+    p {
+      margin-right: 16px;
+      width: 80%;
+      margin-bottom: 16px; 
+      line-height: 2;
+      text-align: justify !important;
+    }
+    .road1 {
+      margin-bottom: 20px;
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+          width: 100%;
+          height: fit-content !important;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+      
+           }
+           .description {
+            width: 60%; 
+          padding: 20px;
+          h1 {
+            font-size: 24px;
+            color: #031930; }
+          }
+          p {
+            font-size: 17px;
+            color: #121212; 
+    text-align: justify;
+          }
+
+          button {
         width: 120px;
         height: 30px;
-cursor: pointer;
+        cursor: pointer;
         border-radius: 8px;
         border: 2px solid #f7f7f7;
         color: #f7f7f7;
         background: #223A59;
         transition: all 0.3s ease;
-        margin-bottom: 8px; }
-        #road .road1 .description button:hover {
-          border: 2px solid #223A59;
-          background: #f7f7f7;
-          color: #223A59; }
+        margin-bottom: 8px;
+            &:hover {
+              border: 2px solid #223A59;
+              background: #f7f7f7;
+              color: #223A59; }
+      }    
+}
+
     #road .road1 img {
       height: 90%;
       width: 30%;
