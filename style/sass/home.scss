@@ -594,8 +594,77 @@ start section features
     }
      }
 }
-/********************************************/
-/*
-end section features
-*/
-/********************************************/
+
+/*Start Select Road*/
+.select-road{
+padding:  60px 20px;
+margin:  60px 0;
+   .content{
+  display: flex;
+  justify-content: space-between;
+  border-block: 1px solid $mainColor;
+  align-items: center;
+  padding: 20px;
+  .image{
+display: flex;
+justify-content: end;
+width: 70%;
+  order: 3;
+  img{
+  width: 500px;
+  border-radius: 20px;
+   border: .2px solid $blackColor;
+   }
+  }
+  .text{
+    text-align: center;
+    h1{
+    color: $mainColor;
+    font-weight: 600;
+    }   
+    p{
+      margin: 20px auto;
+    color: $mainColor;
+      width: 80%;
+      font-size: 18px;
+    }
+    button{
+    padding: 10px 15px;
+    outline: none;
+    border: none;
+    width: 50%;
+    background: none;
+    border: 1px solid $mainColor;
+    border-radius: 40pc;
+    cursor: pointer;
+    transition: .4s;
+    &:hover{
+      border-color:transparent;
+      color: $lightColor;
+      background: $mainColor;
+    }
+    }
+  }
+  }
+}
+
+@media (max-width: 767px){
+.select-road{
+.content  {
+flex-direction: column;
+display: flex;
+flex-wrap: wrap;
+.image , .text{
+width: 100%;
+}
+.image{
+order:0;
+margin: auto;
+justify-content: center;
+margin: 30px 0 40px 0;
+}
+}
+}
+}
+/*End Select Road*/
+

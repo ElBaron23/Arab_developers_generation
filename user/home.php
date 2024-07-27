@@ -99,6 +99,21 @@ include '../inc/init.php';
 
 
 
+<!-- start Select Road --> 
+<section class="select-road">
+<div class="content">
+<div class="image"><img src="../file/image/home/road_home.jpg" alt=""></div>
+<div class="text">
+<h1 class="title" >هل انت محتار في اختيار مسارك</h1>
+<p class="desc">
+يمكننا تقديم لك المساعده من خلال المقال اللذي اعددناه. نشرح فيه كل التخصصات المتاحه لدينا لمساعدتك في اتخاذ قرارك المناسب
+</p>
+<button class="btn btn-moreInf">معرفه المزيد</button>
+</div>
+</div>
+</section>
+<!-- End Select Road --> 
+
 
 
 
