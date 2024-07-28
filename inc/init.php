@@ -8,7 +8,6 @@ $home      = "../style/css/home.css";
 $profile   = "../style/css/profile.css";
 $register  = "../style/css/register.css";
 $nav       = "../style/css/nav.css";
-$scrollbar = '../style/css/scrollbar.css';
 $contact_s = '../style/css/contact_us.css';
 
 

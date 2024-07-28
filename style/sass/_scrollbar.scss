@@ -1,0 +1,21 @@
+/* تخصيص شريط التمرير في المتصفحات الحديثة */
+::-webkit-scrollbar {
+    width: 12px; /* عرض شريط التمرير */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #223A59; /* لون شريط التمرير */
+    border-radius: 6px; /* تدوير حواف شريط التمرير */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* لون الخلفية الخاصة بشريط التمرير */
+    border-radius: 6px; /* تدوير حواف مسار شريط التمرير */
+  }
+  
+  /* تخصيص شريط التمرير في المتصفحات الأخرى */
+  .scrollable-element {
+    scrollbar-color: #223A59 #f1f1f1; /* لون شريط التمرير في المتصفحات التي تدعمه */
+    scrollbar-width: thin; /* عرض شريط التمرير */
+  }
+  
