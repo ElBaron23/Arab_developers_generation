@@ -12,7 +12,7 @@ include 'inc/init.php';
     <title>الجيل البرمجي العربي</title>
 </head>
 <body dir="rtl">
-<!-- start header  -->
+<!-- start header -->
 <header>
         <?php
             include $navIndex2;
