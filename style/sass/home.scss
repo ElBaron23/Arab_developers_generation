@@ -426,14 +426,123 @@ start section features
     ._box {
       width: 30%;
       height: 150px;
-      border: 2px solid red;
       margin-top: 16px;
       border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       background: $lightColor;
+      text-align: center;
       box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.2);
+      p{
+        font-size: 15px;
+        margin: 4px;
+        color: $secondColor;
+      }
+      .terminal-loader {
+        border: 2px solid #333;
+        background-color: #1a1a1a;
+        color: #0f0;
+        font-size: 16px;
+        padding:  16px;
+        width: 95%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 12px;
+        position: relative;
+        overflow: hidden;
+        box-sizing: border-box;
+        .terminal-header {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 24px;
+          background-color: #333;
+          border-top-left-radius: 4px;
+          border-top-right-radius: 4px;
+          padding: 0 1px;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: space-between;
+          .terminal-controls {
+            float:left;
+            .control {
+              display: inline-block;
+              width: 9px;
+              height: 9px;
+              margin-left: 6px;
+              border-radius: 50%;
+              background-color: #777;
+            }
+            
+            .control.close {
+              background-color: #e33;
+            }
+            
+            .control.minimize {
+              background-color: #ee0;
+            }
+            
+            .control.maximize {
+              background-color: #0b0;
+            }
+          }
+          .terminal-title {
+            float: left;
+            line-height:24px;
+            color: $lightColor;
+          }
+        }
+        @keyframes blinkCursor {
+          50% {
+            border-right-color: transparent;
+          }
+        }
+        
+        @keyframes typeAndDelete {
+          0%,
+          10% {
+            width: 0;
+          }
+          45%,
+          55% {
+            width: 100px;
+          } /* adjust width based on content */
+          90%,
+          100% {
+            width: 0;
+          }
+        }
+      }
+
     }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.2em solid green; /* Cursor */
+  animation: typeAndDelete 4s steps(11) infinite,
+    blinkCursor 0.5s step-end infinite alternate;
+  margin-top: 1.5em;
+}
+
 
 /*
 *********************

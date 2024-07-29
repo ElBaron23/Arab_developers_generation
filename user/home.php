@@ -354,12 +354,26 @@ include '../inc/init.php';
         <div class="container">
          <div class="_box">
             
+
          </div>
          <div class="_box">
             
          </div>
          <div class="_box">
-            
+            <p>نوفر ميزة تجربة اكوادك مباشرة على الموقع داخل محرر جاهز</p>
+            <div class="terminal-loader">
+                <div class="terminal-header">
+                  
+                     <div class="terminal-controls">
+                       <div class="control close"></div>
+                       <div class="control minimize"></div>
+                       <div class="control maximize"></div>
+                     </div>
+                     <div class="terminal-title">تحرير مباشرة</div>
+                </div>
+            <div class="text">الجيل البرمجي  </div>
+        </div>
+
          </div>
          
 
