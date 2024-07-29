@@ -360,6 +360,30 @@ start section language
           p{
             margin-bottom: 8px;
           }
+          .progress{
+            width: 100%;
+            height: 10px;
+            border: 1px solid $mainColor;
+            border-radius: 12px;
+            margin-bottom: 8px;
+            .progress_chart{
+              
+            }
+          }
+          button{
+            width: 80%;
+            height: 35px;
+            border: 2px solid $mainColor;
+            background: $mainColor;
+            color: $lightColor;
+            transition: all .4s ease;
+            border-radius: 12px;
+            &:hover{
+              color: $mainColor;
+              background: $lightColor;
+              border: 2px solid $mainColor;
+            }
+          }
          }
     }
 }
@@ -379,6 +403,7 @@ start section features
 */
 /********************************************/
 #features {
+  margin-top: 16px;
   width: 90%;
   height: 400px;
   display: flex;
@@ -400,6 +425,12 @@ start section features
 
     ._box {
       width: 30%;
+      height: 150px;
+      border: 2px solid red;
+      margin-top: 16px;
+      border-radius: 12px;
+      background: $lightColor;
+      box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.2);
     }
   }
 }
@@ -454,7 +485,7 @@ Start Select Road
       }
 
       button {
-        padding: 10px 15px;
+       height: 35px;
         outline: none;
         border: none;
         width: 50%;

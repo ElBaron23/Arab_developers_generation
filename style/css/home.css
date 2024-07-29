@@ -55,7 +55,7 @@ h2 {
   display: none; }
 
 .lo, .lo:hover {
-  padding: 7px !important;
+  padding: 4px !important;
   background: #f00000 !important;
   color: #fff !important; }
 
@@ -457,6 +457,24 @@ start section language
         margin-bottom: 16px; }
       .languages .languages_box .content p {
         margin-bottom: 8px; }
+      .languages .languages_box .content .progress {
+        width: 100%;
+        height: 10px;
+        border: 1px solid #223A59;
+        border-radius: 12px;
+        margin-bottom: 8px; }
+      .languages .languages_box .content button {
+        width: 80%;
+        height: 35px;
+        border: 2px solid #223A59;
+        background: #223A59;
+        color: #f7f7f7;
+        transition: all .4s ease;
+        border-radius: 12px; }
+        .languages .languages_box .content button:hover {
+          color: #223A59;
+          background: #f7f7f7;
+          border: 2px solid #223A59; }
 
 /********************************************/
 /*
@@ -469,6 +487,7 @@ start section features
 */
 /********************************************/
 #features {
+  margin-top: 16px;
   width: 90%;
   height: 400px;
   display: flex;
@@ -485,7 +504,13 @@ start section features
     justify-content: center;
     justify-content: space-around; }
     #features .container ._box {
-      width: 30%; }
+      width: 30%;
+      height: 150px;
+      border: 2px solid red;
+      margin-top: 16px;
+      border-radius: 12px;
+      background: #f7f7f7;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
 
 /*
 *********************
@@ -526,7 +551,7 @@ Start Select Road
         width: 80%;
         font-size: 18px; }
       .select-road .content1 .text button {
-        padding: 10px 15px;
+        height: 35px;
         outline: none;
         border: none;
         width: 50%;

@@ -156,16 +156,20 @@ include '../inc/init.php';
 
     <div class="languages_box">
 
-        <figure class="fig">
+        <figure>
             <img src="../file/image/home/html.png" alt="no image">
         </figure>
         <div class="content">
         <h3 >تعلم لغة HTML</h3>
-        <p class="para">هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
-        <button class="butt_html"> ابدا تعلم اللغة الان</button>
-        </div>
-       
+        <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
 
+        <div class="progress">
+
+                 <div class="progress_chart"></div>
+        </div>
+
+        <button> ابدا تعلم اللغة الان</button>
+        </div>
     </div>
 
     <div class="languages_box">
@@ -174,6 +178,10 @@ include '../inc/init.php';
         <div class="content">
         <h3>تعلم لغة CSS</h3>
         <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <div class="progress">
+
+<div class="progress_chart"></div>
+</div>
         <button class="butt_css"> ابدا تعلم اللغة الان</button>
 
         </div>
@@ -186,6 +194,10 @@ include '../inc/init.php';
         <div class="content">
         <h3> تعلم لغة JavaScript</h3>
         <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <div class="progress">
+
+<div class="progress_chart"></div>
+</div>
         <button > ابدا تعلم اللغة الان</button>
         </div>
         
@@ -198,6 +210,10 @@ include '../inc/init.php';
         <div class="content">
         <h3> تعلم لغة PHP</h3>
         <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <div class="progress">
+
+<div class="progress_chart"></div>
+</div>
         <button class="butt_php"> ابدا تعلم اللغة الان</button>
         </div>
        
@@ -210,6 +226,10 @@ include '../inc/init.php';
         <div class="content">
         <h3> تعلم لغة C</h3>
         <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <div class="progress">
+
+<div class="progress_chart"></div>
+</div>
         <button class="butt_c"> ابدا تعلم اللغة الان</button>
         </div>
        
@@ -222,6 +242,10 @@ include '../inc/init.php';
         <div class="content">
         <h3> تعلم لغة ++C</h3>
         <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <div class="progress">
+
+<div class="progress_chart"></div>
+</div>
         <button class="butt_cpp"> ابدا تعلم اللغة الان</button>
         </div>
         
@@ -234,6 +258,10 @@ include '../inc/init.php';
         <div class="content">
         <h3> تعلم لغة #C</h3>
         <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <div class="progress">
+
+<div class="progress_chart"></div>
+</div>
         <button class="butt_C_char"> ابدا تعلم اللغة الان</button>
         </div>
         
@@ -246,6 +274,10 @@ include '../inc/init.php';
         <div class="content">
         <h3> تعلم لغة SQL</h3>
         <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <div class="progress">
+
+<div class="progress_chart"></div>
+</div>
         <button class="butt_C_char"> ابدا تعلم اللغة الان</button>
         </div>
 
@@ -257,6 +289,10 @@ include '../inc/init.php';
         <div class="content">
         <h3> تعلم لغة PYTHON</h3>
         <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <div class="progress">
+
+<div class="progress_chart"></div>
+</div>
         <button class="butt_C_char"> ابدا تعلم اللغة الان</button>
         </div>
 
@@ -268,6 +304,10 @@ include '../inc/init.php';
         <div class="content">
         <h3>تعلم لغة JAVA</h3>
         <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <div class="progress">
+
+<div class="progress_chart"></div>
+</div>
         <button class="butt_C_char"> ابدا تعلم اللغة الان</button>
         </div>
 
@@ -279,6 +319,10 @@ include '../inc/init.php';
         <div class="content">
         <h3>تعلم لغة RUBY</h3>
         <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <div class="progress">
+
+<div class="progress_chart btn toggle active"></div>
+</div>
         <button class="butt_C_char"> ابدا تعلم اللغة الان</button>
         </div>
 
@@ -308,6 +352,12 @@ include '../inc/init.php';
             الجيل البرمجي العربي
           </p>
         <div class="container">
+         <div class="_box">
+            
+         </div>
+         <div class="_box">
+            
+         </div>
          <div class="_box">
             
          </div>
