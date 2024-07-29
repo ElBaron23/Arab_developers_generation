@@ -564,6 +564,14 @@ start section features
             float: left;
             line-height: 24px;
             color: #f7f7f7; }
+        #features .container ._box .terminal-loader .text {
+          display: inline-block;
+          white-space: nowrap;
+          overflow: hidden;
+          border-right: 0.2em solid green;
+          /* Cursor */
+          animation: typeAndDelete 4s steps(11) infinite, blinkCursor 0.5s step-end infinite alternate;
+          margin-top: 24px; }
 @keyframes blinkCursor {
   50% {
     border-right-color: transparent; } }
@@ -578,15 +586,6 @@ start section features
   90%,
           100% {
     width: 0; } }
-.text {
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 0.2em solid green;
-  /* Cursor */
-  animation: typeAndDelete 4s steps(11) infinite, blinkCursor 0.5s step-end infinite alternate;
-  margin-top: 1.5em; }
-
 /*
 *********************
 Start Select Road
