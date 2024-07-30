@@ -13,7 +13,7 @@ include '../inc/init.php';
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="<?=$profile?>">
-
+    <link rel="stylesheet" href="../style/css/static.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>المنشورات</title>
 </head>
@@ -21,5 +21,32 @@ include '../inc/init.php';
 <?php
     include $_nav;
 ?>  
+
+<!-- start des additions des statics au profile  -->
+    <div class="total">
+        <div class="main">
+            <img src="../file/image/mypic.png" alt="Mon image">
+            <div>
+            <h2 class="name">imad touzouz</h2>
+            <p class="email">imad@gmail.com</p>
+            </div>
+        </div>
+        <div class="static">
+            <img src="../file/image/home/good_answ.png" alt="exercices">
+            <div class="text">
+                <p class="description">امتحان تم اجتيازه بنجاح</p>
+                <p class="numero">6</p>
+            </div>
+        </div>
+        <div class="static">
+            <img src="../file/image/home/bon.png" alt="exams">
+            <div class="text">
+            <p class="description">تمارين تم حلها</p>
+            <p class="numero">60</p>
+            </div>
+        </div>
+    </div>
+    <!-- end des additions des statics au profile -->
+
 </body>
 </html>
