@@ -14,7 +14,7 @@ include '../inc/init.php';
     <meta charset="UTF-8">
     <link rel="stylesheet" href="<?=$profile?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>المنشورات</title>
+    <title>الاحصائيات</title>
 </head>
 <body dir="rtl">
 <?php
