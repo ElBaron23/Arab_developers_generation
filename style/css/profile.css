@@ -745,4 +745,61 @@ body {
   flex-direction: column;
   padding: 20px; }
 
+/**********************************************
+static page
+
+***********************************************/
+@font-face {
+  font-family: tajawal;
+  src: url(../../font/Tajawal-Regular.ttf); }
+.total {
+  margin: 32px;
+  height: 320px;
+  padding: 17px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
+  .total .main {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 20px;
+    align-items: end; }
+    .total .main img {
+      width: 100px;
+      height: 105px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      border-radius: 12px; }
+    .total .main div {
+      text-align: center; }
+      .total .main div .name {
+        display: initial !important;
+        color: #223A59;
+        font-size: 26px; }
+      .total .main div .email {
+        color: #4083b8; }
+  .total .static {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 12px; }
+    .total .static img {
+      width: 80px;
+      height: 70px; }
+    .total .static .text {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+      font-size: 20px;
+      color: #4083b8; }
+      .total .static .text .numero {
+        font-size: 50px;
+        font-weight: 800;
+        width: 100px;
+        text-align: center;
+        border: 2px solid #223A59;
+        border-radius: 12px; }
+
 /*# sourceMappingURL=profile.css.map */

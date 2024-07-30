@@ -1,22 +1,11 @@
-// file for styling static page
-* {
-    box-sizing: border-box;
-    border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
-}
 
-:root {
-    --border_width: 1px;
-}
-
+@import'var';
 .total {
-    margin: 35px;
-    height: 350px;
+    margin:32px;
+    height: 320px;
     padding: 17px;
-    border: var(--border_width) solid black;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.3);
 
     .main {
         margin-bottom: 10px;
@@ -25,10 +14,10 @@
         align-items: end;
 
         img {
-            border: var(--border_width) solid black;
             width: 100px;
             height: 105px;
-
+             box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.2);
+            border-radius: 12px;
         }
 
         div {
@@ -36,6 +25,8 @@
 
             .name {
                 display: initial !important;
+                color: $mainColor;
+                font-size: 26px;
             }
 
             .email {
@@ -48,14 +39,14 @@
         display: flex;
         align-items: center;
         gap: 30px;
-        border: var(--border_width) solid black;
         margin-bottom: 10px;
         padding: 10px;
+        box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.2);
+        border-radius: 12px;
 
         img {
             width: 80px;
             height: 70px;
-            border: var(--border_width) solid black;
         }
 
         .text {
@@ -69,9 +60,10 @@
             .numero {
                 font-size: 50px;
                 font-weight: 800;
-                border: var(--border_width) solid black;
                 width: 100px;
                 text-align: center;
+                border: 2px solid $mainColor;
+                border-radius: 12px;
             }
         }
     }

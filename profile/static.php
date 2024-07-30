@@ -13,7 +13,6 @@ include '../inc/init.php';
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="<?=$profile?>">
-    <link rel="stylesheet" href="../style/css/static.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>المنشورات</title>
 </head>
@@ -27,8 +26,8 @@ include '../inc/init.php';
         <div class="main">
             <img src="../file/image/mypic.png" alt="Mon image">
             <div>
-            <h2 class="name">imad touzouz</h2>
-            <p class="email">imad@gmail.com</p>
+            <h2 class="name"><?php echo  $firstname ." ". $lastname ?></h2>
+            <p class="email"><?php  echo $email ?></p>
             </div>
         </div>
         <div class="static">
