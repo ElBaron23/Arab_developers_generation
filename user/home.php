@@ -3,8 +3,387 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <?php 
 include '../inc/init.php';
+include $cnx;
+function getLangs($state){
+if ($state){
+echo(' <form method="post">
+
+<div class="languages_box">
+
+    <figure>
+        <img src="../file/image/home/html.png" alt="no image">
+    </figure>
+    <div class="content">
+    <h3 >تعلم لغة HTML</h3>
+    <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+
+    <div class="progress">
+
+             <div class="progress_chart"></div>
+    </div>
+
+    <button value="1" name="sub"> ابدا تعلم اللغة الان</button>
+    </div>
+</div>
+
+<div class="languages_box">
+
+    <figure class="fig"><img src="../file/image/home/css.png" alt="no image"></figure>
+    <div class="content">
+    <h3>تعلم لغة CSS</h3>
+    <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+    <div class="progress">
+
+<div class="progress_chart"></div>
+</div>
+    <button class="butt_css"name="sub" value="2"> ابدا تعلم اللغة الان</button>
+
+    </div>
+    
+</div>
+
+<div class="languages_box">
+
+    <figure class="fig"><img src="../file/image/home/javascript.png" alt="no image"></figure>
+    <div class="content">
+    <h3> تعلم لغة JavaScript</h3>
+    <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+    <div class="progress">
+
+<div class="progress_chart"></div>
+</div>
+    <button value="3"name="sub" > ابدا تعلم اللغة الان</button>
+    </div>
+    
+
+</div>
+
+<div class="languages_box">
+
+    <figure class="fig"><img src="../file/image/home/php.png" alt="no image"></figure>
+    <div class="content">
+    <h3> تعلم لغة PHP</h3>
+    <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+    <div class="progress">
+
+<div class="progress_chart"></div>
+</div>
+    <button class="butt_php"name="sub" value="4"> ابدا تعلم اللغة الان</button>
+    </div>
+   
+
+</div>
+
+<div class="languages_box">
+
+    <figure class="fig"><img src="../file/image/home/C.png" alt="no image"></figure>
+    <div class="content">
+    <h3> تعلم لغة C</h3>
+    <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+    <div class="progress">
+
+<div class="progress_chart"></div>
+</div>
+    <button class="butt_c"name="sub" value="5"> ابدا تعلم اللغة الان</button>
+    </div>
+   
+
+</div>
+
+<div class="languages_box">
+
+    <figure class="fig"><img src="../file/image/home/CPP.png" alt="no image"></figure>
+    <div class="content">
+    <h3> تعلم لغة ++C</h3>
+    <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+    <div class="progress">
+
+<div class="progress_chart"></div>
+</div>
+    <button class="butt_cpp"name="sub" value="6"> ابدا تعلم اللغة الان</button>
+    </div>
+    
+
+</div>
+
+<div class="languages_box">
+
+    <figure class="fig"><img src="../file/image/home/C_char.png" alt="no image"></figure>
+    <div class="content">
+    <h3> تعلم لغة #C</h3>
+    <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+    <div class="progress">
+
+<div class="progress_chart"></div>
+</div>
+    <button class="butt_C_char"name="sub" value="7"> ابدا تعلم اللغة الان</button>
+    </div>
+    
+
+</div>
+
+<div class="languages_box">
+
+    <figure class="fig"><img src="../file/image/home/sql.png" alt="no image"></figure>
+    <div class="content">
+    <h3> تعلم لغة SQL</h3>
+    <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+    <div class="progress">
+
+<div class="progress_chart"></div>
+</div>
+    <button class="butt_C_char" value=8 name="sub"> ابدا تعلم اللغة الان</button>
+    </div>
+
+</div>
+
+<div class="languages_box">
+
+    <figure class="fig"><img src="../file/image/home/python.png" alt="no image"></figure>
+    <div class="content">
+    <h3> تعلم لغة PYTHON</h3>
+    <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+    <div class="progress">
+
+<div class="progress_chart"></div>
+</div>
+    <button class="butt_C_char" name="sub"value="9"> ابدا تعلم اللغة الان</button>
+    </div>
+
+</div>
+
+<div class="languages_box">
+
+    <figure class="fig"><img src="../file/image/home/java1.png" alt="no image"></figure>
+    <div class="content">
+    <h3>تعلم لغة JAVA</h3>
+    <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+    <div class="progress">
+
+<div class="progress_chart"></div>
+</div>
+    <button class="butt_C_char"name="sub" value="10"> ابدا تعلم اللغة الان</button>
+    </div>
+
+</div>
+
+<div class="languages_box">
+
+    <figure class="fig"><img src="../file/image/home/ruby.png" alt="no image"></figure>
+    <div class="content">
+    <h3>تعلم لغة RUBY</h3>
+    <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+    <div class="progress">
+
+<div class="progress_chart btn toggle active"></div>
+</div>
+    <button class="butt_C_char"name="sub" value="11"> ابدا تعلم اللغة الان</button>
+    </div>
+
+</div>
+</form>
+');
+}else{
+    echo('
+    <div class="languages_box">
+    
+        <figure>
+            <img src="../file/image/home/html.png" alt="no image">
+        </figure>
+        <div class="content">
+        <h3 >تعلم لغة HTML</h3>
+        <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+    
+        <div class="progress">
+    
+                 <div class="progress_chart"></div>
+        </div>
+    <button> 
+    عليك انهاء اللغه اللتي اخترتها اولا
+    </button> 
+        </div>
+    </div>
+    
+    <div class="languages_box">
+    
+        <figure class="fig"><img src="../file/image/home/css.png" alt="no image"></figure>
+        <div class="content">
+        <h3>تعلم لغة CSS</h3>
+        <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <div class="progress">
+    
+    <div class="progress_chart"></div>
+    </div>
+    <button> 
+    عليك انهاء اللغه اللتي اخترتها اولا
+    </button> 
+        </div>
+        
+    </div>
+    
+    <div class="languages_box">
+    
+        <figure class="fig"><img src="../file/image/home/javascript.png" alt="no image"></figure>
+        <div class="content">
+        <h3> تعلم لغة JavaScript</h3>
+        <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <div class="progress">
+    
+    <div class="progress_chart"></div>
+    </div>
+    <button> 
+    عليك انهاء اللغه اللتي اخترتها اولا
+    </button> 
+        </div>
+        
+    
+    </div>
+    
+    <div class="languages_box">
+    
+        <figure class="fig"><img src="../file/image/home/php.png" alt="no image"></figure>
+        <div class="content">
+        <h3> تعلم لغة PHP</h3>
+        <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <div class="progress">
+    
+    <div class="progress_chart"></div>
+    </div>
+    <button> 
+    عليك انهاء اللغه اللتي اخترتها اولا
+    </button> 
+        </div>
+       
+    
+    </div>
+    
+    <div class="languages_box">
+    
+        <figure class="fig"><img src="../file/image/home/C.png" alt="no image"></figure>
+        <div class="content">
+        <h3> تعلم لغة C</h3>
+        <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <div class="progress">
+    
+    <div class="progress_chart"></div>
+    </div>
+    <button> 
+    عليك انهاء اللغه اللتي اخترتها اولا
+    </button> 
+        </div>
+       
+    
+    </div>
+    
+    <div class="languages_box">
+    
+        <figure class="fig"><img src="../file/image/home/CPP.png" alt="no image"></figure>
+        <div class="content">
+        <h3> تعلم لغة ++C</h3>
+        <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <div class="progress">
+    
+    <div class="progress_chart"></div>
+    </div>
+    <button> 
+    عليك انهاء اللغه اللتي اخترتها اولا
+    </button> 
+        </div>
+        
+    
+    </div>
+    
+    <div class="languages_box">
+    
+        <figure class="fig"><img src="../file/image/home/C_char.png" alt="no image"></figure>
+        <div class="content">
+        <h3> تعلم لغة #C</h3>
+        <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <div class="progress">
+    
+    <div class="progress_chart"></div>
+    </div>
+    <button> 
+    عليك انهاء اللغه اللتي اخترتها اولا
+    </button> 
+        </div>
+        
+    
+    </div>
+    
+    <div class="languages_box">
+    
+        <figure class="fig"><img src="../file/image/home/sql.png" alt="no image"></figure>
+        <div class="content">
+        <h3> تعلم لغة SQL</h3>
+        <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <div class="progress">
+    
+    <div class="progress_chart"></div>
+    </div>
+    <button> 
+    عليك انهاء اللغه اللتي اخترتها اولا
+    </button> 
+        </div>
+    
+    </div>
+    
+    <div class="languages_box">
+    
+        <figure class="fig"><img src="../file/image/home/python.png" alt="no image"></figure>
+        <div class="content">
+        <h3> تعلم لغة PYTHON</h3>
+        <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <div class="progress">
+    
+    <div class="progress_chart"></div>
+    </div>
+    <button> 
+    عليك انهاء اللغه اللتي اخترتها اولا
+    </button> 
+        </div>
+    
+    </div>
+    
+    <div class="languages_box">
+    
+        <figure class="fig"><img src="../file/image/home/java1.png" alt="no image"></figure>
+        <div class="content">
+        <h3>تعلم لغة JAVA</h3>
+        <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <div class="progress">
+    
+    <div class="progress_chart"></div>
+    </div>
+    <button> 
+    عليك انهاء اللغه اللتي اخترتها اولا
+    </button> 
+        </div>
+    
+    </div>
+    
+    <div class="languages_box">
+    
+        <figure class="fig"><img src="../file/image/home/ruby.png" alt="no image"></figure>
+        <div class="content">
+        <h3>تعلم لغة RUBY</h3>
+        <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
+        <div class="progress">
+    
+    <div class="progress_chart btn toggle active"></div>
+    </div>
+    <button> 
+    عليك انهاء اللغه اللتي اخترتها اولا
+    </button> 
+        </div>
+    
+    </div>
+    ');
+}
+}
 ?>
     <link rel="shortcut icon" href="file/image/logo.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -75,7 +454,7 @@ include '../inc/init.php';
        <p>
 من هنا تنطلق الخطوة الاولى في التاسيس البرمجي لن تحتاج الى اي خبرة مسبقة سنبدا من الصفر خطوة خطوة ان شاء الله
        </p>
-       <button type="submit" id="foundation">ابدا الان</button>
+       <button type="submit" value="1" id="foundation">ابدا الان</button>
     </div>
 </div>
 <div class="road1">
@@ -85,7 +464,7 @@ include '../inc/init.php';
         <p>من خلال اختيارك لهذا المسار ستمكن من تعلم كيف تصمم واجهات مواقع 
             جذابة مع احدث التقنيات المتاحة 
         </p>
-        <button type="submit" id="web_designe">ابدا الان</button>
+        <button type="submit" value="2" id="web_designe">ابدا الان</button>
     </div>
 </div>
 <div class="road1">
@@ -95,7 +474,7 @@ include '../inc/init.php';
       <p>من خلال اختيارك لهذا المسار ستتكمن من تنمية قدرتك
         على برمجة المواقع وجعل الموقع قابل للتفاعل مع المستخدم
       </p>
-        <button type="submit" id="web_designe">ابدا الان</button>
+        <button type="submit" value="3" id="web_designe">ابدا الان</button>
     </div>
 </div>
 <div class="road1">
@@ -105,10 +484,9 @@ include '../inc/init.php';
 <p>من خلال هدا المسار ستتمكن من ربط موقعك مع قاعدة البيانات وادارة 
     بيانات المستخدمين والتعامل مع قواعد البيانات بشكل احترافي
 </p>
-        <button type="submit" id="web_designe">ابدا الان</button>
+        <button type="submit" value="4" id="web_designe">ابدا الان</button>
     </div>
 </div>
-
  </div>
   <!-- 
  ***************************
@@ -153,183 +531,16 @@ include '../inc/init.php';
  **********************************-->
 
 <section class="languages">
-
-    <div class="languages_box">
-
-        <figure>
-            <img src="../file/image/home/html.png" alt="no image">
-        </figure>
-        <div class="content">
-        <h3 >تعلم لغة HTML</h3>
-        <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
-
-        <div class="progress">
-
-                 <div class="progress_chart"></div>
-        </div>
-
-        <button> ابدا تعلم اللغة الان</button>
-        </div>
-    </div>
-
-    <div class="languages_box">
-
-        <figure class="fig"><img src="../file/image/home/css.png" alt="no image"></figure>
-        <div class="content">
-        <h3>تعلم لغة CSS</h3>
-        <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
-        <div class="progress">
-
-<div class="progress_chart"></div>
-</div>
-        <button class="butt_css"> ابدا تعلم اللغة الان</button>
-
-        </div>
-        
-    </div>
-
-    <div class="languages_box">
-
-        <figure class="fig"><img src="../file/image/home/javascript.png" alt="no image"></figure>
-        <div class="content">
-        <h3> تعلم لغة JavaScript</h3>
-        <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
-        <div class="progress">
-
-<div class="progress_chart"></div>
-</div>
-        <button > ابدا تعلم اللغة الان</button>
-        </div>
-        
-
-    </div>
-
-    <div class="languages_box">
-
-        <figure class="fig"><img src="../file/image/home/php.png" alt="no image"></figure>
-        <div class="content">
-        <h3> تعلم لغة PHP</h3>
-        <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
-        <div class="progress">
-
-<div class="progress_chart"></div>
-</div>
-        <button class="butt_php"> ابدا تعلم اللغة الان</button>
-        </div>
-       
-
-    </div>
-
-    <div class="languages_box">
-
-        <figure class="fig"><img src="../file/image/home/C.png" alt="no image"></figure>
-        <div class="content">
-        <h3> تعلم لغة C</h3>
-        <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
-        <div class="progress">
-
-<div class="progress_chart"></div>
-</div>
-        <button class="butt_c"> ابدا تعلم اللغة الان</button>
-        </div>
-       
-
-    </div>
-    
-    <div class="languages_box">
-
-        <figure class="fig"><img src="../file/image/home/CPP.png" alt="no image"></figure>
-        <div class="content">
-        <h3> تعلم لغة ++C</h3>
-        <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
-        <div class="progress">
-
-<div class="progress_chart"></div>
-</div>
-        <button class="butt_cpp"> ابدا تعلم اللغة الان</button>
-        </div>
-        
-
-    </div>
-
-    <div class="languages_box">
-
-        <figure class="fig"><img src="../file/image/home/C_char.png" alt="no image"></figure>
-        <div class="content">
-        <h3> تعلم لغة #C</h3>
-        <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
-        <div class="progress">
-
-<div class="progress_chart"></div>
-</div>
-        <button class="butt_C_char"> ابدا تعلم اللغة الان</button>
-        </div>
-        
-
-    </div>
-
-    <div class="languages_box">
-
-        <figure class="fig"><img src="../file/image/home/sql.png" alt="no image"></figure>
-        <div class="content">
-        <h3> تعلم لغة SQL</h3>
-        <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
-        <div class="progress">
-
-<div class="progress_chart"></div>
-</div>
-        <button class="butt_C_char"> ابدا تعلم اللغة الان</button>
-        </div>
-
-    </div>
-
-    <div class="languages_box">
-
-        <figure class="fig"><img src="../file/image/home/python.png" alt="no image"></figure>
-        <div class="content">
-        <h3> تعلم لغة PYTHON</h3>
-        <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
-        <div class="progress">
-
-<div class="progress_chart"></div>
-</div>
-        <button class="butt_C_char"> ابدا تعلم اللغة الان</button>
-        </div>
-
-    </div>
-
-    <div class="languages_box">
-
-        <figure class="fig"><img src="../file/image/home/java1.png" alt="no image"></figure>
-        <div class="content">
-        <h3>تعلم لغة JAVA</h3>
-        <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
-        <div class="progress">
-
-<div class="progress_chart"></div>
-</div>
-        <button class="butt_C_char"> ابدا تعلم اللغة الان</button>
-        </div>
-
-    </div>
-
-    <div class="languages_box">
-
-        <figure class="fig"><img src="../file/image/home/ruby.png" alt="no image"></figure>
-        <div class="content">
-        <h3>تعلم لغة RUBY</h3>
-        <p>هذد اللغة هي اساس بناء هيكل المظهر الخارجي لاي  مشروع تصادفه</p>
-        <div class="progress">
-
-<div class="progress_chart btn toggle active"></div>
-</div>
-        <button class="butt_C_char"> ابدا تعلم اللغة الان</button>
-        </div>
-
-    </div>
-
-
-
+<?php
+$query = $mydb->prepare('SELECT * FROM  user_lang WHERE user_id = :id ');
+$query->bindParam('id' , $_SESSION['user_id']);
+$query->execute();
+if ($query->rowCount() <= 0){
+getLangs(true);
+}else{
+getLangs(false);
+}
+?>
 
   </section>
 <!-- 
@@ -387,3 +598,16 @@ include '../inc/init.php';
 -->
 </body>
 </html>
+
+<?php
+if (isset($_POST['sub'])){
+$add_lang = $mydb->prepare('INSERT INTO user_lang (`lang_id` , `user_id` , `date`) VALUES (:lang_id , :user_id , NOW())');
+$add_lang->bindParam('lang_id' , $_POST['sub']);
+$add_lang->bindParam('user_id' , $_SESSION['user_id']);
+if ($add_lang->execute()){
+header("refresh:0"); # update in the after
+header("location:home.php"); # update in the after
+exit();
+}
+}
+?>

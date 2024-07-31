@@ -330,6 +330,16 @@ start section language
   align-items: center;
   width: 100% ;
   margin-top: 16px;
+  justify-content: center;
+  form{
+    width: 100%;
+    margin:auto;
+    display: flex;
+    text-align: center;
+  flex-direction: column ;
+  justify-content: center;
+  align-items: center;
+  }
     .languages_box{
          margin-top: 20px;
          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
@@ -640,3 +650,7 @@ Start Select Road
 *********************
 end Select Road
 **********************/
+
+button{
+cursor: pointer;
+}

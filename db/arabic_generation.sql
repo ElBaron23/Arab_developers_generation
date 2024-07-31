@@ -113,3 +113,34 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+-- إنشاء جدول اللغات
+CREATE TABLE IF NOT EXISTS `languages` (
+    `lang_id` INT PRIMARY KEY,
+    `lang_name` VARCHAR(50)
+);
+
+-- إنشاء جدول علاقة المستخدمين مع اللغات
+CREATE TABLE IF NOT EXISTS `user_lang` (
+    `lang_id` INT NOT NULL,
+    `user_id` INT NOT NULL,
+    `date` DATE,
+    `finished` INT ,
+    FOREIGN KEY (`lang_id`) REFERENCES `languages`(`lang_id`),
+    FOREIGN KEY (`user_id`) REFERENCES `user`(`user_id`)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
+);
+
+-- إدراج بيانات في جدول اللغات
+INSERT INTO `languages` (`lang_id`, `lang_name`) VALUES
+(1, 'HTML'),
+(2, 'CSS'),
+(3, 'JS'),
+(4, 'PHP'),
+(5, 'C'),
+(6, 'CPP'),
+(7, 'CS'),
+(8, 'SQL'),
+(9, 'PYTHON'),
+(10, 'JAVA'),
+(11, 'RUBY');
