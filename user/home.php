@@ -3,10 +3,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <?php 
+ <?php 
+session_start();
 include '../inc/init.php';
 include $cnx;
+if (isset($_POST['sub'])) {
+    $add_lang = $mydb->prepare('INSERT INTO user_lang (`lang_id`, `user_id`, `date`) VALUES (:lang_id, :user_id, NOW())');
+    $add_lang->bindParam('lang_id', $_POST['sub']);
+    $add_lang->bindParam('user_id', $_SESSION['user_id']);
+    if ($add_lang->execute()) {
+        header("Location: home.php");
+        exit();
+    }
+}
+
 function getLangs($state){
 if ($state){
 echo(' <form method="post">
@@ -187,6 +197,7 @@ echo(' <form method="post">
 </form>
 ');
 }else{
+
     echo('
     <div class="languages_box">
     
@@ -393,7 +404,6 @@ echo(' <form method="post">
 <body dir="rtl">
 <?php
       // بدء جلسة PHP، وهذا يعني أنه سيتم استخدام متغيرات الجلسة في هذا الملف
-      session_start();
 
       // تضمين ملف يحتوي على تعريفات أو متغيرات أخرى، افترض أن $if_not_reg يحتوي على اسم الملف المناسب
       include $if_not_reg;
@@ -532,16 +542,20 @@ echo(' <form method="post">
 
 <section class="languages">
 <?php
-$query = $mydb->prepare('SELECT * FROM  user_lang WHERE user_id = :id ');
-$query->bindParam('id' , $_SESSION['user_id']);
-$query->execute();
-if ($query->rowCount() <= 0){
-getLangs(true);
-}else{
-getLangs(false);
-}
-?>
 
+
+    
+
+    $query = $mydb->prepare('SELECT * FROM  user_lang WHERE user_id = :id ');
+    $query->bindParam('id' , $_SESSION['user_id']);
+    $query->execute();
+    if ($query->rowCount() <= 0){
+    getLangs(true);
+    }else{
+    getLangs(false);
+    }
+
+?>
   </section>
 <!-- 
   **********************************
@@ -596,18 +610,6 @@ getLangs(false);
       <!-- 
         - end FEATURES
 -->
+
 </body>
 </html>
-
-<?php
-if (isset($_POST['sub'])){
-$add_lang = $mydb->prepare('INSERT INTO user_lang (`lang_id` , `user_id` , `date`) VALUES (:lang_id , :user_id , NOW())');
-$add_lang->bindParam('lang_id' , $_POST['sub']);
-$add_lang->bindParam('user_id' , $_SESSION['user_id']);
-if ($add_lang->execute()){
-header("refresh:0"); # update in the after
-header("location:home.php"); # update in the after
-exit();
-}
-}
-?>
