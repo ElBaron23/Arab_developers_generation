@@ -203,7 +203,7 @@ h2 {
 body {
   height: fit-content;
   width: 100vw;
-  /*overflow-x: hidden;*/
+  overflow-x: hidden;
 }
 
 .container {
@@ -737,57 +737,22 @@ body {
   color: #223A59;
   border: 2px solid #223A59;
 }
-.text_head > div:not(.hidden-content) {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-}
-.text_head .hidden-content {
-  margin-top: 20px;
-  transition: 0.4s;
-  width: 100%;
-}
-.text_head .hidden-content .content {
-  padding: 20px;
-  display: flex;
-  flex-direction: column !important;
-  gap: 30px;
-  width: 100%;
-}
-.text_head .hidden-content .content div {
+.text_head div {
   display: flex;
   flex-direction: column;
   gap: 10px;
   width: 50%;
   margin: auto;
 }
-.text_head .hidden-content .content div input {
+.text_head div input {
   padding: 10px 15px;
   width: 100%;
   transition: 0.3s;
   outline: none;
   border-radius: 10px;
 }
-.text_head .hidden-content .content div input:focus {
+.text_head div input:focus {
   background: none;
-}
-
-.hidden {
-  height: 0;
-  padding: 0 !important;
-  margin: 0 !important;
-  overflow: hidden;
-  transition: 0.4s;
-  opacity: 0;
-}
-
-.show {
-  height: fit-content;
-  padding: 20px !important;
-  margin: 0 0 20px 0 !important;
-  transition: 0.4s;
-  opacity: 1;
 }
 
 @media (max-width: 767px) {

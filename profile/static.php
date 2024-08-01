@@ -24,7 +24,7 @@ include '../inc/init.php';
 <!-- start des additions des statics au profile  -->
     <div class="total">
         <div class="main">
-            <img src="../file/image/mypic.png" alt="Mon image">
+            <img src="../upload/avatar/<?=$_SESSION['data']->photo_profile?>" alt="Mon image">
             <div>
             <h2 class="name"><?php echo  $firstname ." ". $lastname ?></h2>
             <p class="email"><?php  echo $email ?></p>
@@ -34,14 +34,14 @@ include '../inc/init.php';
             <img src="../file/image/home/good_answ.png" alt="exercices">
             <div class="text">
                 <p class="description">امتحان تم اجتيازه بنجاح</p>
-                <p class="numero">6</p>
+                <p class="numero">00</p>
             </div>
         </div>
         <div class="static">
             <img src="../file/image/home/bon.png" alt="exams">
             <div class="text">
             <p class="description">تمارين تم حلها</p>
-            <p class="numero">60</p>
+            <p class="numero">00</p>
             </div>
         </div>
     </div>

@@ -25,7 +25,7 @@ include $navIndex
     <main><?php      
 if(isset($_POST['register'])){
 $checkEmail= $mydb->prepare("SELECT * FROM user WHERE email =:EMAIL");
-$new_email=$_POST['new_email'];
+$new_email= $_POST['new_email'];
 $checkEmail->bindParam("EMAIL",$new_email);
 $checkEmail->execute();
 
@@ -39,17 +39,17 @@ echo' <h4 class="email_repp" >هذا البريد الاكتروني مسجل ل
     
     $new_password=$_POST['new_password'];
     if(strlen($new_password)>= 8){
-       $password = $new_password;
+       $password = htmlspecialchars($new_password);
     }else{
         echo"<h3>يجب ان تحتوي كلمة المرور على 8 احرف عالاقل</h3>";
     }
-    $new_email=$_POST['new_email'];
+    $new_email=htmlspecialchars($_POST['new_email']);
 
     $adduser= $mydb->prepare("INSERT INTO user(firstname,lastname,email,password)
                                      VAlUES(:firstname,:lastname,:email,:password)");
-    $adduser->bindParam("firstname",$firstname);                                 
-    $adduser->bindParam("lastname",$lastname);                                 
-    $adduser->bindParam("email",$new_email);                               
+    $adduser->bindParam("firstname",htmlspecialchars($firstname));                                 
+    $adduser->bindParam("lastname",htmlspecialchars($lastname));                                 
+    $adduser->bindParam("email",htmlspecialchars($new_email));                               
     $adduser->bindParam("password",$password);
    
     if($adduser->execute()){

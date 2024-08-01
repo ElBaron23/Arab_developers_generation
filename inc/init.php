@@ -19,7 +19,7 @@ $contact_s = '../style/css/contact_us.css';
 $if_not_reg = "../inc/if_not_regi.php";
 $navbar     = "../inc/navbar.php";
 $cnx        = '../inc/cnx.php';
-$contact    = '../other/contact.php'; 
+$contact    = '../other/contact_us.php'; 
 $navIndex   = "../inc/_navIndex.inc";
 $footer     = "../inc/_footer.php";
 
