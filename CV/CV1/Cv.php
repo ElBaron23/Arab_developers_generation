@@ -1,14 +1,30 @@
+<?php
+session_start();
+require_once('../../inc/if_not_regi.php');
+
+$data = $_SESSION['data'];
+$name = "{$data->firstname} {$data->lastname}";
+$country = $data->country;
+$birthDate = $data->datebirdth;
+$desc = $data->description;
+$linkedin = $data->linkedin;
+$instagram = $data->instagram;
+$email = $data->email;
+$number = $data->phone;
+$skills = $_SESSION['skills'];
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV</title>
-    <link rel="stylesheet" href="CvStyle.css">
+    <link rel="stylesheet" href="CV/cv1/CvStyle.css">
 </head>
 <body>
     <header>
-        <h1>Full name</h1>
+        <h1><?=$name?></h1>
         <p>Front-End Developer</p>
     </header>
 
@@ -25,19 +41,16 @@
         <section class="section">
             <h2>Education</h2>
             <ul class="education">
-                <li><strong>ENSA Marrakech</strong> - Engineering Student in Computer Science</li>
+                <li><strong><?=$country?></strong> - <?=$desc?></li>
             </ul>
         </section>
 
         <section class="section">
             <h2>Skills</h2>
             <ul class="skills">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Python</li>
-                <li>MySQL</li>
-                <li>React.js</li>
+                <?php  foreach ($skills as $skill): ?>
+                    <li><?=$skill?></li>
+                <?php endforeach?>
             </ul>
         </section>
 
@@ -50,13 +63,17 @@
             </ul>
         </section>
 
-        <section class="section">
+        <section class="section">   <?php
+
+
+?>
+y
             <h2>Contact</h2>
             <ul class="profile">
-                <li>Email: myemail@gmail.com</li>
-                <li>Phone: +212 600 000 000</li>
-                <li>LinkedIn: <a href="#" target="_blank">linkedin.com/in/mouadbourquouquou</a></li>
-                <li>GitHub: <a href="#" target="_blank">github.com/mouadbourquouquou</a></li>
+                <li>Email: <?=$email?></li>
+                <li>Phone: <?=$number?></li>
+                <li>LinkedIn: <a href="<?=$linkedin?>" target="_blank"><?=$name?></a></li>
+                <li>Instagram: <a href="<?=$instagram?>" target="_blank"><?=$name?></a></li>
             </ul>
         </section>
     </div>

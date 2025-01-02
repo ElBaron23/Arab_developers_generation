@@ -37,8 +37,16 @@ if(isset($_POST['login'])){
    $data = $login->fetchObject();
     $_SESSION['user_id']= $data->user_id;
     $_SESSION['data']= $data;
+    
+    $getSkills = $mydb->prepare("SELECT * FROM SKILLS WHERE user_id = :id");
+    $getSkills->bindParam("id" , $data->user_id);
+
+    if ($getSkills->execute()){
+        $skills = $getSkills->fetchAll(PDO::FETCH_ASSOC);
+    $_SESSION['skills']= $skills;
 
     header("location:$homeP",true);
+    }
     
  }else{
     echo'<h4 style="color:rgb(245, 74, 74);">البريد الاكتروني او كلمة السر غير صحيحة</h4>';

@@ -144,3 +144,14 @@ INSERT INTO `languages` (`lang_id`, `lang_name`) VALUES
 (9, 'PYTHON'),
 (10, 'JAVA'),
 (11, 'RUBY');
+
+
+
+
+
+CREATE TABLE IF NOT EXISTS `skills`(
+  `id` int(11) AUTO_INCREMENT PRIMARY KEY ,
+  `user_id` int(11) NOT NULL ,
+  `skill` varchar(25),
+  FOREIGN KEY (`user_id`) REFERENCES `user`(`user_id`) 
+)
