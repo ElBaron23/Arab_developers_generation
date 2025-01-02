@@ -13,7 +13,7 @@ if (isset($_POST['sub'])) {
     $add_lang->bindParam('lang_id', $_POST['sub']);
     $add_lang->bindParam('user_id', $_SESSION['user_id']);
     if ($add_lang->execute()) {
-        header("Location: home.php");
+        header("Location: /home");
         exit();
     }
 }
