@@ -53,7 +53,7 @@ echo' <h4 class="email_repp" >هذا البريد الاكتروني مسجل ل
     $adduser->bindParam("password",$password);
    
     if($adduser->execute()){
-     header("location:login.php",true);
+     header("location:/login",true);
     }else{
         echo"probleme";
     }
@@ -81,7 +81,7 @@ echo' <h4 class="email_repp" >هذا البريد الاكتروني مسجل ل
             مع احذت أساليب التعليم لتحقيق هذفك معنا</h5>
             <div class="for_login">
                 <h3>لدي حساب بالفعل؟</h3>
-                <a href="login.php">تسجيل الدخول</a>
+                <a href="/login">تسجيل الدخول</a>
             </div>
         </div>
         </div>
@@ -89,9 +89,6 @@ echo' <h4 class="email_repp" >هذا البريد الاكتروني مسجل ل
     <?php
     include $footer;
     ?>
-    <!-- هدا script تمت برمجته من قبل 
-     https://github.com/AHMED1CB
-    -->
     <script src="<?=$passwordV?>"></script>
 </body>
 </html>

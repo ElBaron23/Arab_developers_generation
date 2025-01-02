@@ -5,7 +5,7 @@
     <div class="social">
        <div class="logo_footer">
        <?php
-$url = __FILE__;  // يتم تعيين قيمة متغير $url بالمسار الكامل للملف الحالي
+$url = $_SERVER['REQUEST_URI'];  // يتم تعيين قيمة متغير $url بالمسار الكامل للملف الحالي
 if (!strpos($url, 'index.php')){  // إذا كان الملف الحالي لا يحتوي على النص "index.php"
     echo('<img src='.$logo2.' alt="logo">');  // يتم عرض صورة تحمل مصدرها متغير $logo2
 } else {
@@ -19,7 +19,7 @@ if (!strpos($url, 'index.php')){  // إذا كان الملف الحالي لا 
        <h4>تابعنا على:</h4>
        <div class="img_social">
        <?php
-if (!strpos($url, 'index.php')){
+if (!strpos($url, '/')){
 echo '
   <a href="#"><img src='.$instagram2 .' alt="instagram"></a>
         <a href="#"><img src='.$facebook2 .' alt="facebook"></a>
@@ -45,16 +45,16 @@ echo '
     </div>  
      <div class="contact">
         <ul>
-            <li><a href="other/contact_us.php">تواصل معنا</a></li>
-            <li><a href="other/error.php"> شروط الاستخدام</a></li>
-            <li><a href="other/error.php"> درب معنا</a></li>
+            <li><a href="<?=$contact?>">تواصل معنا</a></li>
+            <li><a href="<?=$errorPage?>"> شروط الاستخدام</a></li>
+            <li><a href="<?=$errorPage?>"> درب معنا</a></li>
         </ul>
      </div>
      <div class="contact">
         <ul>
-            <li><a href="other/error.php"> اسئلة شائعة</a></li>
-            <li><a href="other/error.php"> السياسة والخصوصية </a></li>
-            <li><a href="other/error.php"> الدعم </a></li>
+            <li><a href="<?=$errorPage?>"> اسئلة شائعة</a></li>
+            <li><a href="<?=$errorPage?>"> السياسة والخصوصية </a></li>
+            <li><a href="<?=$errorPage?>"> الدعم </a></li>
         </ul>
      </div>
 

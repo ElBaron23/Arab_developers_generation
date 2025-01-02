@@ -1,12 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
  <?php 
 session_start();
+
 include '../inc/init.php';
 include $cnx;
+
 if (isset($_POST['sub'])) {
     $add_lang = $mydb->prepare('INSERT INTO user_lang (`lang_id`, `user_id`, `date`) VALUES (:lang_id, :user_id, NOW())');
     $add_lang->bindParam('lang_id', $_POST['sub']);

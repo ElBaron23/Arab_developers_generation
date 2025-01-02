@@ -19,10 +19,10 @@ $data = $mydb->prepare("SELECT * FROM user WHERE email = :email");
 $data->bindParam(":email", $email);
 // تنفيذ الاستعلام الذي تم تحضيره، والذي يقوم بجلب بيانات المستخدم بناءً على البريد الإلكتروني.
 $data->execute();
-// استرداد نتيجة الاستعلام ككائن PHP يحتوي على جميع بيانات المستخدم.
+
 $info = $data->fetchObject();
-// الحصول على اسم الصورة من الجلسة وحفضها في المتغير 
-$photo = $_SESSION['data']->photo_profile 
+
+$photo = $_SESSION['data']->photo_profile;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -75,13 +75,12 @@ if (isset($_FILES['img']) && $_FILES['img']['error'] === UPLOAD_ERR_OK) {
         // مسار الوجهة لنقل الملف
         $target_directory = "../upload/avatar/";
         //توليد رقم عشوائي واضافته الى اسم الصورة لتفادي تكرار اسم الصورة
-        $randName = rand(0 , 100000) . '_' . $img_name;
+        $randName = 'user-' . rand(0 , 100000) . '_' . $img_name;
 
         $target_path = $target_directory . basename($randName);
 
         // نقل الملف إلى المسار النهائي
         if (move_uploaded_file($img_tmp, $target_path)) {
-            echo "تم نقل الملف بنجاح.";
         } else {
            $randName = $photo;
         }
@@ -103,7 +102,7 @@ if (isset($_FILES['img']) && $_FILES['img']['error'] === UPLOAD_ERR_OK) {
                                             gender=:gender,
                                             datebirdth=:datebirdth,
                                             country=:country,
-                                            description=:description,
+                                            `description`=:description,
                                             instagram=:instagram,
                                             facebook=:facebook,
                                             twitter=:twitter,
@@ -130,10 +129,9 @@ if (isset($_FILES['img']) && $_FILES['img']['error'] === UPLOAD_ERR_OK) {
       $newInfo = $mydb->prepare("SELECT * FROM user WHERE email = :email");
       $newInfo->bindParam("email",$email);
       $newInfo->execute();
-      $new_info= $newInfo->fetchObject();
-      $_SESSION['data']=$new_info;
-      header('location:profile.php');
-    exit();
+          $new_info= $newInfo->fetchObject();
+          $_SESSION['data']= $new_info;
+
     } else {
         echo "فشل تحديث البيانات";
     }

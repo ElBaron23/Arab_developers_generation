@@ -59,6 +59,7 @@ echo "<p style='color:red; margin:10px 0'>كلمه المرور غير صحيح�
                     <label for="pass1">كلمة المرور القديمة</label>
                     <input type="password" placeholder="كلمة المرور القديمة" id="pass1" name="oldPass">
                 </div>
+
                 <div class="new">
                     <label for="pass2">كلمة المرور الجديدة</label>
                     <input type="password" placeholder="كلمة المرور الجديدة" id="pass2" name="newPass">
@@ -80,7 +81,7 @@ echo "<p style='color:red; margin:10px 0'>كلمه المرور غير صحيح�
                     <label for="pass2">البريد الاكتروني</label>
                     <input type="email" placeholder="البريد الاكتروني" id="pass2" name="newPass">
                 </div>
-                <button type="submit" name="changepass" id="passbtn">تاكيد البريد الاكتروني</button>
+                <button type="submit" name="changeemail" id="passbtn">تاكيد البريد الاكتروني</button>
             </form>
         </div>
     </div>

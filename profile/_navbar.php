@@ -11,7 +11,7 @@ include '../inc/init.php';
     <div id="nav">
   
     <ul>
-    <li> <a href="profile.php" id="profile" class="active">الملف الشخصي</a></li>
+    <li> <a href="/profile" id="profile" class="active">الملف الشخصي</a></li>
         <li> <a href="<?=$profileS?>" id="edit_profile"> اعدادات الملف الشخصي</a></li>
         <li> <a href="<?=$accountS?>" id="edit_account">  الحساب</a></li>
         <li> <a href="<?=$notification?>" id="notification"> الاشعارات</a></li>

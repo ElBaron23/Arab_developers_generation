@@ -32,7 +32,7 @@ include $navIndex;
             مع احذت أساليب التعليم لتحقيق هذفك معنا</h5>
             <div class="for_login">
                 <h3>ليس لديك حساب ؟</h3>
-                <a href="register.php">انشاء حساب </a>
+                <a href="/register">انشاء حساب </a>
             </div>
         </div>
         </div>
