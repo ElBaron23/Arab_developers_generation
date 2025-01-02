@@ -765,4 +765,12 @@ button {
   cursor: pointer;
 }
 
+.already_has_lang {
+  padding: 40px 0;
+  margin: 40px 0;
+}
+.already_has_lang h1 {
+  font-size: 40px;
+}
+
 /*# sourceMappingURL=home.css.map */

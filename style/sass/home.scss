@@ -316,8 +316,6 @@ img {
 
 
 
-
-
 /********************************************/
 /*
 start section language
@@ -653,4 +651,13 @@ end Select Road
 
 button{
 cursor: pointer;
+}
+
+
+.already_has_lang{
+  padding:40px 0;
+  margin:40px 0;
+      h1{
+        font-size: 40px;
+      }
 }
