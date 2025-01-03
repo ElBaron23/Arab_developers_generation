@@ -161,22 +161,28 @@ $instagram = $_SESSION['data']->instagram ?? '#';
 $country = $_SESSION['data']->country ?? 'Country';
 $desc = $_SESSION['data']->descreption ?? 'Description';
 $skills = ['html' , 'css' ,'js'];
-
-function displaySkills($skills)
-{
+$skillsStr = "<li>";
+function displaySkills($skills){
+    global $skillsStr;
        foreach ($skills as $skill) {
-        return "<li>$skill</li>";
+        $skillsStr .= " $skill -";
        }
-}
+
+       $skillsStr .= "</li>";
+       
+    }
+
+displaySkills($skills);
+
 
 $template = file_get_contents(__DIR__. "/../CV/Cv1/cv.php");
-$str_skills = displaySkills($skills);
+
 
 $data = [
     'name' => $firstname . " " . $lastname,
     'country' => $country,
     'desc' => $desc,
-    'skills' => $str_skills,
+    'skills' => $skillsStr,
     'email' => $email,
     'number' => $phone
 ];

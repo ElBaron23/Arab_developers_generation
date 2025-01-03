@@ -113,7 +113,7 @@ header p {
                 <li>Email: {{email}}</li>
                 <li>Phone: {{number}}</li>
                 <li>LinkedIn: <a href="{{linkedin}}" target="_blank">{{name}}</a></li>
-                <li>Instagram: <a href="{{$instagram}}" target="_blank">{{name}}</a></li>
+                <li>Instagram: <a href="{{instagram}}" target="_blank">{{name}}</a></li>
             </ul>
         </section>
     </div>

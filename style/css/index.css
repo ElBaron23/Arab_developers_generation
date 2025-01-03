@@ -1,12 +1,13 @@
 @charset "UTF-8";
 body {
   background: #031930;
+  font-family: tajawal;
+
 }
 
 * {
   margin: 0;
   padding: 0;
-  font-family: tajawal;
 }
 
 @font-face {
@@ -120,7 +121,6 @@ nav ul li a:hover {
 
 ::-webkit-scrollbar-track {
   background-color: #f1f1f1; /* لون الخلفية الخاصة بشريط التمرير */
-  border-radius: 6px; /* تدوير حواف مسار شريط التمرير */
 }
 
 /* تخصيص شريط التمرير في المتصفحات الأخرى */

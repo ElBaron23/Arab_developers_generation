@@ -7,7 +7,7 @@ include 'inc/init.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="file/image/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="<?=$index?>">
+    <link rel="stylesheet"  href="<?=$index?>">
     <link rel="stylesheet" href="<?=$nav2?>">
     <title>الجيل البرمجي العربي</title>
 </head>
@@ -40,25 +40,26 @@ include 'inc/init.php';
         <!-- end hero -->
     </header>
 <!-- end header  -->
+
 <!-- start section of brunch -->
  <section id="brunch">
 <h2>العديد من التخصصات متاحة الان</h2>
 <div class="brunch_box">
     <div class="brunch_container">
     <div class="div_img">
-        <img src="file/icons/webdiv.png">
+        <img loading='lazy' src="file/icons/webdiv.png">
         </div>
         <h5>برمجة وتطوير المواقع الاكترونية</h5>
     </div>
     <div class="brunch_container">
     <div class="div_img">
-        <img src="file/icons/ui.jpg">
+        <img loading='lazy' src="file/icons/ui.jpg">
         </div>
         <h5>تصميم المواقع الاكترونية</h5>
     </div>
     <div class="brunch_container">
         <div class="div_img">
-        <img src="file/icons/app.png">
+        <img loading='lazy' src="file/icons/app.png">
         </div>
         <h5> برمجة تطبيقات الهاتف</h5>
     </div>
@@ -66,13 +67,13 @@ include 'inc/init.php';
 <div class="brunch_box">
     <div class="brunch_container">
     <div class="div_img">
-        <img src="file/icons/desktop.png">
+        <img loading='lazy' src="file/icons/desktop.png">
         </div>
         <h5>برمجة برامج الحاسوب</h5>
     </div>
     <div class="brunch_container">
     <div class="div_img">
-        <img src="file/icons/game.png">
+        <img loading='lazy' src="file/icons/game.png">
         </div>
         <h5>برمجة الا لعاب</h5>
     </div>
@@ -105,15 +106,15 @@ include 'inc/init.php';
    <section id="apk">
     <div class="mobile">
         <div class="phone">
-            <img src="file/image/phone.png" alt="phone">
-       <img src="file/image/scren.png" alt="scren" id="scren">
+            <img loading='lazy' src="file/image/phone.png" alt="phone">
+       <img loading='lazy' src="file/image/scren.png" alt="scren" id="scren">
         </div>
     </div>
     <div class="text">
         <h1>استمتع بتجربة اكثر  مع تطبيقنا </h1>
         <h4>تطبيق موقعنا يتوفر الان على منصة
         جوجل بلاي واب ستور</h4>
-        <img src="file/image/gp.png" alt="download">
+        <img loading='lazy' src="file/image/gp.png" alt="download">
     </div>
    </section>
   <!-- end section apk -->
@@ -123,7 +124,7 @@ include 'inc/init.php';
     <h2>لماذا تختار موقعنا </h2>
     <div class="box1">
         <div class="box1_img">          
-            <img src="file/image/arabe.png" alt="arabic">
+            <img loading='lazy'  src="file/image/arabe.png" alt="arabic">
         </div>
         <h3>نوفر محتوا شامل لمسارك التعليمي
  بالغة العربية مع شرح سلسل ومبسط
@@ -135,13 +136,13 @@ include 'inc/init.php';
         <h3>نقوم بتحديث المحتوى بشكل مستمر 
         مع احدت التقنيات المتاحة بشكل مجاني </h3>
         <div class="box1_img">          
-            <img src="file/image/actualise.png" alt="refrache">
+            <img loading='lazy' src="file/image/actualise.png" alt="refrache">
         </div>
     </div>
     <span class="span_right"></span>
     <div class="box1">
         <div class="box1_img">          
-            <img src="file/image/support.png" alt="support">
+            <img loading='lazy' src="file/image/support.png" alt="support">
         </div>
     <h3>نوفر دعم مباشر لاجابة عن كافة استفساراتكم
     ومساعدتكم في التوجيه مع فريق من المبرمجين</h3>
@@ -151,7 +152,7 @@ include 'inc/init.php';
     <h3>هل تحتار من اين تبدا تعلم البرمجة ؟ 
     نوفر خريطة متسلسلة في مختلف المجالات البرمجية</h3>
         <div class="box1_img">          
-            <img src="file/image/road.png" alt="roadmap">
+            <img loading='lazy' src="file/image/road.png" alt="roadmap">
         </div>
 
     </div>
@@ -161,25 +162,25 @@ include 'inc/init.php';
  <section id="all_lang">
  <div class="strok_lang">
         <div class="lang_icon position1">
-            <img src="file/icons/lang_pr/php.png" alt="">
+            <img loading='lazy' src="file/icons/lang_pr/php.png" alt="">
         </div>
         <div class="lang_icon position2">
-            <img src="file/icons/lang_pr/html.png" alt="">
+            <img loading='lazy'  src="file/icons/lang_pr/html.png" alt="">
         </div>
         <div class="lang_icon position3">
-            <img src="file/icons/lang_pr/python.png" alt="">
+            <img loading='lazy' src="file/icons/lang_pr/python.png" alt="">
         </div>
         <div class="lang_icon position4">
-            <img src="file/icons/lang_pr/java.png" alt="">
+            <img loading='lazy' src="file/icons/lang_pr/java.png" alt="">
         </div>
         <div class="lang_icon position5">
-            <img src="file/icons/lang_pr/sql.png" alt="">
+            <img loading='lazy' src="file/icons/lang_pr/sql.png" alt="">
         </div>
         <div class="lang_icon position6">
-            <img src="file/icons/lang_pr/js.png" alt="">
+            <img loading='lazy' src="file/icons/lang_pr/js.png" alt="">
         </div>
         <div class="lang_icon position7">
-            <img src="file/icons/lang_pr/mysql.png" alt="">
+            <img loading='lazy' src="file/icons/lang_pr/mysql.png" alt="">
         </div>
         <div class="lang_icon2 position8">
         </div>

@@ -54,32 +54,35 @@ if (isset($_POST['SaveChange'])) {
     $link_linkedin   = $_POST['link_linkedin'];
     $link_x          = $_POST['link_x'];
 
-    //تحديد خصائص الصورة
     $img_name            = $_FILES['img']['name'];
     $img_size            = $_FILES['img']['size'];
     $img_type            = $_FILES['img']['type'];
     $img_tmp             = $_FILES['img']['tmp_name'];
 
-// التحقق من أن الملف تم تحميله بشكل صحيح
+    $randName = null;
+
+        
+    $query = "";
+    
+
+
+
 if (isset($_FILES['img']) && $_FILES['img']['error'] === UPLOAD_ERR_OK) {
     if ($img_size > 0){
-            // الملف المرسل من النموذج
     $uploaded_file = $_FILES['img'];
 
-    // حصول على امتداد الملف
     $file_extension = strtolower(pathinfo($img_name, PATHINFO_EXTENSION));
 
-    // قائمة بأمتدادات الملفات التي تُعتبر صوراً (يمكنك تعديلها حسب الاحتياج)
     $image_extensions = array("jpg", "jpeg", "png", "gif");
+
     if (in_array($file_extension, $image_extensions)) {
-        // مسار الوجهة لنقل الملف
+    
         $target_directory = "../upload/avatar/";
-        //توليد رقم عشوائي واضافته الى اسم الصورة لتفادي تكرار اسم الصورة
+    
         $randName = 'user-' . rand(0 , 100000) . '_' . $img_name;
 
         $target_path = $target_directory . basename($randName);
 
-        // نقل الملف إلى المسار النهائي
         if (move_uploaded_file($img_tmp, $target_path)) {
         } else {
            $randName = $photo;
@@ -87,101 +90,129 @@ if (isset($_FILES['img']) && $_FILES['img']['error'] === UPLOAD_ERR_OK) {
     } else {
         $randName = $photo;
     }
-   
+    
 
 } else {
     $randName = $photo;
 }
 
+$query = "UPDATE user SET firstname=:firstname,
+lastname=:lastname,
+phone=:phone,
+gender=:gender,
+datebirdth=:datebirdth,
+country=:country,
+`description`=:description,
+instagram=:instagram,
+facebook=:facebook,
+twitter=:twitter,
+linkedin=:linkedin,
+photo_profile=:photo_profile
+WHERE email=:email";
 
 
+}else{
+    
+$query = "UPDATE user SET firstname=:firstname,
+lastname=:lastname,
+phone=:phone,
+gender=:gender,
+datebirdth=:datebirdth,
+country=:country,
+`description`=:description,
+instagram=:instagram,
+facebook=:facebook,
+twitter=:twitter,
+linkedin=:linkedin
+WHERE email=:email";
+    
+}
 
-    $newData = $mydb->prepare("UPDATE user SET firstname=:firstname,
-                                            lastname=:lastname,
-                                            phone=:phone,
-                                            gender=:gender,
-                                            datebirdth=:datebirdth,
-                                            country=:country,
-                                            `description`=:description,
-                                            instagram=:instagram,
-                                            facebook=:facebook,
-                                            twitter=:twitter,
-                                            linkedin=:linkedin,
-                                            photo_profile=:photo_profile
-                                            WHERE email=:email"
-    );
+if ($query){
+    
 
-    $newData->bindParam(":firstname", $new_firstname);
-    $newData->bindParam(":lastname", $new_lastname);
-    $newData->bindParam(":phone", $new_PhoneNumber);
-    $newData->bindParam(":gender", $new_gender);
-    $newData->bindParam(":datebirdth", $newDateBirdth);
-    $newData->bindParam(":country", $new_country);
-    $newData->bindParam(":description", $new_description);
-    $newData->bindParam(":instagram", $link_instagram);
-    $newData->bindParam(":facebook", $link_facebook);
-    $newData->bindParam(":twitter", $link_x);
-    $newData->bindParam(":linkedin", $link_linkedin);
-    //نقوم بتخزين اسم الصورة في قاعدة البيانات
+$newData = $mydb->prepare($query);
+
+$newData->bindParam(":firstname", $new_firstname);
+
+if(strpos($query ,  'photo') !== false ){
     $newData->bindParam(":photo_profile", $randName);
-    $newData->bindParam(":email", $email);
-    if ($newData->execute()) {
-      $newInfo = $mydb->prepare("SELECT * FROM user WHERE email = :email");
-      $newInfo->bindParam("email",$email);
-      $newInfo->execute();
-          $new_info= $newInfo->fetchObject();
-          $_SESSION['data']= $new_info;
+}
+$newData->bindParam(":lastname", $new_lastname);
+$newData->bindParam(":phone", $new_PhoneNumber);
+$newData->bindParam(":gender", $new_gender);
+$newData->bindParam(":datebirdth", $newDateBirdth);
+$newData->bindParam(":country", $new_country);
+$newData->bindParam(":description", $new_description);
+$newData->bindParam(":instagram", $link_instagram);
+$newData->bindParam(":facebook", $link_facebook);
+$newData->bindParam(":twitter", $link_x);
+$newData->bindParam(":linkedin", $link_linkedin);
 
-    } else {
-        echo "فشل تحديث البيانات";
-    }
+$newData->bindParam(":email", $email);
 
-}}
+if ($newData->execute()) {
+  $newInfo = $mydb->prepare("SELECT * FROM user WHERE email = :email");
+  $newInfo->bindParam("email",$email);
+  $newInfo->execute();
+      $new_info= $newInfo->fetchObject();
+      $_SESSION['data']= $new_info;
+    header('refresh:0');
+
+}
+}
+}
 ?>
 <form method="POST" id="edit_profile2" enctype="multipart/form-data">
-    <!-- //تخصيص زر حفظ التغيرات -->
     <div class="text_head">
         <h4>حسابي:</h4>
         <button type="submit" name="SaveChange">حفظ التغيرات</button>
     </div>
-    <!-- هنا مكان رفع الصورة الشخصية -->
     <div class="upload_photo">
 
         <div id="yourPhoto">
+
+        <?php
+            $dir = __DIR__;
+        if ($photo){
+        
+        echo   "<img src='../../upload/avatar/$photo'>" ;
+        } 
+        ?>
+            
+
+
         </div>
 
         <div class="input_photo">
             <label for="inputFile" style="margin: 0"  class="custom_upload_file">اختر الصورة</label>
-            <input type="file" id="inputFile" value="../upload/avatar/client.png" name="img" accept="image/*">
+            <input type="file" id="inputFile" value="<?php echo $photo ? $photo : ''  ?>" name="img" accept="image/*">
             <button id="delete_photo" style="margin: 0 5px">حذف الصورة</button>
             <script>
                 let output = document.getElementById('yourPhoto');
                 let input = document.getElementById('inputFile');
                 let delete_photo = document.getElementById('delete_photo');
-                // إضافة دالة استماع لحظة التغيير
-                input.addEventListener('change', function(event) {
-                    // الحصول على الملف المرفوع
-                    const file = event.target.files[0];
-                    if (file) { // تحقق من وجود الملف
 
-                        // إنشاء كائن لقراءة محتوى الملف
+                input.addEventListener('change', function(event) {
+
+                    const file = event.target.files[0];
+                    if (file) { 
+
                         const reader = new FileReader();
-                        // تحديد ما يحدث عند اكتمال القراءة
+
                         reader.onload = function(e) {
-                            // إنشاء عنصر لعرض الصورة
                             const img = document.createElement('img');
-                            img.src = e.target.result; // ضبط مصدر الصورة على نتيجة القراءة
-                            img.style.maxWidth = '100%'; // لتعديل حجم الصورة
-                            img.style.height = '100%'; // لتعديل حجم الصورة
-                            output.innerHTML = ''; // إزالة الصورة السابقة
-                            output.appendChild(img); // عرض الصورة
+                            img.src = e.target.result;
+                            img.style.maxWidth = '100%';
+                            img.style.height = '100%'; 
+                            output.innerHTML = ''; 
+                            output.appendChild(img);
                         };
-                        reader.readAsDataURL(file); // قراءة الملف كـ data URL
+                        reader.readAsDataURL(file);
                     }
                 });
-                // دالة استماع إلى حدث النقر
                 delete_photo.addEventListener('click', () => {
-                    // عند النقر على الزر يقوم بحذف الصورة
+
                     output.innerHTML = '<div id="yourPhoto"><img src="../upload/avatar/client.png"></div>';
                 });
             </script>
@@ -203,8 +234,8 @@ if (isset($_FILES['img']) && $_FILES['img']['error'] === UPLOAD_ERR_OK) {
                     <h5> الجنس</h5>
                     <select name="gender" id="gender">
                         <option value="غير محدد">غير محدد</option>
-                        <option value="ذكر" <?= ($info->gender === 'male') ? 'selected' : '' ?>>ذكر</option>
-                        <option value="انثي" <?= ($info->gender === 'female') ? 'selected' : '' ?>>أنثى</option>
+                        <option value="ذكر" <?= ($info->gender === 'ذكر') ? 'selected' : '' ?>>ذكر</option>
+                        <option value="انثي" <?= ($info->gender === 'انثي') ? 'selected' : '' ?>>أنثى</option>
                     </select>
                 </div>
             </div>

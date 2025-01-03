@@ -21,20 +21,20 @@ if (!strpos($url, 'index.php')){  // إذا كان الملف الحالي لا 
        <?php
 if (!strpos($url, '/')){
 echo '
-  <a href="#"><img src='.$instagram2 .' alt="instagram"></a>
-        <a href="#"><img src='.$facebook2 .' alt="facebook"></a>
-        <a href="#"><img src='.$github2 .' alt="github"></a>
-        <a href="#"><img src='.$youtube2 .' alt="youtube"></a>
-        <a href="#"><img src='.$twitter2 .' alt="x"></a>
+  <a href="#"><img loading="lazy" src='.$instagram2 .' alt="instagram"></a>
+        <a href="#"><img loading="lazy" src='.$facebook2 .' alt="facebook"></a>
+        <a href="#"><img loading="lazy" src='.$github2 .' alt="github"></a>
+        <a href="#"><img loading="lazy" src='.$youtube2 .' alt="youtube"></a>
+        <a href="#"><img loading="lazy" src='.$twitter2 .' alt="x"></a>
 ';
 
 }else{
 echo '
-  <a href="#"><img src='.$instagram .' alt="instagram"></a>
-        <a href="#"><img src='.$facebook .' alt="facebook"></a>
-        <a href="#"><img src='.$github .' alt="github"></a>
-        <a href="#"><img src='.$youtube .' alt="youtube"></a>
-        <a href="#"><img src='.$twitter .' alt="x"></a>
+  <a href="#"><img loading="lazy" src='.$instagram .' alt="instagram"></a>
+        <a href="#"><img loading="lazy" src='.$facebook .' alt="facebook"></a>
+        <a href="#"><img loading="lazy" loading="lazy" src='.$github .' alt="github"></a>
+        <a href="#"><img loading="lazy" src='.$youtube .' alt="youtube"></a>
+        <a href="#"><img loading="lazy" src='.$twitter .' alt="x"></a>
 ';
 }
 
