@@ -157,7 +157,7 @@ if ($newData->execute()) {
   $newInfo->execute();
       $new_info= $newInfo->fetchObject();
       $_SESSION['data']= $new_info;
-    header('refresh:0');
+    header('location: /profile');
 
 }
 }
@@ -177,6 +177,7 @@ if ($newData->execute()) {
         if ($photo){
         
         echo   "<img src='../../upload/avatar/$photo'>" ;
+
         } 
         ?>
             

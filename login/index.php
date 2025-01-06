@@ -37,7 +37,6 @@ if(isset($_POST['login'])){
    $data = $login->fetchObject();
     $_SESSION['user_id']= $data->user_id;
     $_SESSION['data']= $data;
-    
     $getSkills = $mydb->prepare("SELECT * FROM SKILLS WHERE user_id = :id");
     $getSkills->bindParam("id" , $data->user_id);
 

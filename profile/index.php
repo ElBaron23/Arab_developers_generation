@@ -165,7 +165,7 @@ $skillsStr = "<li>";
 function displaySkills($skills){
     global $skillsStr;
        foreach ($skills as $skill) {
-        $skillsStr .= " $skill -";
+        $skillsStr .= " $skill ";
        }
 
        $skillsStr .= "</li>";
